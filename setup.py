@@ -1,0 +1,29 @@
+from setuptools import setup
+import re
+
+VERSIONFILE = "./_version.py"
+verstrline = open(VERSIONFILE, "rt").read()
+VSRE = r"^__version__ = ['\"]([^'\"]*)['\"]"
+mo = re.search(VSRE, verstrline, re.M)
+if mo:
+    verstr = mo.group(1)
+else:
+    raise RuntimeError("Unable to find version string in %s." % (VERSIONFILE,))
+
+print(f"========> Current version is {verstr}")
+
+setup(name='jama_rest_client',
+      version=verstr,
+      description='Jama REST client',
+      url='https://github.com/Tanaka12/jama-rest-client',
+      author='Jose Peiro',
+      packages=[],
+      classifiers=[
+          "Topic :: Jama :: REST :: client",
+          "Programming Language :: Python :: 3",
+          "License :: Free"],
+      install_requires=[],
+      tests_require=['pytest==8.2.2',
+                     'pytest-mock==3.14.0'],
+      zip_safe=False
+)
