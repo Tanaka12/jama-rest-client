@@ -1,0 +1,478 @@
+{
+    "meta": {
+        "status": "OK",
+        "timestamp": "2025-05-26T16:11:23.071+0000",
+        "pageInfo": {
+            "startIndex": 0,
+            "resultCount": 0,
+            "totalResults": 0
+        }
+    },
+    "links": {
+        "data.createdBy": {
+            "type": "users",
+            "href": "createdBy"
+        },
+        "data.fields.user1": {
+            "type": "users",
+            "href": "user1"
+        },
+        "data.modifiedBy": {
+            "type": "users",
+            "href": "modifiedBy"
+        },
+        "data.fields.projectManager": {
+            "type": "users",
+            "href": "projectManager"
+        },
+        "data.fields.projectGroup": {
+            "type": "picklistoptions",
+            "href": "projectGroup"
+        },
+        "data.parent": {
+            "type": "projects",
+            "href": "parent"
+        },
+        "data.fields.statusId": {
+            "type": "picklistoptions",
+            "href": "statusId"
+        }
+    },
+    "data": [
+        {
+            "id": 1,
+            "projectKey": "DummyProjectKey 1",
+            "parent": 2,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 1",
+            "modifiedDate": "DummyModifiedDate 1",
+            "createdBy": 3,
+            "modifiedBy": 4,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 2,
+            "projectKey": "DummyProjectKey 2",
+            "parent": 3,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 2",
+            "modifiedDate": "DummyModifiedDate 2",
+            "createdBy": 4,
+            "modifiedBy": 5,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 3,
+            "projectKey": "DummyProjectKey 3",
+            "parent": 4,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 3",
+            "modifiedDate": "DummyModifiedDate 3",
+            "createdBy": 5,
+            "modifiedBy": 6,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 4,
+            "projectKey": "DummyProjectKey 4",
+            "parent": 5,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 4",
+            "modifiedDate": "DummyModifiedDate 4",
+            "createdBy": 6,
+            "modifiedBy": 7,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 5,
+            "projectKey": "DummyProjectKey 5",
+            "parent": 6,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 5",
+            "modifiedDate": "DummyModifiedDate 5",
+            "createdBy": 7,
+            "modifiedBy": 8,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 6,
+            "projectKey": "DummyProjectKey 6",
+            "parent": 7,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 6",
+            "modifiedDate": "DummyModifiedDate 6",
+            "createdBy": 8,
+            "modifiedBy": 9,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 7,
+            "projectKey": "DummyProjectKey 7",
+            "parent": 8,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 7",
+            "modifiedDate": "DummyModifiedDate 7",
+            "createdBy": 9,
+            "modifiedBy": 10,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 8,
+            "projectKey": "DummyProjectKey 8",
+            "parent": 9,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 8",
+            "modifiedDate": "DummyModifiedDate 8",
+            "createdBy": 10,
+            "modifiedBy": 11,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 9,
+            "projectKey": "DummyProjectKey 9",
+            "parent": 10,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 9",
+            "modifiedDate": "DummyModifiedDate 9",
+            "createdBy": 11,
+            "modifiedBy": 12,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 10,
+            "projectKey": "DummyProjectKey 10",
+            "parent": 11,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 10",
+            "modifiedDate": "DummyModifiedDate 10",
+            "createdBy": 12,
+            "modifiedBy": 13,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 11,
+            "projectKey": "DummyProjectKey 11",
+            "parent": 12,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 11",
+            "modifiedDate": "DummyModifiedDate 11",
+            "createdBy": 13,
+            "modifiedBy": 14,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 12,
+            "projectKey": "DummyProjectKey 12",
+            "parent": 13,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 12",
+            "modifiedDate": "DummyModifiedDate 12",
+            "createdBy": 14,
+            "modifiedBy": 15,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 13,
+            "projectKey": "DummyProjectKey 13",
+            "parent": 14,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 13",
+            "modifiedDate": "DummyModifiedDate 13",
+            "createdBy": 15,
+            "modifiedBy": 16,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 14,
+            "projectKey": "DummyProjectKey 14",
+            "parent": 15,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 14",
+            "modifiedDate": "DummyModifiedDate 14",
+            "createdBy": 16,
+            "modifiedBy": 17,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 15,
+            "projectKey": "DummyProjectKey 15",
+            "parent": 16,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 15",
+            "modifiedDate": "DummyModifiedDate 15",
+            "createdBy": 17,
+            "modifiedBy": 18,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 16,
+            "projectKey": "DummyProjectKey 16",
+            "parent": 17,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 16",
+            "modifiedDate": "DummyModifiedDate 16",
+            "createdBy": 18,
+            "modifiedBy": 19,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 17,
+            "projectKey": "DummyProjectKey 17",
+            "parent": 18,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 17",
+            "modifiedDate": "DummyModifiedDate 17",
+            "createdBy": 19,
+            "modifiedBy": 20,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 18,
+            "projectKey": "DummyProjectKey 18",
+            "parent": 19,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 18",
+            "modifiedDate": "DummyModifiedDate 18",
+            "createdBy": 20,
+            "modifiedBy": 21,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 19,
+            "projectKey": "DummyProjectKey 19",
+            "parent": 20,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 19",
+            "modifiedDate": "DummyModifiedDate 19",
+            "createdBy": 21,
+            "modifiedBy": 22,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 20,
+            "projectKey": "DummyProjectKey 20",
+            "parent": 21,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 20",
+            "modifiedDate": "DummyModifiedDate 20",
+            "createdBy": 22,
+            "modifiedBy": 23,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 21,
+            "projectKey": "DummyProjectKey 21",
+            "parent": 22,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 21",
+            "modifiedDate": "DummyModifiedDate 21",
+            "createdBy": 23,
+            "modifiedBy": 24,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 22,
+            "projectKey": "DummyProjectKey 22",
+            "parent": 23,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 22",
+            "modifiedDate": "DummyModifiedDate 22",
+            "createdBy": 24,
+            "modifiedBy": 25,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 23,
+            "projectKey": "DummyProjectKey 23",
+            "parent": 24,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 23",
+            "modifiedDate": "DummyModifiedDate 23",
+            "createdBy": 25,
+            "modifiedBy": 26,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 24,
+            "projectKey": "DummyProjectKey 24",
+            "parent": 25,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 24",
+            "modifiedDate": "DummyModifiedDate 24",
+            "createdBy": 26,
+            "modifiedBy": 27,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 25,
+            "projectKey": "DummyProjectKey 25",
+            "parent": 26,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 25",
+            "modifiedDate": "DummyModifiedDate 25",
+            "createdBy": 27,
+            "modifiedBy": 28,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 26,
+            "projectKey": "DummyProjectKey 26",
+            "parent": 27,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 26",
+            "modifiedDate": "DummyModifiedDate 26",
+            "createdBy": 28,
+            "modifiedBy": 29,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 27,
+            "projectKey": "DummyProjectKey 27",
+            "parent": 28,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 27",
+            "modifiedDate": "DummyModifiedDate 27",
+            "createdBy": 29,
+            "modifiedBy": 30,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 28,
+            "projectKey": "DummyProjectKey 28",
+            "parent": 29,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 28",
+            "modifiedDate": "DummyModifiedDate 28",
+            "createdBy": 30,
+            "modifiedBy": 31,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        },
+        {
+            "id": 29,
+            "projectKey": "DummyProjectKey 29",
+            "parent": 30,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 29",
+            "modifiedDate": "DummyModifiedDate 29",
+            "createdBy": 31,
+            "modifiedBy": 32,
+            "fields": {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": true,
+                "randomFieldInt": 1
+            }
+        }
+    ]
+}
