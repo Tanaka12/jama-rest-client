@@ -1,4 +1,3 @@
-
 from jama_rest_client.model.project import Project
 
 class ProjectJSONParser:
