@@ -6,7 +6,7 @@ from jama_rest_client.dal.parsers.json import ProjectJSONParser
 from jama_rest_client.model.project import Project
 
 from mocks.projects import ProjectsMocks, PROJECTS_API_MOCKS
-from test_utilities.builders import ProjectBuilder
+from test_utilities.builders.project import ProjectBuilder
 
 class TestProjectJSONParser():
 
