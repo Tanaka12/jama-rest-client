@@ -1,5 +1,3 @@
-from typing import List
-
 from jama_rest_client.model.project import Project
 
 class ProjectBuilder:
