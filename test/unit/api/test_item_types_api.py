@@ -1,0 +1,228 @@
+from typing import List
+
+import pytest
+from unittest.mock import Mock
+
+from jama_rest_client.api import ItemTypesAPI
+from jama_rest_client.model.item_type import ItemType
+from jama_rest_client.model.http import HTTPResponse
+
+from mocks.item_types import ItemTypesMocks, ITEM_TYPES_API_MOCKS
+from test_utilities.builders.http import HTTPResponseBuilder
+from test_utilities.builders.item_type import ItemTypeBuilder, ItemTypeFieldBuilder
+
+class TestItemTypesAPI():
+    __service: ItemTypesAPI
+    __http_client: Mock
+
+    def setup_method(self):
+        self.__http_client = Mock()
+        self.__service = ItemTypesAPI(self.__http_client)
+    
+    def test_validate_happy_path_get_item_types_calls_http_get_method_with_expected_resource(self) -> None:
+        self.__http_client.get.return_value = HTTPResponseBuilder().set_status_code(200) \
+                                                                   .set_body(ITEM_TYPES_API_MOCKS[ItemTypesMocks.CASE_NO_ELEMENTS])\
+                                                                   .get_element()
+        
+        self.__service.get_item_types()    
+        self.__http_client.get.assert_called_once_with('/rest/v1/itemtypes?startAt=0&maxResults=50')
+
+    @pytest.mark.parametrize(
+      "http_responses, expected_item_types",
+      [
+        (
+            [
+                HTTPResponseBuilder().set_status_code(200)
+                                     .set_body(ITEM_TYPES_API_MOCKS[ItemTypesMocks.CASE_NO_ELEMENTS])
+                                     .get_element()
+            ],
+            []
+        ),
+        (
+            [
+                HTTPResponseBuilder().set_status_code(200)
+                                     .set_body(ITEM_TYPES_API_MOCKS[ItemTypesMocks.CASE_1_ELEMENT])
+                                     .get_element(),
+                HTTPResponseBuilder().set_status_code(200)
+                                     .set_body(ITEM_TYPES_API_MOCKS[ItemTypesMocks.CASE_NO_ELEMENTS])
+                                     .get_element()
+            ],
+            [
+                ItemTypeBuilder().set_id(1)
+                                 .set_key('DummyTypeKey 1')
+                                 .set_display('DummyDisplay 1')
+                                 .set_display_plural('DummyDisplayPlural 1')
+                                 .set_description('DummyDescription 1')
+                                 .set_category('DummyCategory 1')
+                                 .set_fields(
+                                    [
+                                        ItemTypeFieldBuilder().set_id(1)
+                                                            .set_name('DummyName 1')
+                                                            .set_label('DummyLabel 1')
+                                                            .set_field_type('DummyFieldType 1')
+                                                            .set_read_only(True)
+                                                            .set_required(False)
+                                                            .set_trigger_suspect(False)
+                                                            .set_synchronize(False)
+                                                            .set_text_type('DummyTextType 1')
+                                                            .get_element(),
+                                        ItemTypeFieldBuilder().set_id(2)
+                                                            .set_name('DummyName 2')
+                                                            .set_label('DummyLabel 2')
+                                                            .set_field_type('DummyFieldType 2')
+                                                            .set_read_only(False)
+                                                            .set_required(True)
+                                                            .set_trigger_suspect(False)
+                                                            .set_synchronize(False)
+                                                            .set_text_type('DummyTextType 2')
+                                                            .get_element(),
+                                        ItemTypeFieldBuilder().set_id(3)
+                                                            .set_name('DummyName 3')
+                                                            .set_label('DummyLabel 3')
+                                                            .set_field_type('DummyFieldType 3')
+                                                            .set_read_only(False)
+                                                            .set_required(False)
+                                                            .set_trigger_suspect(True)
+                                                            .set_synchronize(False)
+                                                            .set_text_type('DummyTextType 3')
+                                                            .get_element(),
+                                        ItemTypeFieldBuilder().set_id(4)
+                                                            .set_name('DummyName 4')
+                                                            .set_label('DummyLabel 4')
+                                                            .set_field_type('DummyFieldType 4')
+                                                            .set_read_only(False)
+                                                            .set_required(False)
+                                                            .set_trigger_suspect(False)
+                                                            .set_synchronize(True)
+                                                            .set_text_type('DummyTextType 4')
+                                                            .get_element()
+                                    ]
+                                 ).get_element()
+            ] 
+        ),
+        (
+            [
+                HTTPResponseBuilder().set_status_code(200)
+                                     .set_body(ITEM_TYPES_API_MOCKS[ItemTypesMocks.CASE_30_ELEMENTS])
+                                     .get_element(),
+                HTTPResponseBuilder().set_status_code(200)
+                                     .set_body(ITEM_TYPES_API_MOCKS[ItemTypesMocks.CASE_NO_ELEMENTS])
+                                     .get_element()
+            ],
+            [
+                ItemTypeBuilder().set_id(index)
+                                 .set_key(f'DummyTypeKey {index}')
+                                 .set_display(f'DummyDisplay {index}')
+                                 .set_display_plural(f'DummyDisplayPlural {index}')
+                                 .set_description(f'DummyDescription {index}')
+                                 .set_category(f'DummyCategory {index}')
+                                                                 .set_fields(
+                                    [
+                                        ItemTypeFieldBuilder().set_id(1)
+                                                            .set_name('DummyName 1')
+                                                            .set_label('DummyLabel 1')
+                                                            .set_field_type('DummyFieldType 1')
+                                                            .set_read_only(False)
+                                                            .set_required(False)
+                                                            .set_trigger_suspect(False)
+                                                            .set_synchronize(True)
+                                                            .set_text_type('DummyTextType 1')
+                                                            .get_element()
+                                    ]
+                                 ).get_element() for index in range(1,30)
+            ]     
+        ),
+        (
+            [
+                HTTPResponseBuilder().set_status_code(200)
+                                     .set_body(ITEM_TYPES_API_MOCKS[ItemTypesMocks.CASE_30_ELEMENTS])
+                                     .get_element(),
+                HTTPResponseBuilder().set_status_code(200)
+                                     .set_body(ITEM_TYPES_API_MOCKS[ItemTypesMocks.CASE_1_ELEMENT])
+                                     .get_element(),
+                HTTPResponseBuilder().set_status_code(200)
+                                     .set_body(ITEM_TYPES_API_MOCKS[ItemTypesMocks.CASE_NO_ELEMENTS])
+                                     .get_element()
+            ],
+            [
+                ItemTypeBuilder().set_id(index)
+                                 .set_key(f'DummyTypeKey {index}')
+                                 .set_display(f'DummyDisplay {index}')
+                                 .set_display_plural(f'DummyDisplayPlural {index}')
+                                 .set_description(f'DummyDescription {index}')
+                                 .set_category(f'DummyCategory {index}')
+                                                                 .set_fields(
+                                    [
+                                        ItemTypeFieldBuilder().set_id(1)
+                                                            .set_name('DummyName 1')
+                                                            .set_label('DummyLabel 1')
+                                                            .set_field_type('DummyFieldType 1')
+                                                            .set_read_only(False)
+                                                            .set_required(False)
+                                                            .set_trigger_suspect(False)
+                                                            .set_synchronize(True)
+                                                            .set_text_type('DummyTextType 1')
+                                                            .get_element()
+                                    ]
+                                 ).get_element() for index in range(1,30)
+            ] +
+            [
+                ItemTypeBuilder().set_id(1)
+                                 .set_key('DummyTypeKey 1')
+                                 .set_display('DummyDisplay 1')
+                                 .set_display_plural('DummyDisplayPlural 1')
+                                 .set_description('DummyDescription 1')
+                                 .set_category('DummyCategory 1')
+                                 .set_fields(
+                                    [
+                                        ItemTypeFieldBuilder().set_id(1)
+                                                            .set_name('DummyName 1')
+                                                            .set_label('DummyLabel 1')
+                                                            .set_field_type('DummyFieldType 1')
+                                                            .set_read_only(True)
+                                                            .set_required(False)
+                                                            .set_trigger_suspect(False)
+                                                            .set_synchronize(False)
+                                                            .set_text_type('DummyTextType 1')
+                                                            .get_element(),
+                                        ItemTypeFieldBuilder().set_id(2)
+                                                            .set_name('DummyName 2')
+                                                            .set_label('DummyLabel 2')
+                                                            .set_field_type('DummyFieldType 2')
+                                                            .set_read_only(False)
+                                                            .set_required(True)
+                                                            .set_trigger_suspect(False)
+                                                            .set_synchronize(False)
+                                                            .set_text_type('DummyTextType 2')
+                                                            .get_element(),
+                                        ItemTypeFieldBuilder().set_id(3)
+                                                            .set_name('DummyName 3')
+                                                            .set_label('DummyLabel 3')
+                                                            .set_field_type('DummyFieldType 3')
+                                                            .set_read_only(False)
+                                                            .set_required(False)
+                                                            .set_trigger_suspect(True)
+                                                            .set_synchronize(False)
+                                                            .set_text_type('DummyTextType 3')
+                                                            .get_element(),
+                                        ItemTypeFieldBuilder().set_id(4)
+                                                            .set_name('DummyName 4')
+                                                            .set_label('DummyLabel 4')
+                                                            .set_field_type('DummyFieldType 4')
+                                                            .set_read_only(False)
+                                                            .set_required(False)
+                                                            .set_trigger_suspect(False)
+                                                            .set_synchronize(True)
+                                                            .set_text_type('DummyTextType 4')
+                                                            .get_element()
+                                    ]
+                                 ).get_element()
+            ]
+        )
+      ]
+    )
+    def test_validate_happy_path_get_item_types_returns_expected_value(self, http_responses: List[HTTPResponse], expected_item_types: List[ItemType]) -> None:
+        self.__http_client.get.side_effect = http_responses
+        
+        item_types: List[ItemType] = self.__service.get_item_types()  
+        assert expected_item_types == item_types 
