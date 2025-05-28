@@ -1,0 +1,835 @@
+{
+    "meta": {
+        "status": "OK",
+        "timestamp": "2025-05-22T15:46:31.191+0000",
+        "pageInfo": {
+            "startIndex": 0,
+            "resultCount": 0,
+            "totalResults": 0
+        }
+    },
+    "links": {
+        "data.fields.pickList": {
+            "type": "picklists",
+            "href": ""
+        },
+        "data.fields.itemType": {
+            "type": "itemtypes",
+            "href": ""
+        }
+    },
+    "data": [
+        {
+            "id": 1,
+            "documentKey": "DummyDocumentKey 1",
+            "globalId": "DummyGlobalId 1",
+            "itemType": 2,
+            "project": 3,
+            "createdDate": "DummyCreatedDate 1",
+            "modifiedDate": "DummyModifiedDate 1",
+            "lastActivityDate": "DummyLastActivityDate 1",
+            "createdBy": 4,
+            "modifiedBy": 5,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 2,
+            "documentKey": "DummyDocumentKey 2",
+            "globalId": "DummyGlobalId 2",
+            "itemType": 3,
+            "project": 4,
+            "createdDate": "DummyCreatedDate 2",
+            "modifiedDate": "DummyModifiedDate 2",
+            "lastActivityDate": "DummyLastActivityDate 2",
+            "createdBy": 5,
+            "modifiedBy": 6,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 3,
+            "documentKey": "DummyDocumentKey 3",
+            "globalId": "DummyGlobalId 3",
+            "itemType": 4,
+            "project": 5,
+            "createdDate": "DummyCreatedDate 3",
+            "modifiedDate": "DummyModifiedDate 3",
+            "lastActivityDate": "DummyLastActivityDate 3",
+            "createdBy": 6,
+            "modifiedBy": 7,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 4,
+            "documentKey": "DummyDocumentKey 4",
+            "globalId": "DummyGlobalId 4",
+            "itemType": 5,
+            "project": 6,
+            "createdDate": "DummyCreatedDate 4",
+            "modifiedDate": "DummyModifiedDate 4",
+            "lastActivityDate": "DummyLastActivityDate 4",
+            "createdBy": 7,
+            "modifiedBy": 8,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 5,
+            "documentKey": "DummyDocumentKey 5",
+            "globalId": "DummyGlobalId 5",
+            "itemType": 6,
+            "project": 7,
+            "createdDate": "DummyCreatedDate 5",
+            "modifiedDate": "DummyModifiedDate 5",
+            "lastActivityDate": "DummyLastActivityDate 5",
+            "createdBy": 8,
+            "modifiedBy": 9,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 6,
+            "documentKey": "DummyDocumentKey 6",
+            "globalId": "DummyGlobalId 6",
+            "itemType": 7,
+            "project": 8,
+            "createdDate": "DummyCreatedDate 6",
+            "modifiedDate": "DummyModifiedDate 6",
+            "lastActivityDate": "DummyLastActivityDate 6",
+            "createdBy": 9,
+            "modifiedBy": 10,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 7,
+            "documentKey": "DummyDocumentKey 7",
+            "globalId": "DummyGlobalId 7",
+            "itemType": 8,
+            "project": 9,
+            "createdDate": "DummyCreatedDate 7",
+            "modifiedDate": "DummyModifiedDate 7",
+            "lastActivityDate": "DummyLastActivityDate 7",
+            "createdBy": 10,
+            "modifiedBy": 11,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 8,
+            "documentKey": "DummyDocumentKey 8",
+            "globalId": "DummyGlobalId 8",
+            "itemType": 9,
+            "project": 10,
+            "createdDate": "DummyCreatedDate 8",
+            "modifiedDate": "DummyModifiedDate 8",
+            "lastActivityDate": "DummyLastActivityDate 8",
+            "createdBy": 11,
+            "modifiedBy": 12,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 9,
+            "documentKey": "DummyDocumentKey 9",
+            "globalId": "DummyGlobalId 9",
+            "itemType": 10,
+            "project": 11,
+            "createdDate": "DummyCreatedDate 9",
+            "modifiedDate": "DummyModifiedDate 9",
+            "lastActivityDate": "DummyLastActivityDate 9",
+            "createdBy": 12,
+            "modifiedBy": 13,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 10,
+            "documentKey": "DummyDocumentKey 10",
+            "globalId": "DummyGlobalId 10",
+            "itemType": 11,
+            "project": 12,
+            "createdDate": "DummyCreatedDate 10",
+            "modifiedDate": "DummyModifiedDate 10",
+            "lastActivityDate": "DummyLastActivityDate 10",
+            "createdBy": 13,
+            "modifiedBy": 14,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 11,
+            "documentKey": "DummyDocumentKey 11",
+            "globalId": "DummyGlobalId 11",
+            "itemType": 12,
+            "project": 13,
+            "createdDate": "DummyCreatedDate 11",
+            "modifiedDate": "DummyModifiedDate 11",
+            "lastActivityDate": "DummyLastActivityDate 11",
+            "createdBy": 14,
+            "modifiedBy": 15,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 12,
+            "documentKey": "DummyDocumentKey 12",
+            "globalId": "DummyGlobalId 12",
+            "itemType": 13,
+            "project": 14,
+            "createdDate": "DummyCreatedDate 12",
+            "modifiedDate": "DummyModifiedDate 12",
+            "lastActivityDate": "DummyLastActivityDate 12",
+            "createdBy": 15,
+            "modifiedBy": 16,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 13,
+            "documentKey": "DummyDocumentKey 13",
+            "globalId": "DummyGlobalId 13",
+            "itemType": 14,
+            "project": 15,
+            "createdDate": "DummyCreatedDate 13",
+            "modifiedDate": "DummyModifiedDate 13",
+            "lastActivityDate": "DummyLastActivityDate 13",
+            "createdBy": 16,
+            "modifiedBy": 17,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 14,
+            "documentKey": "DummyDocumentKey 14",
+            "globalId": "DummyGlobalId 14",
+            "itemType": 15,
+            "project": 16,
+            "createdDate": "DummyCreatedDate 14",
+            "modifiedDate": "DummyModifiedDate 14",
+            "lastActivityDate": "DummyLastActivityDate 14",
+            "createdBy": 17,
+            "modifiedBy": 18,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 15,
+            "documentKey": "DummyDocumentKey 15",
+            "globalId": "DummyGlobalId 15",
+            "itemType": 16,
+            "project": 17,
+            "createdDate": "DummyCreatedDate 15",
+            "modifiedDate": "DummyModifiedDate 15",
+            "lastActivityDate": "DummyLastActivityDate 15",
+            "createdBy": 18,
+            "modifiedBy": 19,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 16,
+            "documentKey": "DummyDocumentKey 16",
+            "globalId": "DummyGlobalId 16",
+            "itemType": 17,
+            "project": 18,
+            "createdDate": "DummyCreatedDate 16",
+            "modifiedDate": "DummyModifiedDate 16",
+            "lastActivityDate": "DummyLastActivityDate 16",
+            "createdBy": 19,
+            "modifiedBy": 20,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 17,
+            "documentKey": "DummyDocumentKey 17",
+            "globalId": "DummyGlobalId 17",
+            "itemType": 18,
+            "project": 19,
+            "createdDate": "DummyCreatedDate 17",
+            "modifiedDate": "DummyModifiedDate 17",
+            "lastActivityDate": "DummyLastActivityDate 17",
+            "createdBy": 20,
+            "modifiedBy": 21,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 18,
+            "documentKey": "DummyDocumentKey 18",
+            "globalId": "DummyGlobalId 18",
+            "itemType": 19,
+            "project": 20,
+            "createdDate": "DummyCreatedDate 18",
+            "modifiedDate": "DummyModifiedDate 18",
+            "lastActivityDate": "DummyLastActivityDate 18",
+            "createdBy": 21,
+            "modifiedBy": 22,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 19,
+            "documentKey": "DummyDocumentKey 19",
+            "globalId": "DummyGlobalId 19",
+            "itemType": 20,
+            "project": 21,
+            "createdDate": "DummyCreatedDate 19",
+            "modifiedDate": "DummyModifiedDate 19",
+            "lastActivityDate": "DummyLastActivityDate 19",
+            "createdBy": 22,
+            "modifiedBy": 23,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 20,
+            "documentKey": "DummyDocumentKey 20",
+            "globalId": "DummyGlobalId 20",
+            "itemType": 21,
+            "project": 22,
+            "createdDate": "DummyCreatedDate 20",
+            "modifiedDate": "DummyModifiedDate 20",
+            "lastActivityDate": "DummyLastActivityDate 20",
+            "createdBy": 23,
+            "modifiedBy": 24,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 21,
+            "documentKey": "DummyDocumentKey 21",
+            "globalId": "DummyGlobalId 21",
+            "itemType": 22,
+            "project": 23,
+            "createdDate": "DummyCreatedDate 21",
+            "modifiedDate": "DummyModifiedDate 21",
+            "lastActivityDate": "DummyLastActivityDate 21",
+            "createdBy": 24,
+            "modifiedBy": 25,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 22,
+            "documentKey": "DummyDocumentKey 22",
+            "globalId": "DummyGlobalId 22",
+            "itemType": 23,
+            "project": 24,
+            "createdDate": "DummyCreatedDate 22",
+            "modifiedDate": "DummyModifiedDate 22",
+            "lastActivityDate": "DummyLastActivityDate 22",
+            "createdBy": 25,
+            "modifiedBy": 26,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 23,
+            "documentKey": "DummyDocumentKey 23",
+            "globalId": "DummyGlobalId 23",
+            "itemType": 24,
+            "project": 25,
+            "createdDate": "DummyCreatedDate 23",
+            "modifiedDate": "DummyModifiedDate 23",
+            "lastActivityDate": "DummyLastActivityDate 23",
+            "createdBy": 26,
+            "modifiedBy": 27,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 24,
+            "documentKey": "DummyDocumentKey 24",
+            "globalId": "DummyGlobalId 24",
+            "itemType": 25,
+            "project": 26,
+            "createdDate": "DummyCreatedDate 24",
+            "modifiedDate": "DummyModifiedDate 24",
+            "lastActivityDate": "DummyLastActivityDate 24",
+            "createdBy": 27,
+            "modifiedBy": 28,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 25,
+            "documentKey": "DummyDocumentKey 25",
+            "globalId": "DummyGlobalId 25",
+            "itemType": 26,
+            "project": 27,
+            "createdDate": "DummyCreatedDate 25",
+            "modifiedDate": "DummyModifiedDate 25",
+            "lastActivityDate": "DummyLastActivityDate 25",
+            "createdBy": 28,
+            "modifiedBy": 29,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 26,
+            "documentKey": "DummyDocumentKey 26",
+            "globalId": "DummyGlobalId 26",
+            "itemType": 27,
+            "project": 28,
+            "createdDate": "DummyCreatedDate 26",
+            "modifiedDate": "DummyModifiedDate 26",
+            "lastActivityDate": "DummyLastActivityDate 26",
+            "createdBy": 29,
+            "modifiedBy": 30,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 27,
+            "documentKey": "DummyDocumentKey 27",
+            "globalId": "DummyGlobalId 27",
+            "itemType": 28,
+            "project": 29,
+            "createdDate": "DummyCreatedDate 27",
+            "modifiedDate": "DummyModifiedDate 27",
+            "lastActivityDate": "DummyLastActivityDate 27",
+            "createdBy": 30,
+            "modifiedBy": 31,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 28,
+            "documentKey": "DummyDocumentKey 28",
+            "globalId": "DummyGlobalId 28",
+            "itemType": 29,
+            "project": 30,
+            "createdDate": "DummyCreatedDate 28",
+            "modifiedDate": "DummyModifiedDate 28",
+            "lastActivityDate": "DummyLastActivityDate 28",
+            "createdBy": 31,
+            "modifiedBy": 32,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        },
+        {
+            "id": 29,
+            "documentKey": "DummyDocumentKey 29",
+            "globalId": "DummyGlobalId 29",
+            "itemType": 30,
+            "project": 31,
+            "createdDate": "DummyCreatedDate 29",
+            "modifiedDate": "DummyModifiedDate 29",
+            "lastActivityDate": "DummyLastActivityDate 29",
+            "createdBy": 32,
+            "modifiedBy": 33,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testcycles"
+        }
+    ]
+}
