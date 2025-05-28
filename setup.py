@@ -30,6 +30,7 @@ setup(name='jama_rest_client',
                 'jama_rest_client.model.project',
                 'jama_rest_client.model.test_cycle',
                 'jama_rest_client.model.test_plan',
+                'jama_rest_client.model.test_run',
                 'jama_rest_client.utils',
                 'jama_rest_client.utils.authorization'],
       classifiers=[
