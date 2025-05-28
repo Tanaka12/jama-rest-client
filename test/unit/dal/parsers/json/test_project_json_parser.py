@@ -47,6 +47,6 @@ class TestProjectJSONParser():
         )
       ]
     )
-    def test_validate_happy_path_get_item_type_parser_returns_expected_value(self, project_dict: dict, expected_project: Project) -> None:
+    def test_validate_happy_path_parse_project_returns_expected_value(self, project_dict: dict, expected_project: Project) -> None:
         project = ProjectJSONParser.parse(project_dict)
         assert expected_project == project
