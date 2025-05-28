@@ -1,5 +1,3 @@
-from typing import List
-
 import pytest
 
 from jama_rest_client.dal.parsers.json import ProjectJSONParser
