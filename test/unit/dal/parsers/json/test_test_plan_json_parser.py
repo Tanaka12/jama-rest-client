@@ -57,6 +57,6 @@ class TestTestPlanJSONParser():
         )
       ]
     )
-    def test_validate_happy_path_parse_project_returns_expected_value(self, test_plan_dict: dict, expected_test_plan: TypeTestPlan) -> None:
+    def test_validate_happy_path_parse_test_plan_returns_expected_value(self, test_plan_dict: dict, expected_test_plan: TypeTestPlan) -> None:
         test_plan = TestPlanJSONParser.parse(test_plan_dict)
         assert expected_test_plan == test_plan

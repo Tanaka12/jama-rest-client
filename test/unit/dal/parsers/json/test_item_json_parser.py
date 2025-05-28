@@ -77,6 +77,6 @@ class TestItemJSONParser():
         )
       ]
     )
-    def test_validate_happy_path_parse_item_type_returns_expected_value(self, item_dict: dict, expected_item: Item) -> None:
+    def test_validate_happy_path_parse_item_returns_expected_value(self, item_dict: dict, expected_item: Item) -> None:
         item = ItemJSONParser.parse(item_dict)
         assert expected_item == item
