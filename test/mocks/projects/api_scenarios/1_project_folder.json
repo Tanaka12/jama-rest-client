@@ -1,0 +1,60 @@
+{
+    "meta": {
+        "status": "OK",
+        "timestamp": "2025-05-26T16:11:23.071+0000",
+        "pageInfo": {
+            "startIndex": 0,
+            "resultCount": 0,
+            "totalResults": 0
+        }
+    },
+    "links": {
+        "data.createdBy": {
+            "type": "users",
+            "href": "createdBy"
+        },
+        "data.fields.user1": {
+            "type": "users",
+            "href": "user1"
+        },
+        "data.modifiedBy": {
+            "type": "users",
+            "href": "modifiedBy"
+        },
+        "data.fields.projectManager": {
+            "type": "users",
+            "href": "projectManager"
+        },
+        "data.fields.projectGroup": {
+            "type": "picklistoptions",
+            "href": "projectGroup"
+        },
+        "data.parent": {
+            "type": "projects",
+            "href": "parent"
+        },
+        "data.fields.statusId": {
+            "type": "picklistoptions",
+            "href": "statusId"
+        }
+    },
+    "data": [
+        {
+            "id": 1,
+            "projectKey": "DummyProjectKey 1",
+            "parent": 2,
+            "isFolder": true,
+            "createdDate": "DummyCreatedDate 1",
+            "modifiedDate": "DummyModifiedDate 1",
+            "createdBy": 3,
+            "modifiedBy": 4,
+            "fields": 
+            {
+                "randomFieldStr": "randomFieldStr",
+                "randomFieldBool": false,
+                "randomFieldInt": 1
+            },
+            "type": "itemtypes"
+        }
+    ]
+}
