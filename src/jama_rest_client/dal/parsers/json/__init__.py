@@ -3,3 +3,4 @@ from .item_type_json_parser import ItemTypeJSONParser
 from .project_json_parser import ProjectJSONParser
 from .test_cycle_parser import TestCycleJSONParser
 from .test_plan_json_parser import TestPlanJSONParser
+from .test_run_json_parser import TestRunJSONParser
