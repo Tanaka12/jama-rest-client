@@ -1,0 +1,75 @@
+{
+    "meta": {
+        "status": "OK",
+        "timestamp": "2025-05-28T09:45:25.400+0000",
+        "pageInfo": {
+            "startIndex": 0,
+            "resultCount": 1,
+            "totalResults": 1
+        }
+    },
+    "links": {
+        "data.createdBy": {
+            "type": "users",
+            "href": ""
+        },
+        "data.modifiedBy": {
+            "type": "users",
+            "href": ""
+        },
+        "data.location.parent.item": {
+            "type": "items",
+            "href": ""
+        },
+        "data.project": {
+            "type": "projects",
+            "href": ""
+        },
+        "data.itemType": {
+            "type": "itemtypes",
+            "href": ""
+        }
+    },
+    "data": [
+        {
+            "id": 1,
+            "documentKey": "DummyDocumentKey 1",
+            "globalId": "DummyGlobalId 1",
+            "itemType": 2,
+            "project": 3,
+            "createdDate": "DummyCreatedDate 1",
+            "modifiedDate": "DummyModifiedDate 1",
+            "lastActivityDate": "DummyLastActivityDate 1",
+            "createdBy": 4,
+            "modifiedBy": 5,
+            "fields": {
+                "fieldStr": "DummyField",
+                "fieldInt": 0,
+                "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "location": {
+                "sortOrder": 0,
+                "globalSortOrder": 1,
+                "sequence": "DummySequence 1",
+                "parent": {
+                    "item": 2
+                }
+            },
+            "lock": {
+                "locked": false,
+                "lastLockedDate": "DummyLastLockedDate 1"
+            },
+            "type": "items"
+        }
+    ]
+}

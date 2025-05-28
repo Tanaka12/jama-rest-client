@@ -1,0 +1,34 @@
+{
+    "meta": {
+        "status": "OK",
+        "timestamp": "2025-05-28T09:45:25.400+0000",
+        "pageInfo": {
+            "startIndex": 0,
+            "resultCount": 0,
+            "totalResults": 0
+        }
+    },
+    "links": {
+        "data.createdBy": {
+            "type": "users",
+            "href": ""
+        },
+        "data.modifiedBy": {
+            "type": "users",
+            "href": ""
+        },
+        "data.location.parent.item": {
+            "type": "items",
+            "href": ""
+        },
+        "data.project": {
+            "type": "projects",
+            "href": ""
+        },
+        "data.itemType": {
+            "type": "itemtypes",
+            "href": ""
+        }
+    },
+    "data": []
+}
