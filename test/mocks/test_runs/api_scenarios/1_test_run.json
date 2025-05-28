@@ -1,0 +1,66 @@
+{
+    "meta": {
+        "status": "OK",
+        "timestamp": "2025-05-28T10:56:41.871+0000",
+        "pageInfo": {
+            "startIndex": 0,
+            "resultCount": 0,
+            "totalResults": 0
+        }
+    },
+    "links": {
+        "data.createdBy": {
+            "type": "users",
+            "href": ""
+        },
+        "data.modifiedBy": {
+            "type": "users",
+            "href": ""
+        },
+        "data.fields.project": {
+            "type": "projects",
+            "href": ""
+        },
+        "data.project": {
+            "type": "projects",
+            "href": ""
+        },
+        "data.itemType": {
+            "type": "itemtypes",
+            "href": ""
+        }
+    },
+    "data": [
+        {
+            "id": 1,
+            "documentKey": "DummyDocumentKey 1",
+            "globalId": "DummyGlobalId 1",
+            "itemType": 2,
+            "project": 3,
+            "createdDate": "DummyCreatedDate 1",
+            "modifiedDate": "DummyModifiedDate 1",
+            "lastActivityDate": "DummyLastActivityDate 1",
+            "createdBy": 4,
+            "modifiedBy": 5,
+            "testCaseVersionNumber": 6,
+            "testCaseCurrentVersionNumber": 7,
+            "sortOrderFromTestGroup": 8,
+            "fields": {
+			   "fieldStr": "DummyField",
+               "fieldInt": 0,
+               "fieldBool": true
+            },
+            "resources": {
+                "self": {
+                    "allowed": [
+                        "GET",
+                        "PUT",
+                        "PATCH",
+                        "DELETE"
+                    ]
+                }
+            },
+            "type": "testruns"
+        }
+    ]
+}

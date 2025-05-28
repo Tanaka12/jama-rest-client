@@ -1,6 +1,6 @@
 import pytest
 
-from jama_rest_client.dal.parsers.json import TestPlanJSONParser
+from jama_rest_client.dal.parsers.json import TestPlanJSONParser as TypeTestPlanJSONParser
 from jama_rest_client.model.test_plan import TestPlan as TypeTestPlan
 
 from mocks.test_plans import TestPlansMocks as TypeTestPlansMocks, TEST_PLANS_API_MOCKS
@@ -58,5 +58,5 @@ class TestTestPlanJSONParser():
       ]
     )
     def test_validate_happy_path_parse_test_plan_returns_expected_value(self, test_plan_dict: dict, expected_test_plan: TypeTestPlan) -> None:
-        test_plan = TestPlanJSONParser.parse(test_plan_dict)
+        test_plan = TypeTestPlanJSONParser.parse(test_plan_dict)
         assert expected_test_plan == test_plan
