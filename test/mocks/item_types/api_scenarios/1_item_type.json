@@ -1,0 +1,80 @@
+{
+    "meta": {
+        "status": "OK",
+        "timestamp": "2025-05-22T15:46:31.191+0000",
+        "pageInfo": {
+            "startIndex": 0,
+            "resultCount": 1,
+            "totalResults": 1
+        }
+    },
+    "links": {
+        "data.fields.pickList": {
+            "type": "picklists",
+            "href": ""
+        },
+        "data.fields.itemType": {
+            "type": "itemtypes",
+            "href": ""
+        }
+    },
+    "data": [
+        {
+            "id": 1,
+            "typeKey": "DummyTypeKey 1",
+            "display": "DummyDisplay 1",
+            "displayPlural": "DummyDisplayPlural 1",
+            "description": "DummyDescription 1",
+            "image": "",
+            "category": "DummyCategory 1",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": true,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": false,
+                    "textType": "DummyTextType 1"
+                },
+                {
+                    "id": 2,
+                    "name": "DummyName 2",
+                    "label": "DummyLabel 2",
+                    "fieldType": "DummyFieldType 2",
+                    "readOnly": false,
+                    "required": true,
+                    "triggerSuspect": false,
+                    "synchronize": false,
+                    "textType": "DummyTextType 2"
+                },
+                {
+                    "id": 3,
+                    "name": "DummyName 3",
+                    "label": "DummyLabel 3",
+                    "fieldType": "DummyFieldType 3",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": true,
+                    "synchronize": false,
+                    "textType": "DummyTextType 3"
+                },
+                {
+                    "id": 4,
+                    "name": "DummyName 4",
+                    "label": "DummyLabel 4",
+                    "fieldType": "DummyFieldType 4",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 4"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        }
+    ]
+}

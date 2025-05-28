@@ -8,7 +8,8 @@ from jama_rest_client.model.project import Project
 from jama_rest_client.model.http import HTTPResponse
 
 from mocks.projects import ProjectsMocks, PROJECTS_API_MOCKS
-from test_utilities.builders import HTTPResponseBuilder, ProjectBuilder
+from test_utilities.builders.http import HTTPResponseBuilder
+from test_utilities.builders.project import ProjectBuilder
 
 class TestProjectsAPI():
     __service: ProjectsAPI

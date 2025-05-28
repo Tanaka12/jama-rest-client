@@ -8,7 +8,7 @@ from jama_rest_client.api.base_api import (
     APIUnknownException
 )
 
-from test_utilities.builders import HTTPResponseBuilder
+from test_utilities.builders.http import HTTPResponseBuilder
 
 class TestProjectsAPI():
     __service: BaseAPI

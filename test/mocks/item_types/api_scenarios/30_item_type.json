@@ -1,0 +1,719 @@
+{
+    "meta": {
+        "status": "OK",
+        "timestamp": "2025-05-22T15:46:31.191+0000",
+        "pageInfo": {
+            "startIndex": 0,
+            "resultCount": 0,
+            "totalResults": 0
+        }
+    },
+    "links": {
+        "data.fields.pickList": {
+            "type": "picklists",
+            "href": ""
+        },
+        "data.fields.itemType": {
+            "type": "itemtypes",
+            "href": ""
+        }
+    },
+    "data": [
+        {
+            "id": 1,
+            "typeKey": "DummyTypeKey 1",
+            "display": "DummyDisplay 1",
+            "displayPlural": "DummyDisplayPlural 1",
+            "description": "DummyDescription 1",
+            "image": "",
+            "category": "DummyCategory 1",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 2,
+            "typeKey": "DummyTypeKey 2",
+            "display": "DummyDisplay 2",
+            "displayPlural": "DummyDisplayPlural 2",
+            "description": "DummyDescription 2",
+            "image": "",
+            "category": "DummyCategory 2",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 3,
+            "typeKey": "DummyTypeKey 3",
+            "display": "DummyDisplay 3",
+            "displayPlural": "DummyDisplayPlural 3",
+            "description": "DummyDescription 3",
+            "image": "",
+            "category": "DummyCategory 3",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 4,
+            "typeKey": "DummyTypeKey 4",
+            "display": "DummyDisplay 4",
+            "displayPlural": "DummyDisplayPlural 4",
+            "description": "DummyDescription 4",
+            "image": "",
+            "category": "DummyCategory 4",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 5,
+            "typeKey": "DummyTypeKey 5",
+            "display": "DummyDisplay 5",
+            "displayPlural": "DummyDisplayPlural 5",
+            "description": "DummyDescription 5",
+            "image": "",
+            "category": "DummyCategory 5",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 6,
+            "typeKey": "DummyTypeKey 6",
+            "display": "DummyDisplay 6",
+            "displayPlural": "DummyDisplayPlural 6",
+            "description": "DummyDescription 6",
+            "image": "",
+            "category": "DummyCategory 6",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 7,
+            "typeKey": "DummyTypeKey 7",
+            "display": "DummyDisplay 7",
+            "displayPlural": "DummyDisplayPlural 7",
+            "description": "DummyDescription 7",
+            "image": "",
+            "category": "DummyCategory 7",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 8,
+            "typeKey": "DummyTypeKey 8",
+            "display": "DummyDisplay 8",
+            "displayPlural": "DummyDisplayPlural 8",
+            "description": "DummyDescription 8",
+            "image": "",
+            "category": "DummyCategory 8",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 9,
+            "typeKey": "DummyTypeKey 9",
+            "display": "DummyDisplay 9",
+            "displayPlural": "DummyDisplayPlural 9",
+            "description": "DummyDescription 9",
+            "image": "",
+            "category": "DummyCategory 9",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 10,
+            "typeKey": "DummyTypeKey 10",
+            "display": "DummyDisplay 10",
+            "displayPlural": "DummyDisplayPlural 10",
+            "description": "DummyDescription 10",
+            "image": "",
+            "category": "DummyCategory 10",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 11,
+            "typeKey": "DummyTypeKey 11",
+            "display": "DummyDisplay 11",
+            "displayPlural": "DummyDisplayPlural 11",
+            "description": "DummyDescription 11",
+            "image": "",
+            "category": "DummyCategory 11",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 12,
+            "typeKey": "DummyTypeKey 12",
+            "display": "DummyDisplay 12",
+            "displayPlural": "DummyDisplayPlural 12",
+            "description": "DummyDescription 12",
+            "image": "",
+            "category": "DummyCategory 12",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 13,
+            "typeKey": "DummyTypeKey 13",
+            "display": "DummyDisplay 13",
+            "displayPlural": "DummyDisplayPlural 13",
+            "description": "DummyDescription 13",
+            "image": "",
+            "category": "DummyCategory 13",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 14,
+            "typeKey": "DummyTypeKey 14",
+            "display": "DummyDisplay 14",
+            "displayPlural": "DummyDisplayPlural 14",
+            "description": "DummyDescription 14",
+            "image": "",
+            "category": "DummyCategory 14",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 15,
+            "typeKey": "DummyTypeKey 15",
+            "display": "DummyDisplay 15",
+            "displayPlural": "DummyDisplayPlural 15",
+            "description": "DummyDescription 15",
+            "image": "",
+            "category": "DummyCategory 15",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 16,
+            "typeKey": "DummyTypeKey 16",
+            "display": "DummyDisplay 16",
+            "displayPlural": "DummyDisplayPlural 16",
+            "description": "DummyDescription 16",
+            "image": "",
+            "category": "DummyCategory 16",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 17,
+            "typeKey": "DummyTypeKey 17",
+            "display": "DummyDisplay 17",
+            "displayPlural": "DummyDisplayPlural 17",
+            "description": "DummyDescription 17",
+            "image": "",
+            "category": "DummyCategory 17",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 18,
+            "typeKey": "DummyTypeKey 18",
+            "display": "DummyDisplay 18",
+            "displayPlural": "DummyDisplayPlural 18",
+            "description": "DummyDescription 18",
+            "image": "",
+            "category": "DummyCategory 18",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 19,
+            "typeKey": "DummyTypeKey 19",
+            "display": "DummyDisplay 19",
+            "displayPlural": "DummyDisplayPlural 19",
+            "description": "DummyDescription 19",
+            "image": "",
+            "category": "DummyCategory 19",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 20,
+            "typeKey": "DummyTypeKey 20",
+            "display": "DummyDisplay 20",
+            "displayPlural": "DummyDisplayPlural 20",
+            "description": "DummyDescription 20",
+            "image": "",
+            "category": "DummyCategory 20",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 21,
+            "typeKey": "DummyTypeKey 21",
+            "display": "DummyDisplay 21",
+            "displayPlural": "DummyDisplayPlural 21",
+            "description": "DummyDescription 21",
+            "image": "",
+            "category": "DummyCategory 21",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 22,
+            "typeKey": "DummyTypeKey 22",
+            "display": "DummyDisplay 22",
+            "displayPlural": "DummyDisplayPlural 22",
+            "description": "DummyDescription 22",
+            "image": "",
+            "category": "DummyCategory 22",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 23,
+            "typeKey": "DummyTypeKey 23",
+            "display": "DummyDisplay 23",
+            "displayPlural": "DummyDisplayPlural 23",
+            "description": "DummyDescription 23",
+            "image": "",
+            "category": "DummyCategory 23",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 24,
+            "typeKey": "DummyTypeKey 24",
+            "display": "DummyDisplay 24",
+            "displayPlural": "DummyDisplayPlural 24",
+            "description": "DummyDescription 24",
+            "image": "",
+            "category": "DummyCategory 24",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 25,
+            "typeKey": "DummyTypeKey 25",
+            "display": "DummyDisplay 25",
+            "displayPlural": "DummyDisplayPlural 25",
+            "description": "DummyDescription 25",
+            "image": "",
+            "category": "DummyCategory 25",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 26,
+            "typeKey": "DummyTypeKey 26",
+            "display": "DummyDisplay 26",
+            "displayPlural": "DummyDisplayPlural 26",
+            "description": "DummyDescription 26",
+            "image": "",
+            "category": "DummyCategory 26",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 27,
+            "typeKey": "DummyTypeKey 27",
+            "display": "DummyDisplay 27",
+            "displayPlural": "DummyDisplayPlural 27",
+            "description": "DummyDescription 27",
+            "image": "",
+            "category": "DummyCategory 27",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 28,
+            "typeKey": "DummyTypeKey 28",
+            "display": "DummyDisplay 28",
+            "displayPlural": "DummyDisplayPlural 28",
+            "description": "DummyDescription 28",
+            "image": "",
+            "category": "DummyCategory 28",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        },
+        {
+            "id": 29,
+            "typeKey": "DummyTypeKey 29",
+            "display": "DummyDisplay 29",
+            "displayPlural": "DummyDisplayPlural 29",
+            "description": "DummyDescription 29",
+            "image": "",
+            "category": "DummyCategory 29",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "DummyName 1",
+                    "label": "DummyLabel 1",
+                    "fieldType": "DummyFieldType 1",
+                    "readOnly": false,
+                    "required": false,
+                    "triggerSuspect": false,
+                    "synchronize": true,
+                    "textType": "DummyTextType 1"
+                }
+            ],
+            "system": true,
+            "type": "itemtypes"
+        }
+    ]
+}

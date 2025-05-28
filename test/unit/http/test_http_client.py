@@ -6,7 +6,7 @@ from jama_rest_client import Context
 from jama_rest_client.http import HTTPClient, HTTPConnectionException
 
 from mocks.projects import ProjectsMocks, PROJECTS_API_MOCKS
-from test_utilities.builders import HTTPRequestBuilder, HTTPResponseBuilder
+from test_utilities.builders.http import HTTPRequestBuilder, HTTPResponseBuilder
 
 class TestHTTPClient():
     __service: HTTPClient
