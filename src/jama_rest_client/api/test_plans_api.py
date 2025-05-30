@@ -33,7 +33,7 @@ class TestPlansAPI(BaseAPI):
 
         start_index: int = 0
         while True:
-            test_cycles_batch = self.__parse_test_cycles_dict(self._get(f'{self.__resourceName}/{test_plan_id}/cycles?startAt={start_index}&maxResults=50').body['data'])
+            test_cycles_batch = self.__parse_test_cycles_dict(self._get(f'{self.__resourceName}/{test_plan_id}/testcycles?startAt={start_index}&maxResults=50').body['data'])
             
             if len(test_cycles_batch) == 0:
                 break

@@ -178,7 +178,7 @@ class TestProjectsAPI():
                                                                    .get_element()
         
         self.__service.get_test_plan_cycles(dummy_test_plan_id)    
-        self.__http_client.get.assert_called_once_with(f'/rest/v1/testplans/{dummy_test_plan_id}/cycles?startAt=0&maxResults=50')
+        self.__http_client.get.assert_called_once_with(f'/rest/v1/testplans/{dummy_test_plan_id}/testcycles?startAt=0&maxResults=50')
 
     @pytest.mark.parametrize(
       "http_responses, expected_test_cycles",
