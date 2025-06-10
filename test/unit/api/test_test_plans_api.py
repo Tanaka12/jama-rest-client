@@ -6,14 +6,14 @@ from unittest.mock import Mock
 
 from jama_rest_client.api import TestPlansAPI as TypeTestPlansAPI
 from jama_rest_client.model.test_cycle import TestCycle as TypeTestCycle
-from jama_rest_client.model.test_plan import TestPlan as TypeTestPlan
+from jama_rest_client.model.test_plan import TestPlan as TypeTestPlan, TestGroup as TypeTestGroup
 from jama_rest_client.model.http import HTTPResponse
 
 from mocks.test_cycles import TestCyclesMocks as TypeTestCyclesMocks, TEST_CYCLES_API_MOCKS
 from mocks.test_plans import TestPlansMocks as TypeTestPlansMocks, TEST_PLANS_API_MOCKS
 from test_utilities.builders.http import HTTPResponseBuilder
 from test_utilities.builders.test_cycle import TestCycleBuilder as TypeTestCycleBuilder
-from test_utilities.builders.test_plan import TestPlanBuilder as TypeTestPlanBuilder
+from test_utilities.builders.test_plan import TestPlanBuilder as TypeTestPlanBuilder, TestGroupBuilder as TypeTestGroupBuilder
 
 class TestProjectsAPI():
     __service: TypeTestPlansAPI
@@ -308,4 +308,91 @@ class TestProjectsAPI():
         self.__http_client.get.side_effect = http_responses
         
         test_cycles: List[TypeTestCycle] = self.__service.get_test_plan_cycles(dummy_test_plan_id)  
-        assert expected_test_cycles == test_cycles 
+        assert expected_test_cycles == test_cycles
+
+    # get_test_plan_groups call
+    def test_validate_happy_path_get_test_plan_groups_calls_http_get_method_with_expected_resource(self) -> None:
+        dummy_test_plan_id: int = 2
+        self.__http_client.get.return_value = HTTPResponseBuilder().set_status_code(200) \
+                                                                   .set_body(TEST_PLANS_API_MOCKS[TypeTestPlansMocks.CASE_TEST_GROUP_NO_ELEMENTS])\
+                                                                   .get_element()
+        
+        self.__service.get_test_plan_groups(dummy_test_plan_id)    
+        self.__http_client.get.assert_called_once_with(f'/rest/v1/testplans/{dummy_test_plan_id}/testgroups?startAt=0&maxResults=50')
+
+    @pytest.mark.parametrize(
+      "http_responses, expected_test_groups",
+      [
+        (
+            [
+                HTTPResponseBuilder().set_status_code(200)
+                                     .set_body(TEST_PLANS_API_MOCKS[TypeTestPlansMocks.CASE_TEST_GROUP_NO_ELEMENTS])
+                                     .get_element()
+            ],
+            []
+        ),
+        (
+            [
+                HTTPResponseBuilder().set_status_code(200)
+                                     .set_body(TEST_PLANS_API_MOCKS[TypeTestPlansMocks.CASE_TEST_GROUP_1_ELEMENT])
+                                     .get_element(),
+                HTTPResponseBuilder().set_status_code(200)
+                                     .set_body(TEST_PLANS_API_MOCKS[TypeTestPlansMocks.CASE_TEST_GROUP_NO_ELEMENTS])
+                                     .get_element()
+            ],
+            [
+                TypeTestGroupBuilder().set_id(0)
+                                      .set_name('DummyName 1')
+                                      .set_assigned_to(1)
+                                      .get_element()
+            ] 
+        ),
+        (
+            [
+                HTTPResponseBuilder().set_status_code(200)
+                                     .set_body(TEST_PLANS_API_MOCKS[TypeTestPlansMocks.CASE_TEST_GROUP_30_ELEMENTS])
+                                     .get_element(),
+                HTTPResponseBuilder().set_status_code(200)
+                                     .set_body(TEST_PLANS_API_MOCKS[TypeTestPlansMocks.CASE_TEST_GROUP_NO_ELEMENTS])
+                                     .get_element()
+            ],
+            [
+                TypeTestGroupBuilder().set_id(index)
+                                      .set_name(f'DummyName {index}')
+                                      .set_assigned_to(index + 1)
+                                      .get_element() for index in range(1,30)
+            ]     
+        ),
+        (
+            [
+                HTTPResponseBuilder().set_status_code(200)
+                                     .set_body(TEST_PLANS_API_MOCKS[TypeTestPlansMocks.CASE_TEST_GROUP_30_ELEMENTS])
+                                     .get_element(),
+                HTTPResponseBuilder().set_status_code(200)
+                                     .set_body(TEST_PLANS_API_MOCKS[TypeTestPlansMocks.CASE_TEST_GROUP_1_ELEMENT])
+                                     .get_element(),
+                HTTPResponseBuilder().set_status_code(200)
+                                     .set_body(TEST_PLANS_API_MOCKS[TypeTestPlansMocks.CASE_TEST_GROUP_NO_ELEMENTS])
+                                     .get_element()
+            ],
+            [
+                TypeTestGroupBuilder().set_id(index)
+                                      .set_name(f'DummyName {index}')
+                                      .set_assigned_to(index + 1)
+                                      .get_element() for index in range(1,30)
+            ] +
+            [
+                TypeTestGroupBuilder().set_id(0)
+                                      .set_name(f'DummyName 1')
+                                      .set_assigned_to(1)
+                                      .get_element()
+            ]
+        )
+      ]
+    )
+    def test_validate_happy_path_get_test_plan_groups_returns_expected_value(self, http_responses: List[HTTPResponse], expected_test_groups: List[TypeTestGroup]) -> None:
+        dummy_test_plan_id: int = 2
+        self.__http_client.get.side_effect = http_responses
+        
+        test_groups: List[TypeTestGroup] = self.__service.get_test_plan_groups(dummy_test_plan_id)  
+        assert expected_test_groups == test_groups 
