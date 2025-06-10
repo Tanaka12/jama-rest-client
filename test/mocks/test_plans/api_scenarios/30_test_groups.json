@@ -1,0 +1,168 @@
+{
+    "meta": {
+        "status": "OK",
+        "timestamp": "2025-05-22T15:46:31.191+0000",
+        "pageInfo": {
+            "startIndex": 0,
+            "resultCount": 0,
+            "totalResults": 0
+        }
+    },
+    "links": {
+        "data.fields.pickList": {
+            "type": "picklists",
+            "href": ""
+        },
+        "data.fields.itemType": {
+            "type": "itemtypes",
+            "href": ""
+        }
+    },
+    "data": [
+        {
+            "id": 1,
+            "name": "DummyName 1",
+            "assignedTo": 2
+        },
+        {
+            "id": 2,
+            "name": "DummyName 2",
+            "assignedTo": 3
+        },
+        {
+            "id": 3,
+            "name": "DummyName 3",
+            "assignedTo": 4
+        },
+        {
+            "id": 4,
+            "name": "DummyName 4",
+            "assignedTo": 5
+        },
+        {
+            "id": 5,
+            "name": "DummyName 5",
+            "assignedTo": 6
+        },
+        {
+            "id": 6,
+            "name": "DummyName 6",
+            "assignedTo": 7
+        },
+        {
+            "id": 7,
+            "name": "DummyName 7",
+            "assignedTo": 8
+        },
+        {
+            "id": 8,
+            "name": "DummyName 8",
+            "assignedTo": 9
+        },
+        {
+            "id": 9,
+            "name": "DummyName 9",
+            "assignedTo": 10
+        },
+        {
+            "id": 10,
+            "name": "DummyName 10",
+            "assignedTo": 11
+        },
+        {
+            "id": 11,
+            "name": "DummyName 11",
+            "assignedTo": 12
+        },
+        {
+            "id": 12,
+            "name": "DummyName 12",
+            "assignedTo": 13
+        },
+        {
+            "id": 13,
+            "name": "DummyName 13",
+            "assignedTo": 14
+        },
+        {
+            "id": 14,
+            "name": "DummyName 14",
+            "assignedTo": 15
+        },
+        {
+            "id": 15,
+            "name": "DummyName 15",
+            "assignedTo": 16
+        },
+        {
+            "id": 16,
+            "name": "DummyName 16",
+            "assignedTo": 17
+        },
+        {
+            "id": 17,
+            "name": "DummyName 17",
+            "assignedTo": 18
+        },
+        {
+            "id": 18,
+            "name": "DummyName 18",
+            "assignedTo": 19
+        },
+        {
+            "id": 19,
+            "name": "DummyName 19",
+            "assignedTo": 20
+        },
+        {
+            "id": 20,
+            "name": "DummyName 20",
+            "assignedTo": 21
+        },
+        {
+            "id": 21,
+            "name": "DummyName 21",
+            "assignedTo": 22
+        },
+        {
+            "id": 22,
+            "name": "DummyName 22",
+            "assignedTo": 23
+        },
+        {
+            "id": 23,
+            "name": "DummyName 23",
+            "assignedTo": 24
+        },
+        {
+            "id": 24,
+            "name": "DummyName 24",
+            "assignedTo": 25
+        },
+        {
+            "id": 25,
+            "name": "DummyName 25",
+            "assignedTo": 26
+        },
+        {
+            "id": 26,
+            "name": "DummyName 26",
+            "assignedTo": 27
+        },
+        {
+            "id": 27,
+            "name": "DummyName 27",
+            "assignedTo": 28
+        },
+        {
+            "id": 28,
+            "name": "DummyName 28",
+            "assignedTo": 29
+        },
+        {
+            "id": 29,
+            "name": "DummyName 29",
+            "assignedTo": 30
+        }
+    ]
+}

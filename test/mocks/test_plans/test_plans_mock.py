@@ -10,12 +10,17 @@ class TestPlansMocks(str, Enum):
     CASE_1_ELEMENT = "1_ELEMENT"
     CASE_1_ELEMENT_ARCHIVED = "1_ELEMENT_ARCHIVED"
     CASE_30_ELEMENTS = "30 ELEMENTS"
-    
+    CASE_TEST_GROUP_NO_ELEMENTS = "CASE_TEST_GROUP_NO_ELEMENTS"
+    CASE_TEST_GROUP_1_ELEMENT = "CASE_TEST_GROUP_1_ELEMENT"
+    CASE_TEST_GROUP_30_ELEMENTS = "CASE_TEST_GROUP_30_ELEMENTS"    
 
 TEST_PLANS_API_MOCKS: dict[TestPlansMocks, dict] = \
 {
     TestPlansMocks.CASE_NO_ELEMENTS: json.load(open(os.path.join(API_SCENARIOS_PATH, 'test_plans_empty.json'))),
     TestPlansMocks.CASE_1_ELEMENT: json.load(open(os.path.join(API_SCENARIOS_PATH, '1_test_plan.json'))),
     TestPlansMocks.CASE_1_ELEMENT_ARCHIVED: json.load(open(os.path.join(API_SCENARIOS_PATH, '1_test_plan_archived.json'))),
-    TestPlansMocks.CASE_30_ELEMENTS: json.load(open(os.path.join(API_SCENARIOS_PATH, '30_test_plans.json')))
+    TestPlansMocks.CASE_30_ELEMENTS: json.load(open(os.path.join(API_SCENARIOS_PATH, '30_test_plans.json'))),
+    TestPlansMocks.CASE_TEST_GROUP_NO_ELEMENTS: json.load(open(os.path.join(API_SCENARIOS_PATH, 'test_groups_empty.json'))),
+    TestPlansMocks.CASE_TEST_GROUP_1_ELEMENT: json.load(open(os.path.join(API_SCENARIOS_PATH, '1_test_group.json'))),
+    TestPlansMocks.CASE_TEST_GROUP_30_ELEMENTS: json.load(open(os.path.join(API_SCENARIOS_PATH, '30_test_groups.json')))
 }
