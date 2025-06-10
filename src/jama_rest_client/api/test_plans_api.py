@@ -1,9 +1,9 @@
 from typing import List
 
 from jama_rest_client.http import HTTPClient
-from jama_rest_client.dal.parsers.json import TestCycleJSONParser, TestPlanJSONParser
+from jama_rest_client.dal.parsers.json import TestCycleJSONParser, TestGroupJSONParser, TestPlanJSONParser
 from jama_rest_client.model.test_cycle import TestCycle
-from jama_rest_client.model.test_plan import TestPlan
+from jama_rest_client.model.test_plan import TestGroup, TestPlan
 
 from .base_api import BaseAPI
 
@@ -43,8 +43,26 @@ class TestPlansAPI(BaseAPI):
 
         return test_cycles
 
+    def get_test_plan_groups(self, test_plan_id: int) -> List[TestGroup]:
+        test_groups: List[TestGroup] = []
+
+        start_index: int = 0
+        while True:
+            test_groups_batch = self.__parse_test_groups_dict(self._get(f'{self.__resourceName}/{test_plan_id}/testgroups?startAt={start_index}&maxResults=50').body['data'])
+            
+            if len(test_groups_batch) == 0:
+                break
+
+            test_groups.extend(test_groups_batch)
+            start_index += len(test_groups_batch)
+
+        return test_groups
+
     def __parse_test_plans_dict(self, test_plans_list_dict: List[dict]) -> List[TestPlan]:
         return list(map(lambda test_plan_dict: TestPlanJSONParser.parse(test_plan_dict), test_plans_list_dict))
 
     def __parse_test_cycles_dict(self, test_cycles_list_dict: List[dict]) -> List[TestCycle]:
         return list(map(lambda test_cycle_dict: TestCycleJSONParser.parse(test_cycle_dict), test_cycles_list_dict))
+    
+    def __parse_test_groups_dict(self, test_groups_list_dict: List[dict]) -> List[TestGroup]:
+        return list(map(lambda test_group_dict: TestGroupJSONParser.parse(test_group_dict), test_groups_list_dict))
