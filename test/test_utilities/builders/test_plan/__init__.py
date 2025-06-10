@@ -1,1 +1,2 @@
+from .test_group_builder import TestGroupBuilder
 from .test_plan_builder import TestPlanBuilder
