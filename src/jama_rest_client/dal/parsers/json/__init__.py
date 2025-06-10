@@ -1,9 +1,10 @@
-from .api_response_parser import APICreateResponseJSONParser, APIDeleteResponseJSONParser, APIUpdateResponseJSONParser
+from .api_response_json_parser import APICreateResponseJSONParser, APIDeleteResponseJSONParser, APIUpdateResponseJSONParser
 from .item_json_parser import ItemJSONParser
 from .item_type_json_parser import ItemTypeJSONParser
 from .location_json_parser import LocationJSONParser
 from .lock_json_parser import LockJSONParser
 from .project_json_parser import ProjectJSONParser
 from .test_cycle_json_parser import TestCycleJSONParser
+from .test_group_json_parser import TestGroupJSONParser
 from .test_plan_json_parser import TestPlanJSONParser
 from .test_run_json_parser import TestRunJSONParser
