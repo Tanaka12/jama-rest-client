@@ -1,3 +1,4 @@
+from .activity_json_parser import ActivityJSONParser
 from .api_response_json_parser import AbstractRestResponseJSONParser, CreatedResponseJSONParser
 from .item_json_parser import ItemJSONParser
 from .item_type_json_parser import ItemTypeJSONParser
