@@ -1,3 +1,4 @@
+from datetime import datetime
 from jama_rest_client.model.project import Project
 from typing_extensions import Self
 
@@ -15,15 +16,19 @@ class ProjectBuilder:
         self.__project.project_key = project_key
         return self
     
+    def set_parent(self, parent: int) -> Self:
+        self.__project.parent = parent
+        return self
+    
     def set_is_folder(self, is_folder: bool) -> Self:
         self.__project.is_folder = is_folder
         return self
     
-    def set_created_date(self, created_date: str) -> Self:
+    def set_created_date(self, created_date: datetime) -> Self:
         self.__project.created_date = created_date
         return self
     
-    def set_modified_date(self, modified_date: str) -> Self:
+    def set_modified_date(self, modified_date: datetime) -> Self:
         self.__project.modified_date = modified_date
         return self
 
