@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import List
 
 import pytest
@@ -43,11 +44,11 @@ class TestRunsAPI():
         (
             [
                 HTTPResponseBuilder().set_status_code(200)
-                                    .set_body(TEST_RUNS_API_MOCKS[TypeTestRunsMocks.CASE_1_ELEMENT])
-                                    .get_element(),
+                                     .set_body(TEST_RUNS_API_MOCKS[TypeTestRunsMocks.CASE_1_ELEMENT])
+                                     .get_element(),
                 HTTPResponseBuilder().set_status_code(200)
-                                    .set_body(TEST_RUNS_API_MOCKS[TypeTestRunsMocks.CASE_NO_ELEMENTS])
-                                    .get_element()
+                                     .set_body(TEST_RUNS_API_MOCKS[TypeTestRunsMocks.CASE_NO_ELEMENTS])
+                                     .get_element()
             ],
             [
                 TypeTestRunBuilder().set_id(1)
@@ -55,14 +56,15 @@ class TestRunsAPI():
                                     .set_global_id('DummyGlobalId 1')
                                     .set_item_type(2)
                                     .set_project(3)
-                                    .set_created_date('DummyCreatedDate 1')
-                                    .set_modified_date('DummyModifiedDate 1')
-                                    .set_last_activity_date('DummyLastActivityDate 1')
+                                    .set_created_date(datetime.fromtimestamp(1582199426))
+                                    .set_modified_date(datetime.fromtimestamp(1582199426))
+                                    .set_last_activity_date(datetime.fromtimestamp(1582199426))
                                     .set_created_by(4)
                                     .set_modified_by(5)                             
                                     .set_test_case_version_number(6)                             
                                     .set_test_case_current_version_number(7)                             
-                                    .set_sort_order_from_test_group(8)                             
+                                    .set_sort_order_from_test_group(8)           
+                                    .set_test_group([ 1, 2 ])                  
                                     .set_fields(
                                        {
 			                               'fieldStr': 'DummyField',
@@ -75,68 +77,70 @@ class TestRunsAPI():
         (
             [
                 HTTPResponseBuilder().set_status_code(200)
-                                    .set_body(TEST_RUNS_API_MOCKS[TypeTestRunsMocks.CASE_30_ELEMENTS])
-                                    .get_element(),
+                                     .set_body(TEST_RUNS_API_MOCKS[TypeTestRunsMocks.CASE_30_ELEMENTS])
+                                     .get_element(),
                 HTTPResponseBuilder().set_status_code(200)
-                                    .set_body(TEST_RUNS_API_MOCKS[TypeTestRunsMocks.CASE_NO_ELEMENTS])
-                                    .get_element()
+                                     .set_body(TEST_RUNS_API_MOCKS[TypeTestRunsMocks.CASE_NO_ELEMENTS])
+                                     .get_element()
             ],
             [
                 TypeTestRunBuilder().set_id(index)
-                                .set_document_key(f'DummyDocumentKey {index}')
-                                .set_global_id(f'DummyGlobalId {index}')
-                                .set_item_type(index + 1)
-                                .set_project(index + 2)
-                                .set_created_date(f'DummyCreatedDate {index}')
-                                .set_modified_date(f'DummyModifiedDate {index}')
-                                .set_last_activity_date(f'DummyLastActivityDate {index}')
-                                .set_created_by(index + 3)
-                                .set_modified_by(index + 4)                             
-                                .set_test_case_version_number(index + 5)                             
-                                .set_test_case_current_version_number(index + 6)                             
-                                .set_sort_order_from_test_group(index + 7)                             
-                                .set_fields(
-                                   {
-			                           'fieldStr': 'DummyField',
-                                       'fieldInt': 0,
-                                       'fieldBool': True
-                                   }
-                                ).get_element() for index in range(1,30)
+                                    .set_document_key(f'DummyDocumentKey {index}')
+                                    .set_global_id(f'DummyGlobalId {index}')
+                                    .set_item_type(index + 1)
+                                    .set_project(index + 2)
+                                    .set_created_date(datetime.fromtimestamp(1582199426))
+                                    .set_modified_date(datetime.fromtimestamp(1582199426))
+                                    .set_last_activity_date(datetime.fromtimestamp(1582199426))
+                                    .set_created_by(index + 3)
+                                    .set_modified_by(index + 4)                             
+                                    .set_test_case_version_number(index + 5)                             
+                                    .set_test_case_current_version_number(index + 6)                             
+                                    .set_sort_order_from_test_group(index + 7)    
+                                    .set_test_group([ 1, 2 ])                         
+                                    .set_fields(
+                                       {
+			                               'fieldStr': 'DummyField',
+                                           'fieldInt': 0,
+                                           'fieldBool': True
+                                       }
+                                    ).get_element() for index in range(1,30)
             ]     
         ),
         (
             [
                 HTTPResponseBuilder().set_status_code(200)
-                                    .set_body(TEST_RUNS_API_MOCKS[TypeTestRunsMocks.CASE_30_ELEMENTS])
-                                    .get_element(),
+                                     .set_body(TEST_RUNS_API_MOCKS[TypeTestRunsMocks.CASE_30_ELEMENTS])
+                                     .get_element(),
                 HTTPResponseBuilder().set_status_code(200)
-                                    .set_body(TEST_RUNS_API_MOCKS[TypeTestRunsMocks.CASE_1_ELEMENT])
-                                    .get_element(),
+                                     .set_body(TEST_RUNS_API_MOCKS[TypeTestRunsMocks.CASE_1_ELEMENT])
+                                     .get_element(),
                 HTTPResponseBuilder().set_status_code(200)
-                                    .set_body(TEST_RUNS_API_MOCKS[TypeTestRunsMocks.CASE_NO_ELEMENTS])
-                                    .get_element()
+                                     .set_body(TEST_RUNS_API_MOCKS[TypeTestRunsMocks.CASE_NO_ELEMENTS])
+                                     .get_element()
             ],
             [
                 TypeTestRunBuilder().set_id(index)
-                                .set_document_key(f'DummyDocumentKey {index}')
-                                .set_global_id(f'DummyGlobalId {index}')
-                                .set_item_type(index + 1)
-                                .set_project(index + 2)
-                                .set_created_date(f'DummyCreatedDate {index}')
-                                .set_modified_date(f'DummyModifiedDate {index}')
-                                .set_last_activity_date(f'DummyLastActivityDate {index}')
-                                .set_created_by(index + 3)
-                                .set_modified_by(index + 4)                             
-                                .set_test_case_version_number(index + 5)                             
-                                .set_test_case_current_version_number(index + 6)                             
-                                .set_sort_order_from_test_group(index + 7)                             
-                                .set_fields(
-                                   {
-			                           'fieldStr': 'DummyField',
-                                       'fieldInt': 0,
-                                       'fieldBool': True
-                                   }
-                                ).get_element() for index in range(1,30)
+                                    .set_document_key(f'DummyDocumentKey {index}')
+                                    .set_global_id(f'DummyGlobalId {index}')
+                                    .set_item_type(index + 1)
+                                    .set_project(index + 2)
+                                    .set_created_date(datetime.fromtimestamp(1582199426))
+                                    .set_modified_date(datetime.fromtimestamp(1582199426))
+                                    .set_last_activity_date(datetime.fromtimestamp(1582199426))
+                                    .set_created_by(index + 3)
+                                    .set_modified_by(index + 4)                             
+                                    .set_test_case_version_number(index + 5)                             
+                                    .set_test_case_current_version_number(index + 6)                             
+                                    .set_sort_order_from_test_group(index + 7)   
+                                    .set_test_group([ 1, 2 ])                          
+                                    .set_fields(
+                                       {
+			                               'fieldStr': 'DummyField',
+                                           'fieldInt': 0,
+                                           'fieldBool': True
+                                       }
+                                    ).get_element() for index in range(1,30)
             ] +
             [
                 TypeTestRunBuilder().set_id(1)
@@ -144,14 +148,15 @@ class TestRunsAPI():
                                     .set_global_id('DummyGlobalId 1')
                                     .set_item_type(2)
                                     .set_project(3)
-                                    .set_created_date('DummyCreatedDate 1')
-                                    .set_modified_date('DummyModifiedDate 1')
-                                    .set_last_activity_date('DummyLastActivityDate 1')
+                                    .set_created_date(datetime.fromtimestamp(1582199426))
+                                    .set_modified_date(datetime.fromtimestamp(1582199426))
+                                    .set_last_activity_date(datetime.fromtimestamp(1582199426))
                                     .set_created_by(4)
                                     .set_modified_by(5)                             
                                     .set_test_case_version_number(6)                             
                                     .set_test_case_current_version_number(7)                             
-                                    .set_sort_order_from_test_group(8)                             
+                                    .set_sort_order_from_test_group(8)
+                                    .set_test_group([ 1, 2 ])                             
                                     .set_fields(
                                        {
 			                               'fieldStr': 'DummyField',
