@@ -310,6 +310,45 @@ class TestProjectsAPI():
         assert expected_abstract_rest_response == abstract_rest_response 
 
 
+    # delete_test_plan call
+    def test_validate_happy_path_delete_test_plan_calls_http_delete_method_with_expected_resource(self) -> None:
+        dummy_test_plan_id: int = 2
+        self.__http_client.delete.return_value = HTTPResponseBuilder().set_status_code(200) \
+                                                                      .set_body(API_RESPONSES_API_MOCKS[ApiResponsesMocks.CASE_ABSTRACT_REST_RESPONSE])\
+                                                                      .get_element()
+        
+        self.__service.delete_test_plan(dummy_test_plan_id)    
+        self.__http_client.delete.assert_called_once_with(f'/rest/v1/testplans/{dummy_test_plan_id}')
+
+    @pytest.mark.parametrize(
+      "http_responses, expected_abstract_rest_response",
+      [
+        (
+            [
+                HTTPResponseBuilder().set_status_code(200)
+                                    .set_body(API_RESPONSES_API_MOCKS[ApiResponsesMocks.CASE_ABSTRACT_REST_RESPONSE])
+                                    .get_element()
+            ],
+            AbstractRestResponseBuilder().set_status(0)
+                                         .set_status_reason_phrase('DummyStatusReasonPhrase')
+                                         .set_page_info(
+                                             PageInfoBuilder().set_start_index(0)
+                                                              .set_result_count(1)
+                                                              .set_total_results(2)
+                                                              .get_element()
+                                         )
+                                         .get_element()
+        )
+      ]
+    )
+    def test_validate_happy_path_delete_test_plan_returns_expected_value(self, http_responses: List[HTTPResponse], expected_abstract_rest_response: AbstractRestResponse) -> None:
+        dummy_test_plan_id: int = 2
+        self.__http_client.delete.side_effect = http_responses
+        
+        abstract_rest_response = self.__service.delete_test_plan(dummy_test_plan_id)  
+        assert expected_abstract_rest_response == abstract_rest_response 
+
+
     # get_test_plan_cycles call
     def test_validate_happy_path_get_test_plan_cycles_calls_http_get_method_with_expected_resource(self) -> None:
         dummy_test_plan_id: int = 2
