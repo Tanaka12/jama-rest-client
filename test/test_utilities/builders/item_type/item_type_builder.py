@@ -1,4 +1,4 @@
-from jama_rest_client.model.item_type import ItemType, ItemTypeField
+from jama_rest_client.model.item_type import ItemType, ItemTypeCategory, ItemTypeField, ItemTypeFieldTextType, ItemTypeFieldType
 from typing import List
 from typing_extensions import Self
 
@@ -20,12 +20,16 @@ class ItemTypeFieldBuilder:
         self.__item_type_field.label = label
         return self
     
-    def set_field_type(self, field_type: str) -> Self:
+    def set_field_type(self, field_type: ItemTypeFieldType) -> Self:
         self.__item_type_field.field_type = field_type
         return self
 
     def set_read_only(self, read_only: bool) -> Self:
         self.__item_type_field.read_only = read_only
+        return self
+
+    def set_read_only_allow_api_overwrite(self, read_only_allow_api_overwrite: bool) -> Self:
+        self.__item_type_field.read_only_allow_api_overwrite = read_only_allow_api_overwrite
         return self
     
     def set_required(self, required: bool) -> Self:
@@ -40,8 +44,16 @@ class ItemTypeFieldBuilder:
         self.__item_type_field.synchronize = synchronize
         return self
     
-    def set_text_type(self, text_type: str) -> Self:
+    def set_pick_list(self, pick_list: int) -> Self:
+        self.__item_type_field.pick_list = pick_list
+        return self
+
+    def set_text_type(self, text_type: ItemTypeFieldTextType) -> Self:
         self.__item_type_field.text_type = text_type
+        return self
+    
+    def set_item_type(self, item_type: int) -> Self:
+        self.__item_type_field.item_type = item_type
         return self
 
     def get_element(self) -> ItemTypeField:
@@ -57,8 +69,8 @@ class ItemTypeBuilder:
         self.__item_type.id = id
         return self
     
-    def set_key(self, key: str) -> Self:
-        self.__item_type.key = key
+    def set_type_key(self, type_key: str) -> Self:
+        self.__item_type.type_key = type_key
         return self
     
     def set_display(self, display: str) -> Self:
@@ -72,13 +84,21 @@ class ItemTypeBuilder:
     def set_description(self, description: str) -> Self:
         self.__item_type.description = description
         return self
+    
+    def set_image(self, image: str) -> Self:
+        self.__item_type.image = image
+        return self
 
-    def set_category(self, category: str) -> Self:
+    def set_category(self, category: ItemTypeCategory) -> Self:
         self.__item_type.category = category
         return self
     
     def set_fields(self, fields: List[ItemTypeField]) -> Self:
         self.__item_type.fields = fields
+        return self
+
+    def set_system(self, system: bool) -> Self:
+        self.__item_type.system = system
         return self
 
     def get_element(self) -> ItemType:
