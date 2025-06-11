@@ -1,6 +1,6 @@
+from datetime import datetime
 from typing import List
 from typing_extensions import Self
-
 class ItemLock:
     locked: bool
     last_locked_date: str
@@ -34,9 +34,10 @@ class Item:
     global_id: str
     item_type: int
     project: int
-    created_date: str
-    modified_date: str
-    last_activity_date: str
+    child_item_type: int
+    created_date: datetime
+    modified_date: datetime
+    last_activity_date: datetime
     created_by: int
     modified_by: int
     lock: ItemLock
@@ -49,9 +50,10 @@ class Item:
         self.global_id = ""
         self.item_type = 0
         self.project = "" 
-        self.created_date = "" 
-        self.modified_date = ""
-        self.last_activity_date = ""
+        self.child_item_type = 0
+        self.created_date = datetime.fromtimestamp(0) 
+        self.modified_date = datetime.fromtimestamp(0) 
+        self.last_activity_date = datetime.fromtimestamp(0) 
         self.created_by = 0
         self.modified_by = 0
         self.lock = ItemLock()
@@ -64,6 +66,7 @@ class Item:
             and self.global_id == other.global_id \
             and self.item_type == other.item_type \
             and self.project == other.project \
+            and self.child_item_type == other.child_item_type \
             and self.created_date == other.created_date \
             and self.modified_date == other.modified_date \
             and self.last_activity_date == other.last_activity_date \
