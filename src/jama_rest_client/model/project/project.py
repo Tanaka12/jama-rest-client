@@ -1,3 +1,5 @@
+from typing_extensions import Self
+
 class Project:
     id: int
     project_key: str
@@ -18,7 +20,7 @@ class Project:
         self.modified_by = 0
         self.fields = {}
 
-    def __eq__(self, other):
+    def __eq__(self, other: Self):
         if self.id == other.id \
         and self.project_key == other.project_key \
         and self.is_folder == other.is_folder \

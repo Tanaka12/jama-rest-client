@@ -1,4 +1,5 @@
 from jama_rest_client.model.http import HTTPRequest, HTTPResponse
+from typing_extensions import Self
 
 class HTTPResponseBuilder:
     __response: HTTPResponse
@@ -6,15 +7,15 @@ class HTTPResponseBuilder:
     def __init__(self):
         self.__response = HTTPResponse()
 
-    def set_status_code(self, status_code: int):
+    def set_status_code(self, status_code: int) -> Self:
         self.__response.status_code = status_code
         return self
     
-    def set_body(self, body: dict):
+    def set_body(self, body: dict) -> Self:
         self.__response.body = body
         return self
     
-    def set_request(self, request: HTTPRequest):
+    def set_request(self, request: HTTPRequest) -> Self:
         self.__response.request = request
         return self
     

@@ -1,4 +1,5 @@
 from typing import List
+from typing_extensions import Self
 
 class ItemLock:
     locked: bool
@@ -8,7 +9,7 @@ class ItemLock:
         self.locked = False
         self.last_locked_date = ""
 
-    def __eq__(self, other):
+    def __eq__(self, other: Self):
         if self.locked == other.locked \
         and self.last_locked_date == other.last_locked_date:
             return True
@@ -25,7 +26,7 @@ class ItemLocation:
         self.global_sort_order = 0
         self.sequence = ""
 
-    def __eq__(self, other):
+    def __eq__(self, other: Self):
         if self.sort_order == other.sort_order \
         and self.global_sort_order == other.global_sort_order \
         and self.sequence == other.sequence:
@@ -63,7 +64,7 @@ class Item:
         self.location = ItemLocation()
         self.fields = {}
 
-    def __eq__(self, other):
+    def __eq__(self, other: Self):
         if self.id == other.id \
         and self.document_key == other.document_key \
         and self.global_id == other.global_id \

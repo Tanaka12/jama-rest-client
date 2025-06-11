@@ -1,3 +1,5 @@
+from typing_extensions import Self
+
 class TestCycle:
     id: int
     document_key: str
@@ -24,7 +26,7 @@ class TestCycle:
         self.modified_by = 0
         self.fields = {}
 
-    def __eq__(self, other):
+    def __eq__(self, other: Self):
         if self.id == other.id \
         and self.document_key == other.document_key \
         and self.global_id == other.global_id \

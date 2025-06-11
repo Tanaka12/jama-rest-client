@@ -1,4 +1,5 @@
 from typing import List
+from typing_extensions import Self
 
 class ItemTypeField:
     id: int
@@ -22,7 +23,7 @@ class ItemTypeField:
         self.synchronize = False
         self.text_type = ""
 
-    def __eq__(self, other):
+    def __eq__(self, other: Self):
         if self.id == other.id \
         and self.name == other.name \
         and self.label == other.label \
@@ -54,7 +55,7 @@ class ItemType:
         self.category = ""
         self.fields = []
 
-    def __eq__(self, other):
+    def __eq__(self, other: Self):
         if self.id == other.id \
         and self.key == other.key \
         and self.display == other.display \

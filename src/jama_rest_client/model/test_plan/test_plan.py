@@ -1,3 +1,5 @@
+from typing_extensions import Self
+
 class TestPlan:
     id: int
     document_key: str
@@ -26,7 +28,7 @@ class TestPlan:
         self.fields = {}
         self.archived = False
 
-    def __eq__(self, other):
+    def __eq__(self, other: Self):
         if self.id == other.id \
         and self.document_key == other.document_key \
         and self.global_id == other.global_id \
