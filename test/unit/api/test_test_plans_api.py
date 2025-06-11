@@ -1038,12 +1038,12 @@ class TestProjectsAPI():
         )
       ]
     )
-    def test_validate_happy_path_get_test_plan_cycles_returns_expected_value(self, http_responses: List[HTTPResponse], expected_activities: List[Activity]) -> None:
+    def test_validate_happy_path_get_test_plan_cycles_returns_expected_value(self, http_responses: List[HTTPResponse], expected_test_cycles: List[TypeTestCycle]) -> None:
         dummy_test_plan_id: int = 2
         self.__http_client.get.side_effect = http_responses
         
-        activities = self.__service.get_test_plan_activities(dummy_test_plan_id)  
-        assert expected_activities == expected_activities
+        test_cycles = self.__service.get_test_plan_cycles(dummy_test_plan_id)  
+        assert expected_test_cycles == test_cycles
 
 
     # get_test_plan_groups call
