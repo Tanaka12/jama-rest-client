@@ -49,6 +49,10 @@ class TestPlansAPI(BaseAPI):
         http_response = self._put(f'{self.__resourceName}/{test_plan_id}', TestPlanRequestJSONSerializer.serialize(test_plan_request))
         return AbstractRestResponseJSONParser.parse(http_response.body)
 
+    def delete_test_plan(self, test_plan_id: int) -> AbstractRestResponse:
+        http_response = self._delete(f'{self.__resourceName}/{test_plan_id}')
+        return AbstractRestResponseJSONParser.parse(http_response.body)
+
     def get_test_plan_cycles(self, test_plan_id: int) -> List[TestCycle]:
         test_cycles: List[TestCycle] = []
 
