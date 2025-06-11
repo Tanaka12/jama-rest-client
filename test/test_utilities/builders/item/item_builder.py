@@ -1,44 +1,8 @@
 from datetime import datetime
-from jama_rest_client.model.item import Item, ItemLocation, ItemLock
+from jama_rest_client.model.item import Item
+from jama_rest_client.model.location import Location
+from jama_rest_client.model.lock import Lock
 from typing_extensions import Self
-
-class ItemLockBuilder:
-    __item_lock: ItemLock
-
-    def __init__(self):
-        self.__item_lock = ItemLock()
-
-    def set_locked(self, locked: bool) -> Self:
-        self.__item_lock.locked = locked
-        return self
-    
-    def set_last_locked_date(self, last_locked_date: str) -> Self:
-        self.__item_lock.last_locked_date = last_locked_date
-        return self
-    
-    def get_element(self) -> ItemLock:
-        return self.__item_lock
-
-class ItemLocationBuilder:
-    __item_location: ItemLocation
-
-    def __init__(self):
-        self.__item_location = ItemLocation()
-
-    def set_sort_order(self, sort_order: int) -> Self:
-        self.__item_location.sort_order = sort_order
-        return self
-    
-    def set_global_sort_order(self, global_sort_order: int) -> Self:
-        self.__item_location.global_sort_order = global_sort_order
-        return self
-    
-    def set_sequence(self, sequence: str) -> Self:
-        self.__item_location.sequence = sequence
-        return self
-    
-    def get_element(self) -> ItemLocation:
-        return self.__item_location
 
 class ItemBuilder:
     __item: Item
@@ -90,11 +54,11 @@ class ItemBuilder:
         self.__item.modified_by = modified_by
         return self
 
-    def set_lock(self, lock: ItemLock) -> Self:
+    def set_lock(self, lock: Lock) -> Self:
         self.__item.lock = lock
         return self
 
-    def set_location(self, location: ItemLocation) -> Self:
+    def set_location(self, location: Location) -> Self:
         self.__item.location = location
         return self
     
