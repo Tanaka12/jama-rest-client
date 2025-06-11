@@ -6,7 +6,7 @@ from jama_rest_client.model.request import PatchOperationRequest, PatchOperation
 from mocks.requests import RequestsMocks, REQUESTS_API_MOCKS
 from test_utilities.builders.request import PatchOperationRequestBuilder
 
-class TestTestPlanJSONParser():
+class TestPatchOperationRequestJSONSerializer():
 
     @pytest.mark.parametrize(
       "patch_operation_request, expected_patch_operation_request_dict",

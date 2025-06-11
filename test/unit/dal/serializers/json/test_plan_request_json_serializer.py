@@ -6,7 +6,7 @@ from jama_rest_client.model.test_plan import TestPlanRequest as TypeTestPlanRequ
 from mocks.test_plans import TestPlansMocks as TypeTestPlansMocks, TEST_PLANS_API_MOCKS
 from test_utilities.builders.test_plan import TestPlanRequestBuilder as TypeTestPlanRequestBuilder
 
-class TestTestPlanJSONParser():
+class TestTestPlanRequestJSONSerializer():
 
     @pytest.mark.parametrize(
       "test_plan_request, expected_test_plan_request_dict",
@@ -25,6 +25,6 @@ class TestTestPlanJSONParser():
         )
       ]
     )
-    def test_validate_happy_path_serialize_test_cycle_request_returns_expected_value(self, test_plan_request: TypeTestPlanRequest, expected_test_plan_request_dict: dict) -> None:
+    def test_validate_happy_path_serialize_test_plan_request_returns_expected_value(self, test_plan_request: TypeTestPlanRequest, expected_test_plan_request_dict: dict) -> None:
         test_plan_request_dict = TypeTestPlanRequestJSONSerializer.serialize(test_plan_request)
         assert expected_test_plan_request_dict == test_plan_request_dict

@@ -6,7 +6,7 @@ from jama_rest_client.model.test_cycle import TestCycleRequest as TypeTestCycleR
 from mocks.test_cycles import TestCyclesMocks as TypeTestCyclesMocks, TEST_CYCLES_API_MOCKS
 from test_utilities.builders.test_cycle import TestCycleRequestBuilder as TypeTestCycleRequestBuilder, TestRunGenerationConfigBuilder as TypeTestRunGenerationConfigBuilder
 
-class TestTestPlanJSONParser():
+class TestTestCycleRequestJSONSerializer():
 
     @pytest.mark.parametrize(
       "test_cycle_request, expected_test_cycle_request_dict",
