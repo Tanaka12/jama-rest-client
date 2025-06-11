@@ -1,0 +1,9 @@
+{
+    "project": 0,
+    "fields": 
+    {
+        "fieldStr": "DummyField",
+        "fieldInt": 0,
+        "fieldBool": true
+    }
+}
