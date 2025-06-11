@@ -10,8 +10,9 @@ from jama_rest_client.model.http import HTTPResponse
 
 from mocks.items import ItemMocks, ITEMS_API_MOCKS
 from test_utilities.builders.http import HTTPResponseBuilder
-from test_utilities.builders.item import ItemBuilder, ItemLocationBuilder, ItemLockBuilder
-
+from test_utilities.builders.item import ItemBuilder
+from test_utilities.builders.location import LocationBuilder, ParentBuilder
+from test_utilities.builders.lock import LockBuilder
 class TestItemsAPI():
     __service: ItemsAPI
     __http_client: Mock
@@ -49,15 +50,21 @@ class TestItemsAPI():
                          .set_created_by(4)
                          .set_modified_by(5)
                          .set_lock(
-                             ItemLockBuilder().set_locked(False)
-                                             .set_last_locked_date('DummyLastLockedDate 1')
-                                             .get_element()
+                            LockBuilder().set_locked(False)
+                                         .set_last_locked_date(datetime.fromtimestamp(1582199426))
+                                         .set_locked_by(0)
+                                         .get_element()
                          )
                          .set_location(
-                             ItemLocationBuilder().set_sort_order(0)
-                                                 .set_global_sort_order(1)
-                                                 .set_sequence('DummySequence 1')
-                                                 .get_element()
+                            LocationBuilder().set_sort_order(0)
+                                             .set_global_sort_order(1)
+                                             .set_sequence('DummySequence 1')
+                                             .set_parent(
+                                                 ParentBuilder().set_project(2)
+                                                                .set_item(3)
+                                                                .get_element()
+                                             )
+                                             .get_element()
                          )
                          .set_fields(
                          {
@@ -122,15 +129,21 @@ class TestItemsAPI():
                          .set_created_by(4)
                          .set_modified_by(5)
                          .set_lock(
-                             ItemLockBuilder().set_locked(False)
-                                              .set_last_locked_date('DummyLastLockedDate 1')
-                                              .get_element()
+                            LockBuilder().set_locked(False)
+                                         .set_last_locked_date(datetime.fromtimestamp(1582199426))
+                                         .set_locked_by(0)
+                                         .get_element()
                          )
                          .set_location(
-                             ItemLocationBuilder().set_sort_order(0)
-                                                  .set_global_sort_order(1)
-                                                  .set_sequence('DummySequence 1')
-                                                  .get_element()
+                            LocationBuilder().set_sort_order(0)
+                                             .set_global_sort_order(1)
+                                             .set_sequence('DummySequence 1')
+                                             .set_parent(
+                                                 ParentBuilder().set_project(2)
+                                                                .set_item(3)
+                                                                .get_element()
+                                             )
+                                             .get_element()
                          )
                          .set_fields(
                             {
@@ -164,15 +177,21 @@ class TestItemsAPI():
                              .set_created_by(index + 3)
                              .set_modified_by(index + 4)
                              .set_lock(
-                                 ItemLockBuilder().set_locked(bool(index % 2))
-                                                 .set_last_locked_date(f'DummyLastLockedDate {index}')
-                                                 .get_element()
+                                LockBuilder().set_locked(bool(index % 2))
+                                             .set_last_locked_date(datetime.fromtimestamp(1582199426))
+                                             .set_locked_by(0)
+                                             .get_element()
                              )
                              .set_location(
-                                 ItemLocationBuilder().set_sort_order(index)
-                                                     .set_global_sort_order(index + 1)
-                                                     .set_sequence(f'DummySequence {index}')
-                                                     .get_element()
+                                LocationBuilder().set_sort_order(index)
+                                                 .set_global_sort_order(index + 1)
+                                                 .set_sequence(f'DummySequence {index}')
+                                                 .set_parent(
+                                                     ParentBuilder().set_project(0)
+                                                                    .set_item(1)
+                                                                    .get_element()
+                                                 )
+                                                 .get_element()
                              )
                              .set_fields(
                                  {
@@ -209,15 +228,21 @@ class TestItemsAPI():
                              .set_created_by(index + 3)
                              .set_modified_by(index + 4)
                              .set_lock(
-                                 ItemLockBuilder().set_locked(bool(index % 2))
-                                                  .set_last_locked_date(f'DummyLastLockedDate {index}')
-                                                  .get_element()
+                                LockBuilder().set_locked(bool(index % 2))
+                                             .set_last_locked_date(datetime.fromtimestamp(1582199426))
+                                             .set_locked_by(0)
+                                             .get_element()
                              )
                              .set_location(
-                                 ItemLocationBuilder().set_sort_order(index)
-                                                      .set_global_sort_order(index + 1)
-                                                      .set_sequence(f'DummySequence {index}')
-                                                      .get_element()
+                                LocationBuilder().set_sort_order(index)
+                                                 .set_global_sort_order(index + 1)
+                                                 .set_sequence(f'DummySequence {index}')
+                                                 .set_parent(
+                                                     ParentBuilder().set_project(0)
+                                                                    .set_item(1)
+                                                                    .get_element()
+                                                 )
+                                                 .get_element()
                              )
                              .set_fields(
                                 {
@@ -241,15 +266,21 @@ class TestItemsAPI():
                              .set_created_by(4)
                              .set_modified_by(5)
                              .set_lock(
-                                 ItemLockBuilder().set_locked(False)
-                                                  .set_last_locked_date('DummyLastLockedDate 1')
-                                                  .get_element()
+                                LockBuilder().set_locked(False)
+                                             .set_last_locked_date(datetime.fromtimestamp(1582199426))
+                                             .set_locked_by(0)
+                                             .get_element()
                              )
                              .set_location(
-                                 ItemLocationBuilder().set_sort_order(0)
-                                                      .set_global_sort_order(1)
-                                                      .set_sequence('DummySequence 1')
-                                                      .get_element()
+                                LocationBuilder().set_sort_order(0)
+                                                 .set_global_sort_order(1)
+                                                 .set_sequence('DummySequence 1')
+                                                 .set_parent(
+                                                     ParentBuilder().set_project(2)
+                                                                    .set_item(3)
+                                                                    .get_element()
+                                                 )
+                                                 .get_element()
                              )
                              .set_fields(
                                 {
@@ -314,15 +345,21 @@ class TestItemsAPI():
                              .set_created_by(4)
                              .set_modified_by(5)
                              .set_lock(
-                                 ItemLockBuilder().set_locked(False)
-                                                  .set_last_locked_date('DummyLastLockedDate 1')
-                                                  .get_element()
+                                LockBuilder().set_locked(False)
+                                             .set_last_locked_date(datetime.fromtimestamp(1582199426))
+                                             .set_locked_by(0)
+                                             .get_element()
                              )
                              .set_location(
-                                 ItemLocationBuilder().set_sort_order(0)
-                                                      .set_global_sort_order(1)
-                                                      .set_sequence('DummySequence 1')
-                                                      .get_element()
+                                LocationBuilder().set_sort_order(0)
+                                                 .set_global_sort_order(1)
+                                                 .set_sequence('DummySequence 1')
+                                                 .set_parent(
+                                                     ParentBuilder().set_project(2)
+                                                                    .set_item(3)
+                                                                    .get_element()
+                                                 )
+                                                 .get_element()
                              )
                              .set_fields(
                                 {
@@ -356,15 +393,21 @@ class TestItemsAPI():
                              .set_created_by(index + 3)
                              .set_modified_by(index + 4)
                              .set_lock(
-                                 ItemLockBuilder().set_locked(bool(index % 2))
-                                                  .set_last_locked_date(f'DummyLastLockedDate {index}')
-                                                  .get_element()
+                                LockBuilder().set_locked(bool(index % 2))
+                                             .set_last_locked_date(datetime.fromtimestamp(1582199426))
+                                             .set_locked_by(0)
+                                             .get_element()
                              )
                              .set_location(
-                                 ItemLocationBuilder().set_sort_order(index)
-                                                      .set_global_sort_order(index + 1)
-                                                      .set_sequence(f'DummySequence {index}')
-                                                      .get_element()
+                                LocationBuilder().set_sort_order(index)
+                                                 .set_global_sort_order(index + 1)
+                                                 .set_sequence(f'DummySequence {index}')
+                                                 .set_parent(
+                                                     ParentBuilder().set_project(0)
+                                                                    .set_item(1)
+                                                                    .get_element()
+                                                 )
+                                                 .get_element()
                              )
                              .set_fields(
                                 {
@@ -401,15 +444,21 @@ class TestItemsAPI():
                              .set_created_by(index + 3)
                              .set_modified_by(index + 4)
                              .set_lock(
-                                 ItemLockBuilder().set_locked(bool(index % 2))
-                                                  .set_last_locked_date(f'DummyLastLockedDate {index}')
-                                                  .get_element()
+                                LockBuilder().set_locked(bool(index % 2))
+                                             .set_last_locked_date(datetime.fromtimestamp(1582199426))
+                                             .set_locked_by(0)
+                                             .get_element()
                              )
                              .set_location(
-                                 ItemLocationBuilder().set_sort_order(index)
-                                                      .set_global_sort_order(index + 1)
-                                                      .set_sequence(f'DummySequence {index}')
-                                                      .get_element()
+                                LocationBuilder().set_sort_order(index)
+                                                 .set_global_sort_order(index + 1)
+                                                 .set_sequence(f'DummySequence {index}')
+                                                 .set_parent(
+                                                     ParentBuilder().set_project(0)
+                                                                    .set_item(1)
+                                                                    .get_element()
+                                                 )
+                                                 .get_element()
                              )
                              .set_fields(
                                 {
@@ -433,15 +482,21 @@ class TestItemsAPI():
                              .set_created_by(4)
                              .set_modified_by(5)
                              .set_lock(
-                                 ItemLockBuilder().set_locked(False)
-                                                  .set_last_locked_date('DummyLastLockedDate 1')
-                                                  .get_element()
+                                LockBuilder().set_locked(False)
+                                             .set_last_locked_date(datetime.fromtimestamp(1582199426))
+                                             .set_locked_by(0)
+                                             .get_element()
                              )
                              .set_location(
-                                 ItemLocationBuilder().set_sort_order(0)
-                                                      .set_global_sort_order(1)
-                                                      .set_sequence('DummySequence 1')
-                                                      .get_element()
+                                LocationBuilder().set_sort_order(0)
+                                                 .set_global_sort_order(1)
+                                                 .set_sequence('DummySequence 1')
+                                                 .set_parent(
+                                                     ParentBuilder().set_project(2)
+                                                                    .set_item(3)
+                                                                    .get_element()
+                                                 )
+                                                 .get_element()
                              )
                              .set_fields(
                                 {
@@ -506,15 +561,21 @@ class TestItemsAPI():
                              .set_created_by(4)
                              .set_modified_by(5)
                              .set_lock(
-                                 ItemLockBuilder().set_locked(False)
-                                                 .set_last_locked_date('DummyLastLockedDate 1')
-                                                 .get_element()
+                                LockBuilder().set_locked(False)
+                                             .set_last_locked_date(datetime.fromtimestamp(1582199426))
+                                             .set_locked_by(0)
+                                             .get_element()
                              )
                              .set_location(
-                                 ItemLocationBuilder().set_sort_order(0)
-                                                     .set_global_sort_order(1)
-                                                     .set_sequence('DummySequence 1')
-                                                     .get_element()
+                                LocationBuilder().set_sort_order(0)
+                                                 .set_global_sort_order(1)
+                                                 .set_sequence('DummySequence 1')
+                                                 .set_parent(
+                                                     ParentBuilder().set_project(2)
+                                                                    .set_item(3)
+                                                                    .get_element()
+                                                 )
+                                                 .get_element()
                              )
                              .set_fields(
                                  {
@@ -548,15 +609,21 @@ class TestItemsAPI():
                              .set_created_by(index + 3)
                              .set_modified_by(index + 4)
                              .set_lock(
-                                 ItemLockBuilder().set_locked(bool(index % 2))
-                                                 .set_last_locked_date(f'DummyLastLockedDate {index}')
-                                                 .get_element()
+                                LockBuilder().set_locked(bool(index % 2))
+                                             .set_last_locked_date(datetime.fromtimestamp(1582199426))
+                                             .set_locked_by(0)
+                                             .get_element()
                              )
                              .set_location(
-                                 ItemLocationBuilder().set_sort_order(index)
-                                                     .set_global_sort_order(index + 1)
-                                                     .set_sequence(f'DummySequence {index}')
-                                                     .get_element()
+                                LocationBuilder().set_sort_order(index)
+                                                 .set_global_sort_order(index + 1)
+                                                 .set_sequence(f'DummySequence {index}')
+                                                 .set_parent(
+                                                     ParentBuilder().set_project(0)
+                                                                    .set_item(1)
+                                                                    .get_element()
+                                                 )
+                                                 .get_element()
                              )
                              .set_fields(
                                  {
@@ -593,15 +660,21 @@ class TestItemsAPI():
                              .set_created_by(index + 3)
                              .set_modified_by(index + 4)
                              .set_lock(
-                                 ItemLockBuilder().set_locked(bool(index % 2))
-                                                 .set_last_locked_date(f'DummyLastLockedDate {index}')
-                                                 .get_element()
+                                LockBuilder().set_locked(bool(index % 2))
+                                             .set_last_locked_date(datetime.fromtimestamp(1582199426))
+                                             .set_locked_by(0)
+                                             .get_element()
                              )
                              .set_location(
-                                 ItemLocationBuilder().set_sort_order(index)
-                                                     .set_global_sort_order(index + 1)
-                                                     .set_sequence(f'DummySequence {index}')
-                                                     .get_element()
+                                LocationBuilder().set_sort_order(index)
+                                                 .set_global_sort_order(index + 1)
+                                                 .set_sequence(f'DummySequence {index}')
+                                                 .set_parent(
+                                                     ParentBuilder().set_project(0)
+                                                                    .set_item(1)
+                                                                    .get_element()
+                                                 )
+                                                 .get_element()
                              )
                              .set_fields(
                                  {
@@ -625,15 +698,21 @@ class TestItemsAPI():
                              .set_created_by(4)
                              .set_modified_by(5)
                              .set_lock(
-                                 ItemLockBuilder().set_locked(False)
-                                                 .set_last_locked_date('DummyLastLockedDate 1')
-                                                 .get_element()
+                                LockBuilder().set_locked(False)
+                                             .set_last_locked_date(datetime.fromtimestamp(1582199426))
+                                             .set_locked_by(0)
+                                             .get_element()
                              )
                              .set_location(
-                                 ItemLocationBuilder().set_sort_order(0)
-                                                     .set_global_sort_order(1)
-                                                     .set_sequence('DummySequence 1')
-                                                     .get_element()
+                                LocationBuilder().set_sort_order(0)
+                                                 .set_global_sort_order(1)
+                                                 .set_sequence('DummySequence 1')
+                                                 .set_parent(
+                                                     ParentBuilder().set_project(2)
+                                                                    .set_item(3)
+                                                                    .get_element()
+                                                 )
+                                                 .get_element()
                              )
                              .set_fields(
                                  {
@@ -698,15 +777,21 @@ class TestItemsAPI():
                              .set_created_by(4)
                              .set_modified_by(5)
                              .set_lock(
-                                 ItemLockBuilder().set_locked(False)
-                                                 .set_last_locked_date('DummyLastLockedDate 1')
-                                                 .get_element()
+                                LockBuilder().set_locked(False)
+                                             .set_last_locked_date(datetime.fromtimestamp(1582199426))
+                                             .set_locked_by(0)
+                                             .get_element()
                              )
                              .set_location(
-                                 ItemLocationBuilder().set_sort_order(0)
-                                                     .set_global_sort_order(1)
-                                                     .set_sequence('DummySequence 1')
-                                                     .get_element()
+                                LocationBuilder().set_sort_order(0)
+                                                 .set_global_sort_order(1)
+                                                 .set_sequence('DummySequence 1')
+                                                 .set_parent(
+                                                     ParentBuilder().set_project(2)
+                                                                    .set_item(3)
+                                                                    .get_element()
+                                                 )
+                                                 .get_element()
                              )
                              .set_fields(
                                  {
@@ -740,15 +825,21 @@ class TestItemsAPI():
                              .set_created_by(index + 3)
                              .set_modified_by(index + 4)
                              .set_lock(
-                                 ItemLockBuilder().set_locked(bool(index % 2))
-                                                 .set_last_locked_date(f'DummyLastLockedDate {index}')
-                                                 .get_element()
+                                LockBuilder().set_locked(bool(index % 2))
+                                             .set_last_locked_date(datetime.fromtimestamp(1582199426))
+                                             .set_locked_by(0)
+                                             .get_element()
                              )
                              .set_location(
-                                 ItemLocationBuilder().set_sort_order(index)
-                                                     .set_global_sort_order(index + 1)
-                                                     .set_sequence(f'DummySequence {index}')
-                                                     .get_element()
+                                LocationBuilder().set_sort_order(index)
+                                                 .set_global_sort_order(index + 1)
+                                                 .set_sequence(f'DummySequence {index}')
+                                                 .set_parent(
+                                                     ParentBuilder().set_project(0)
+                                                                    .set_item(1)
+                                                                    .get_element()
+                                                 )
+                                                 .get_element()
                              )
                              .set_fields(
                                  {
@@ -785,15 +876,21 @@ class TestItemsAPI():
                              .set_created_by(index + 3)
                              .set_modified_by(index + 4)
                              .set_lock(
-                                 ItemLockBuilder().set_locked(bool(index % 2))
-                                                 .set_last_locked_date(f'DummyLastLockedDate {index}')
-                                                 .get_element()
+                                LockBuilder().set_locked(bool(index % 2))
+                                             .set_last_locked_date(datetime.fromtimestamp(1582199426))
+                                             .set_locked_by(0)
+                                             .get_element()
                              )
                              .set_location(
-                                 ItemLocationBuilder().set_sort_order(index)
-                                                     .set_global_sort_order(index + 1)
-                                                     .set_sequence(f'DummySequence {index}')
-                                                     .get_element()
+                                LocationBuilder().set_sort_order(index)
+                                                 .set_global_sort_order(index + 1)
+                                                 .set_sequence(f'DummySequence {index}')
+                                                 .set_parent(
+                                                     ParentBuilder().set_project(0)
+                                                                    .set_item(1)
+                                                                    .get_element()
+                                                 )
+                                                 .get_element()
                              )
                              .set_fields(
                                  {
@@ -817,15 +914,21 @@ class TestItemsAPI():
                              .set_created_by(4)
                              .set_modified_by(5)
                              .set_lock(
-                                 ItemLockBuilder().set_locked(False)
-                                                 .set_last_locked_date('DummyLastLockedDate 1')
-                                                 .get_element()
+                                LockBuilder().set_locked(False)
+                                             .set_last_locked_date(datetime.fromtimestamp(1582199426))
+                                             .set_locked_by(0)
+                                             .get_element()
                              )
                              .set_location(
-                                 ItemLocationBuilder().set_sort_order(0)
-                                                     .set_global_sort_order(1)
-                                                     .set_sequence('DummySequence 1')
-                                                     .get_element()
+                                LocationBuilder().set_sort_order(0)
+                                                 .set_global_sort_order(1)
+                                                 .set_sequence('DummySequence 1')
+                                                 .set_parent(
+                                                     ParentBuilder().set_project(2)
+                                                                    .set_item(3)
+                                                                    .get_element()
+                                                 )
+                                                 .get_element()
                              )
                              .set_fields(
                                  {
