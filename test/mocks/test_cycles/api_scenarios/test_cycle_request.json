@@ -1,0 +1,13 @@
+{
+    "testRunGenerationConfig":
+    {
+        "testGroupsToInclude": [ 1, 2, 3 ],
+        "testRunStatusesToInclude": ["PASSED", "NOT_RUN", "INPROGRESS", "FAILED", "BLOCKED"]
+    },
+    "fields": 
+    {
+        "fieldStr": "DummyField",
+        "fieldInt": 0,
+        "fieldBool": true
+    }
+}
