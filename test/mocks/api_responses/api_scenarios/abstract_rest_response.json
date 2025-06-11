@@ -1,0 +1,9 @@
+{
+    "status": 0,
+    "statusReasonPhrase": "DummyStatusReasonPhrase",
+    "pageInfo": {
+        "startIndex": 0,
+        "resultCount": 1,
+        "totalResults": 2
+    }
+}
