@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing_extensions import Self
 
 class TestPlan:
@@ -6,9 +7,9 @@ class TestPlan:
     global_id: str
     project: int
     item_type: int
-    created_date: str
-    modified_date: str
-    last_activity_date: str
+    created_date: datetime
+    modified_date: datetime
+    last_activity_date: datetime
     created_by: int
     modified_by: int
     fields: dict
@@ -20,9 +21,9 @@ class TestPlan:
         self.global_id = ""
         self.project = 0
         self.item_type = 0
-        self.created_date = ""
-        self.modified_date = ""
-        self.last_activity_date = ""
+        self.created_date = datetime.fromtimestamp(0)
+        self.modified_date = datetime.fromtimestamp(0)
+        self.last_activity_date = datetime.fromtimestamp(0)
         self.created_by = 0
         self.modified_by = 0
         self.fields = {}
