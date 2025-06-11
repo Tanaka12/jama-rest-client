@@ -1,1 +1,1 @@
-from .api_response import APICreateResponse, APIDeleteResponse, APIUpdateResponse
+from .api_response import AbstractRestResponse, CreatedResponse
