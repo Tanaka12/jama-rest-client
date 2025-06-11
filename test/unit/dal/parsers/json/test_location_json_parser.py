@@ -26,6 +26,6 @@ class TestLocationJSONParser():
         )
       ]
     )
-    def test_validate_happy_path_parse_item_returns_expected_value(self, location_dict: dict, expected_location: Location) -> None:
+    def test_validate_happy_path_parse_location_returns_expected_value(self, location_dict: dict, expected_location: Location) -> None:
         location = LocationJSONParser.parse(location_dict)
         assert expected_location == location

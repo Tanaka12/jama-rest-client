@@ -28,6 +28,6 @@ class TestLockJSONParser():
         )
       ]
     )
-    def test_validate_happy_path_parse_item_returns_expected_value(self, lock_dict: dict, expected_lock: Lock) -> None:
+    def test_validate_happy_path_parse_lock_returns_expected_value(self, lock_dict: dict, expected_lock: Lock) -> None:
         lock = LockJSONParser.parse(lock_dict)
         assert expected_lock == lock

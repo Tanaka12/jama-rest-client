@@ -482,7 +482,7 @@ class TestItemTypeJSONParser():
         )
       ]
     )
-    def test_validate_parse_item_raises_exception_when_wrong_value(self, item_type_dict: dict, expected_exception: ValueError) -> None:
+    def test_validate_parse_item_type_raises_exception_when_wrong_value(self, item_type_dict: dict, expected_exception: ValueError) -> None:
         with pytest.raises(ValueError) as value_error_exception:
           ItemTypeJSONParser.parse(item_type_dict)
 

@@ -6,7 +6,7 @@ from jama_rest_client.model.test_plan import TestGroup as TypeTestGroup
 from mocks.test_plans import TestPlansMocks as TypeTestPlansMocks, TEST_PLANS_API_MOCKS
 from test_utilities.builders.test_plan import TestGroupBuilder as TypeTestGroupBuilder
 
-class TestTestRunJSONParser():
+class TestGroupRunJSONParser():
 
     @pytest.mark.parametrize(
       "test_group_dict, expected_test_group",
@@ -20,6 +20,6 @@ class TestTestRunJSONParser():
         )
       ]
     )
-    def test_validate_happy_path_parse_test_plan_returns_expected_value(self, test_group_dict: dict, expected_test_group: TypeTestGroup) -> None:
+    def test_validate_happy_path_parse_test_group_returns_expected_value(self, test_group_dict: dict, expected_test_group: TypeTestGroup) -> None:
         test_run = TypeTestGroupJSONParser.parse(test_group_dict)
         assert expected_test_group == test_run
