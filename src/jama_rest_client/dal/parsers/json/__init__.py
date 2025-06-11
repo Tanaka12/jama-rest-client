@@ -3,6 +3,7 @@ from .item_json_parser import ItemJSONParser
 from .item_type_json_parser import ItemTypeJSONParser
 from .location_json_parser import LocationJSONParser
 from .lock_json_parser import LockJSONParser
+from .page_info_json_parser import PageInfoJSONParser
 from .project_json_parser import ProjectJSONParser
 from .test_cycle_json_parser import TestCycleJSONParser
 from .test_group_json_parser import TestGroupJSONParser
