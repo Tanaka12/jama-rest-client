@@ -10,8 +10,15 @@ from jama_rest_client.dal.parsers.json import \
     TestGroupJSONParser, 
     TestPlanJSONParser
 )
-from jama_rest_client.dal.serializers.json import PatchOperationRequestJSONSerializer, TestCycleRequestJSONSerializer, TestPlanRequestJSONSerializer
+from jama_rest_client.dal.serializers.json import \
+(
+    ArchivedStatusRequestJSONSerializer,
+    PatchOperationRequestJSONSerializer, 
+    TestCycleRequestJSONSerializer, 
+    TestPlanRequestJSONSerializer
+)
 from jama_rest_client.model.activity import Activity
+from jama_rest_client.model.archived import ArchivedStatusRequest
 from jama_rest_client.model.api_response import AbstractRestResponse, CreatedResponse
 from jama_rest_client.model.request import PatchOperationRequest
 from jama_rest_client.model.test_cycle import TestCycle, TestCycleRequest
@@ -74,7 +81,11 @@ class TestPlansAPI(BaseAPI):
             start_index += len(activities_batch)
 
         return test_plan_activities
-    
+
+    def update_test_plan_archived_status(self, test_plan_id: int, archived_status_request: ArchivedStatusRequest) -> AbstractRestResponse:
+        http_response = self._put(f'{self.__resourceName}/{test_plan_id}/archived', ArchivedStatusRequestJSONSerializer.serialize(archived_status_request))
+        return AbstractRestResponseJSONParser.parse(http_response.body)
+        
     def get_test_plan_cycles(self, test_plan_id: int) -> List[TestCycle]:
         test_cycles: List[TestCycle] = []
 
