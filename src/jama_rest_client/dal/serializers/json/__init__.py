@@ -1,3 +1,4 @@
+from .archived_status_request_json_serializer import ArchivedStatusRequestJSONSerializer
 from .patch_operation_request_json_serializer import PatchOperationRequestJSONSerializer
 from .test_cycle_request_json_serializer import TestCycleRequestJSONSerializer
 from .test_plan_request_json_serializer import TestPlanRequestJSONSerializer
