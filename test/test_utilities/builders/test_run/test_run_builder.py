@@ -1,4 +1,6 @@
+from datetime import datetime
 from jama_rest_client.model.test_run import TestRun
+from typing import List
 from typing_extensions import Self
 
 class TestRunBuilder:
@@ -27,15 +29,15 @@ class TestRunBuilder:
         self.__test_run.item_type = item_type
         return self
     
-    def set_created_date(self, created_date: str) -> Self:
+    def set_created_date(self, created_date: datetime) -> Self:
         self.__test_run.created_date = created_date
         return self
     
-    def set_modified_date(self, modified_date: str) -> Self:
+    def set_modified_date(self, modified_date: datetime) -> Self:
         self.__test_run.modified_date = modified_date
         return self
 
-    def set_last_activity_date(self, last_activity_date: str) -> Self:
+    def set_last_activity_date(self, last_activity_date: datetime) -> Self:
         self.__test_run.last_activity_date = last_activity_date
         return self
 
@@ -57,6 +59,10 @@ class TestRunBuilder:
     
     def set_sort_order_from_test_group(self, sort_order_from_test_group: int) -> Self:
         self.__test_run.sort_order_from_test_group = sort_order_from_test_group
+        return self
+    
+    def set_test_group(self, test_group: List[int]) -> Self:
+        self.__test_run.test_group = test_group
         return self
     
     def set_fields(self, fields: dict) -> Self:
