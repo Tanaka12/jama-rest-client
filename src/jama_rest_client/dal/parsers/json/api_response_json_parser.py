@@ -1,33 +1,26 @@
-from jama_rest_client.model.api_response import APICreateResponse, APIDeleteResponse, APIUpdateResponse
+from jama_rest_client.model.api_response import AbstractRestResponse, CreatedResponse
+from .page_info_json_parser import PageInfoJSONParser
 
-class APICreateResponseJSONParser:
+class CreatedResponseJSONParser:
 
     @staticmethod
-    def parse(api_create_response_dict: dict) -> APICreateResponse:
-        api_create_response: APICreateResponse = APICreateResponse()
-        api_create_response.id = api_create_response_dict['id']
-        api_create_response.status = api_create_response_dict['status']
-        api_create_response.status_reason_phrase = api_create_response_dict['statusReasonPhrase']
-        api_create_response.location = api_create_response_dict['location']
+    def parse(created_response_dict: dict) -> CreatedResponse:
+        created_response: CreatedResponse = CreatedResponse()
+        created_response.status = created_response_dict['status']
+        created_response.status_reason_phrase = created_response_dict['statusReasonPhrase']
+        created_response.page_info = PageInfoJSONParser.parse(created_response_dict['pageInfo'])
+        created_response.location = created_response_dict['location']
+        created_response.id = created_response_dict['id']
 
-        return api_create_response
+        return created_response
     
-class APIUpdateResponseJSONParser:
+class AbstractRestResponseJSONParser:
 
     @staticmethod
-    def parse(api_update_response_dict: dict) -> APIUpdateResponse:
-        api_update_response: APIUpdateResponse = APIUpdateResponse()
-        api_update_response.status = api_update_response_dict['status']
-        api_update_response.status_reason_phrase = api_update_response_dict['statusReasonPhrase']
+    def parse(abstract_rest_response_dict: dict) -> AbstractRestResponse:
+        abstract_rest_response: AbstractRestResponse = AbstractRestResponse()
+        abstract_rest_response.status = abstract_rest_response_dict['status']
+        abstract_rest_response.status_reason_phrase = abstract_rest_response_dict['statusReasonPhrase']
+        abstract_rest_response.page_info = PageInfoJSONParser.parse(abstract_rest_response_dict['pageInfo'])
 
-        return api_update_response
-    
-class APIDeleteResponseJSONParser:
-
-    @staticmethod
-    def parse(api_delete_response_dict: dict) -> APIDeleteResponse:
-        api_delete_response: APIDeleteResponse = APIDeleteResponse()
-        api_delete_response.status = api_delete_response_dict['status']
-        api_delete_response.status_reason_phrase = api_delete_response_dict['statusReasonPhrase']
-
-        return api_delete_response
+        return abstract_rest_response

@@ -1,4 +1,4 @@
-from .api_response_json_parser import APICreateResponseJSONParser, APIDeleteResponseJSONParser, APIUpdateResponseJSONParser
+from .api_response_json_parser import AbstractRestResponseJSONParser, CreatedResponseJSONParser
 from .item_json_parser import ItemJSONParser
 from .item_type_json_parser import ItemTypeJSONParser
 from .location_json_parser import LocationJSONParser
