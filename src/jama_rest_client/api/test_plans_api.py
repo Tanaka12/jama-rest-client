@@ -5,6 +5,7 @@ from jama_rest_client.dal.parsers.json import \
 (
     ActivityJSONParser,
     AbstractRestResponseJSONParser,
+    AttachmentJSONParser,
     CreatedResponseJSONParser, 
     TestCycleJSONParser, 
     TestGroupJSONParser, 
@@ -19,6 +20,7 @@ from jama_rest_client.dal.serializers.json import \
 )
 from jama_rest_client.model.activity import Activity
 from jama_rest_client.model.archived import ArchivedStatusRequest
+from jama_rest_client.model.attachment import Attachment
 from jama_rest_client.model.api_response import AbstractRestResponse, CreatedResponse
 from jama_rest_client.model.request import PatchOperationRequest
 from jama_rest_client.model.test_cycle import TestCycle, TestCycleRequest
@@ -86,6 +88,21 @@ class TestPlansAPI(BaseAPI):
         http_response = self._put(f'{self.__resourceName}/{test_plan_id}/archived', ArchivedStatusRequestJSONSerializer.serialize(archived_status_request))
         return AbstractRestResponseJSONParser.parse(http_response.body)
         
+    def get_test_plan_attachments(self, test_plan_id: int) -> List[Attachment]:
+        test_plan_attachments: List[Attachment] = []
+
+        start_index: int = 0
+        while True:
+            attachments_batch = self.__parse_attachments_dict(self._get(f'{self.__resourceName}/{test_plan_id}/attachments?startAt={start_index}&maxResults=50').body['data'])
+            
+            if len(attachments_batch) == 0:
+                break
+
+            test_plan_attachments.extend(attachments_batch)
+            start_index += len(attachments_batch)
+
+        return test_plan_attachments
+    
     def get_test_plan_cycles(self, test_plan_id: int) -> List[TestCycle]:
         test_cycles: List[TestCycle] = []
 
@@ -125,6 +142,9 @@ class TestPlansAPI(BaseAPI):
 
     def __parse_activities_dict(self, activities_list_dict: List[dict]) -> List[Activity]:
         return list(map(lambda activity_dict: ActivityJSONParser.parse(activity_dict), activities_list_dict))
+
+    def __parse_attachments_dict(self, attachments_list_dict: List[dict]) -> List[Attachment]:
+        return list(map(lambda attachment_dict: AttachmentJSONParser.parse(attachment_dict), attachments_list_dict))
 
     def __parse_test_cycles_dict(self, test_cycles_list_dict: List[dict]) -> List[TestCycle]:
         return list(map(lambda test_cycle_dict: TestCycleJSONParser.parse(test_cycle_dict), test_cycles_list_dict))
