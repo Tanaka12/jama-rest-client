@@ -5,15 +5,18 @@ import pytest
 from unittest.mock import ANY, Mock
 
 from jama_rest_client.api import TestPlansAPI as TypeTestPlansAPI
+from jama_rest_client.model.activity import Activity, EventType, ObjectType
 from jama_rest_client.model.api_response import AbstractRestResponse, CreatedResponse
 from jama_rest_client.model.request import PatchOperationRequest
 from jama_rest_client.model.test_cycle import TestCycle as TypeTestCycle, TestCycleRequest as TypeTestCycleRequest
 from jama_rest_client.model.test_plan import TestPlan as TypeTestPlan, TestGroup as TypeTestGroup, TestPlanRequest as TypeTestPlanRequest
 from jama_rest_client.model.http import HTTPResponse
 
+from mocks.activities import ActivitiesMocks, ACTIVITIES_API_MOCKS
 from mocks.api_responses import ApiResponsesMocks, API_RESPONSES_API_MOCKS
 from mocks.test_cycles import TestCyclesMocks as TypeTestCyclesMocks, TEST_CYCLES_API_MOCKS
 from mocks.test_plans import TestPlansMocks as TypeTestPlansMocks, TEST_PLANS_API_MOCKS
+from test_utilities.builders.activity import ActivityBuilder
 from test_utilities.builders.api_response import AbstractRestResponseBuilder, CreatedResponseBuilder
 from test_utilities.builders.http import HTTPResponseBuilder
 from test_utilities.builders.page_info import PageInfoBuilder
@@ -391,6 +394,518 @@ class TestProjectsAPI():
         assert expected_abstract_rest_response == abstract_rest_response 
 
 
+    # get_test_plan_activities call
+    def test_validate_happy_path_get_test_plan_activities_calls_http_get_method_with_expected_resource(self) -> None:
+        dummy_test_plan_id: int = 2
+        self.__http_client.get.return_value = HTTPResponseBuilder().set_status_code(200) \
+                                                                   .set_body(ACTIVITIES_API_MOCKS[ActivitiesMocks.CASE_ACTIVITIES_EMPTY])\
+                                                                   .get_element()
+        
+        self.__service.get_test_plan_activities(dummy_test_plan_id)    
+        self.__http_client.get.assert_called_once_with(f'/rest/v1/testplans/{dummy_test_plan_id}/activities?startAt=0&maxResults=50')
+
+    @pytest.mark.parametrize(
+      "http_responses, expected_activities",
+      [
+        (
+            [
+                HTTPResponseBuilder().set_status_code(200)
+                                     .set_body(ACTIVITIES_API_MOCKS[ActivitiesMocks.CASE_ACTIVITIES_EMPTY])
+                                     .get_element()
+            ],
+            []
+        ),
+        (
+            [
+                HTTPResponseBuilder().set_status_code(200)
+                                     .set_body(ACTIVITIES_API_MOCKS[ActivitiesMocks.CASE_1_ACTIVITY])
+                                     .get_element(),
+                HTTPResponseBuilder().set_status_code(200)
+                                     .set_body(ACTIVITIES_API_MOCKS[ActivitiesMocks.CASE_ACTIVITIES_EMPTY])
+                                     .get_element()
+            ],
+            [
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails')
+                                 .set_action('DummyAction')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.BATCH_COPY)
+                                 .set_object_type(ObjectType.BASELINE)
+                                 .get_element()          
+            ] 
+        ),
+        (
+            [
+                HTTPResponseBuilder().set_status_code(200)
+                                    .set_body(ACTIVITIES_API_MOCKS[ActivitiesMocks.CASE_19_ACTIVITIES])
+                                    .get_element(),
+                HTTPResponseBuilder().set_status_code(200)
+                                    .set_body(ACTIVITIES_API_MOCKS[ActivitiesMocks.CASE_ACTIVITIES_EMPTY])
+                                    .get_element()
+            ],
+            [
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 1')
+                                 .set_action('DummyAction 1')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 1')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.BATCH_COPY)
+                                 .set_object_type(ObjectType.BASELINE)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 2')
+                                 .set_action('DummyAction 2')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 2')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.BATCH_CREATE)
+                                 .set_object_type(ObjectType.CHANGE_REQUEST)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 3')
+                                 .set_action('DummyAction 3')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 3')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.BATCH_DELETE)
+                                 .set_object_type(ObjectType.COMMENT)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 4')
+                                 .set_action('DummyAction 4')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 4')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.BATCH_SUMMARY)
+                                 .set_object_type(ObjectType.INTEGRATION)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 5')
+                                 .set_action('DummyAction 5')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 5')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.BATCH_UPDATE)
+                                 .set_object_type(ObjectType.ITEM_ATTACHMENT)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 6')
+                                 .set_action('DummyAction 6')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 6')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.COPY)
+                                 .set_object_type(ObjectType.ITEM_TAG)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 7')
+                                 .set_action('DummyAction 7')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 7')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.CREATE)
+                                 .set_object_type(ObjectType.MISCELLANEOUS)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 8')
+                                 .set_action('DummyAction 8')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 8')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.DELETE)
+                                 .set_object_type(ObjectType.PROJECT)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 9')
+                                 .set_action('DummyAction 9')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 9')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.MOVE)
+                                 .set_object_type(ObjectType.RELATIONSHIP)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 10')
+                                 .set_action('DummyAction 10')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 10')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.PUBLIC)
+                                 .set_object_type(ObjectType.REVIEW)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 11')
+                                 .set_action('DummyAction 11')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 11')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.UPDATE)
+                                 .set_object_type(ObjectType.REVISION)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 12')
+                                 .set_action('DummyAction 12')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 12')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.UPDATE)
+                                 .set_object_type(ObjectType.REVISION_ITEM)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 13')
+                                 .set_action('DummyAction 13')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 13')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.UPDATE)
+                                 .set_object_type(ObjectType.TAG)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 14')
+                                 .set_action('DummyAction 14')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 14')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.UPDATE)
+                                 .set_object_type(ObjectType.TEST_CYCLE)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 15')
+                                 .set_action('DummyAction 15')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 15')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.UPDATE)
+                                 .set_object_type(ObjectType.TEST_PLAN)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 16')
+                                 .set_action('DummyAction 16')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 16')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.UPDATE)
+                                 .set_object_type(ObjectType.TEST_RESULT)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 17')
+                                 .set_action('DummyAction 17')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 17')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.UPDATE)
+                                 .set_object_type(ObjectType.TEST_RUN)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 18')
+                                 .set_action('DummyAction 18')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 18')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.UPDATE)
+                                 .set_object_type(ObjectType.URL)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 19')
+                                 .set_action('DummyAction 19')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 19')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.UPDATE)
+                                 .set_object_type(ObjectType.USER)
+                                 .get_element(),
+            ]     
+        ),
+        (
+            [
+                HTTPResponseBuilder().set_status_code(200)
+                                    .set_body(ACTIVITIES_API_MOCKS[ActivitiesMocks.CASE_19_ACTIVITIES])
+                                    .get_element(),
+                HTTPResponseBuilder().set_status_code(200)
+                                    .set_body(ACTIVITIES_API_MOCKS[ActivitiesMocks.CASE_1_ACTIVITY])
+                                    .get_element(),
+                HTTPResponseBuilder().set_status_code(200)
+                                    .set_body(ACTIVITIES_API_MOCKS[ActivitiesMocks.CASE_ACTIVITIES_EMPTY])
+                                    .get_element()
+            ],
+            [
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 1')
+                                 .set_action('DummyAction 1')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 1')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.BATCH_COPY)
+                                 .set_object_type(ObjectType.BASELINE)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 2')
+                                 .set_action('DummyAction 2')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 2')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.BATCH_CREATE)
+                                 .set_object_type(ObjectType.CHANGE_REQUEST)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 3')
+                                 .set_action('DummyAction 3')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 3')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.BATCH_DELETE)
+                                 .set_object_type(ObjectType.COMMENT)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 4')
+                                 .set_action('DummyAction 4')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 4')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.BATCH_SUMMARY)
+                                 .set_object_type(ObjectType.INTEGRATION)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 5')
+                                 .set_action('DummyAction 5')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 5')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.BATCH_UPDATE)
+                                 .set_object_type(ObjectType.ITEM_ATTACHMENT)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 6')
+                                 .set_action('DummyAction 6')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 6')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.COPY)
+                                 .set_object_type(ObjectType.ITEM_TAG)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 7')
+                                 .set_action('DummyAction 7')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 7')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.CREATE)
+                                 .set_object_type(ObjectType.MISCELLANEOUS)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 8')
+                                 .set_action('DummyAction 8')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 8')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.DELETE)
+                                 .set_object_type(ObjectType.PROJECT)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 9')
+                                 .set_action('DummyAction 9')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 9')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.MOVE)
+                                 .set_object_type(ObjectType.RELATIONSHIP)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 10')
+                                 .set_action('DummyAction 10')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 10')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.PUBLIC)
+                                 .set_object_type(ObjectType.REVIEW)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 11')
+                                 .set_action('DummyAction 11')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 11')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.UPDATE)
+                                 .set_object_type(ObjectType.REVISION)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 12')
+                                 .set_action('DummyAction 12')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 12')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.UPDATE)
+                                 .set_object_type(ObjectType.REVISION_ITEM)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 13')
+                                 .set_action('DummyAction 13')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 13')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.UPDATE)
+                                 .set_object_type(ObjectType.TAG)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 14')
+                                 .set_action('DummyAction 14')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 14')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.UPDATE)
+                                 .set_object_type(ObjectType.TEST_CYCLE)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 15')
+                                 .set_action('DummyAction 15')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 15')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.UPDATE)
+                                 .set_object_type(ObjectType.TEST_PLAN)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 16')
+                                 .set_action('DummyAction 16')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 16')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.UPDATE)
+                                 .set_object_type(ObjectType.TEST_RESULT)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 17')
+                                 .set_action('DummyAction 17')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 17')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.UPDATE)
+                                 .set_object_type(ObjectType.TEST_RUN)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 18')
+                                 .set_action('DummyAction 18')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 18')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.UPDATE)
+                                 .set_object_type(ObjectType.URL)
+                                 .get_element(),
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails 19')
+                                 .set_action('DummyAction 19')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment 19')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.UPDATE)
+                                 .set_object_type(ObjectType.USER)
+                                 .get_element(),
+            ] +
+            [
+                ActivityBuilder().set_id(1)
+                                 .set_date(datetime.fromtimestamp(1582199426))
+                                 .set_details('DummyDetails')
+                                 .set_action('DummyAction')
+                                 .set_user(2)
+                                 .set_user_comment('DummyUserComment')
+                                 .set_item(3)
+                                 .set_item_type(4)
+                                 .set_event_type(EventType.BATCH_COPY)
+                                 .set_object_type(ObjectType.BASELINE)
+                                 .get_element()         
+            ]
+        )
+      ]
+    )
+    def test_validate_happy_path_get_test_plan_activities_returns_expected_value(self, http_responses: List[HTTPResponse], expected_activities: List[Activity]) -> None:
+        dummy_project_id: int = 2
+        self.__http_client.get.side_effect = http_responses
+        
+        activities = self.__service.get_test_plan_activities(dummy_project_id)  
+        assert expected_activities == activities
+
+
     # get_test_plan_cycles call
     def test_validate_happy_path_get_test_plan_cycles_calls_http_get_method_with_expected_resource(self) -> None:
         dummy_test_plan_id: int = 2
@@ -523,12 +1038,12 @@ class TestProjectsAPI():
         )
       ]
     )
-    def test_validate_happy_path_get_test_plan_cycles_returns_expected_value(self, http_responses: List[HTTPResponse], expected_test_cycles: List[TypeTestCycle]) -> None:
+    def test_validate_happy_path_get_test_plan_cycles_returns_expected_value(self, http_responses: List[HTTPResponse], expected_activities: List[Activity]) -> None:
         dummy_test_plan_id: int = 2
         self.__http_client.get.side_effect = http_responses
         
-        test_cycles: List[TypeTestCycle] = self.__service.get_test_plan_cycles(dummy_test_plan_id)  
-        assert expected_test_cycles == test_cycles
+        activities = self.__service.get_test_plan_activities(dummy_test_plan_id)  
+        assert expected_activities == expected_activities
 
 
     # get_test_plan_groups call
