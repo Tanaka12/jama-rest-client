@@ -220,6 +220,55 @@ class TestProjectsAPI():
         assert expected_created_response == created_response 
 
 
+    # get_test_plan call
+    def test_validate_happy_path_get_test_plan_calls_http_get_method_with_expected_resource(self) -> None:
+        dummy_test_plan_id: int = 2
+        self.__http_client.get.return_value = HTTPResponseBuilder().set_status_code(200) \
+                                                                   .set_body(TEST_PLANS_API_MOCKS[TypeTestPlansMocks.CASE_TEST_PLAN_SINGLE])\
+                                                                   .get_element()
+        
+        self.__service.get_test_plan(dummy_test_plan_id)    
+        self.__http_client.get.assert_called_once_with(f'/rest/v1/testplans/{dummy_test_plan_id}')
+
+    @pytest.mark.parametrize(
+      "http_responses, expected_test_plan",
+      [
+        (
+            [
+                HTTPResponseBuilder().set_status_code(200)
+                                    .set_body(TEST_PLANS_API_MOCKS[TypeTestPlansMocks.CASE_TEST_PLAN_SINGLE])
+                                    .get_element()
+            ],
+            TypeTestPlanBuilder().set_id(1)
+                                 .set_document_key('DummyDocumentKey 1')
+                                 .set_global_id('DummyGlobalId 1')
+                                 .set_item_type(2)
+                                 .set_project(3)
+                                 .set_created_date(datetime.fromtimestamp(1582199426))
+                                 .set_modified_date(datetime.fromtimestamp(1582199426))
+                                 .set_last_activity_date(datetime.fromtimestamp(1582199426))
+                                 .set_created_by(4)
+                                 .set_modified_by(5)                             
+                                 .set_fields(
+                                 {
+                                     'fieldStr': 'DummyField',
+                                     'fieldInt': 0,
+                                     'fieldBool': True
+                                 }
+                                 )   
+                                 .set_archived(False)
+                                 .get_element()
+        )
+      ]
+    )
+    def test_validate_happy_path_get_test_plan_returns_expected_value(self, http_responses: List[HTTPResponse], expected_test_plan: TypeTestPlan) -> None:
+        dummy_test_plan_id: int = 2
+        self.__http_client.get.side_effect = http_responses
+        
+        test_plan = self.__service.get_test_plan(dummy_test_plan_id)  
+        assert expected_test_plan == test_plan 
+
+
     # get_test_plan_cycles call
     def test_validate_happy_path_get_test_plan_cycles_calls_http_get_method_with_expected_resource(self) -> None:
         dummy_test_plan_id: int = 2
