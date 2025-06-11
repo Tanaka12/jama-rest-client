@@ -1,3 +1,4 @@
+from datetime import datetime
 from jama_rest_client.model.item import Item, ItemLock, ItemLocation
 
 class ItemJSONParser:
@@ -10,9 +11,10 @@ class ItemJSONParser:
         item.global_id = item_dict['globalId']
         item.item_type = item_dict['itemType']
         item.project = item_dict['project']
-        item.created_date = item_dict['createdDate']
-        item.modified_date = item_dict['modifiedDate']
-        item.last_activity_date = item_dict['lastActivityDate']
+        item.child_item_type = item_dict['childItemType']
+        item.created_date = ItemJSONParser.__parse_date_time(item_dict['createdDate'])
+        item.modified_date = ItemJSONParser.__parse_date_time(item_dict['modifiedDate'])
+        item.last_activity_date = ItemJSONParser.__parse_date_time(item_dict['lastActivityDate'])
         item.created_by = item_dict['createdBy']
         item.modified_by = item_dict['modifiedBy']
         item.lock = ItemJSONParser.__parse_item_lock(item_dict['lock'])
@@ -21,6 +23,10 @@ class ItemJSONParser:
 
         return item
     
+    @staticmethod
+    def __parse_date_time(date_time: str) -> datetime:
+        return datetime.strptime(date_time, '%Y-%m-%dT%H:%M:%S.000+0000')
+
     @staticmethod
     def __parse_item_lock(item_lock_dict: dict) -> ItemLock:
         item_lock: ItemLock = ItemLock()
