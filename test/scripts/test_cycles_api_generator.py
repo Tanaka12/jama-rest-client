@@ -36,9 +36,9 @@ if __name__ == "__main__":
             'globalId': f'DummyGlobalId {index}',
             'itemType': index + 1,
             'project': index + 2,
-            'createdDate': f'DummyCreatedDate {index}',
-            'modifiedDate': f'DummyModifiedDate {index}',
-            'lastActivityDate': f'DummyLastActivityDate {index}',
+            'createdDate': '2020-02-20T12:50:26.000+0000',
+            'modifiedDate': '2020-02-20T12:50:26.000+0000',
+            'lastActivityDate': '2020-02-20T12:50:26.000+0000',
             'createdBy': index + 3,
             'modifiedBy': index + 4,
             "fields": {
