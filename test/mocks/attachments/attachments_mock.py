@@ -9,10 +9,12 @@ class AttachmentsMocks(str, Enum):
     CASE_NO_ELEMENTS = "CASE_NO_ELEMENTS"
     CASE_1_ELEMENT = "CASE_1_ELEMENT"
     CASE_30_ELEMENTS = "30 CASE_30_ELEMENTS"
+    CASE_ATTACHMENT_REQUEST = "CASE_ATTACHMENT_REQUEST"
 
 ATTACHMENTS_API_MOCKS: dict[AttachmentsMocks, dict] = \
 {
     AttachmentsMocks.CASE_NO_ELEMENTS: json.load(open(os.path.join(API_SCENARIOS_PATH, 'attachments_empty.json'))),
     AttachmentsMocks.CASE_1_ELEMENT: json.load(open(os.path.join(API_SCENARIOS_PATH, '1_attachment.json'))),
-    AttachmentsMocks.CASE_30_ELEMENTS: json.load(open(os.path.join(API_SCENARIOS_PATH, '30_attachments.json')))
+    AttachmentsMocks.CASE_30_ELEMENTS: json.load(open(os.path.join(API_SCENARIOS_PATH, '30_attachments.json'))),
+    AttachmentsMocks.CASE_ATTACHMENT_REQUEST: json.load(open(os.path.join(API_SCENARIOS_PATH, 'attachment_request.json')))
 }
