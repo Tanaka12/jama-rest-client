@@ -7,6 +7,7 @@ from unittest.mock import ANY, Mock
 from jama_rest_client.api import TestPlansAPI as TypeTestPlansAPI
 from jama_rest_client.model.activity import Activity, EventType, ObjectType
 from jama_rest_client.model.archived import ArchivedStatusRequest
+from jama_rest_client.model.attachment import Attachment
 from jama_rest_client.model.api_response import AbstractRestResponse, CreatedResponse
 from jama_rest_client.model.request import PatchOperationRequest
 from jama_rest_client.model.test_cycle import TestCycle as TypeTestCycle, TestCycleRequest as TypeTestCycleRequest
@@ -14,12 +15,15 @@ from jama_rest_client.model.test_plan import TestPlan as TypeTestPlan, TestGroup
 from jama_rest_client.model.http import HTTPResponse
 
 from mocks.activities import ActivitiesMocks, ACTIVITIES_API_MOCKS
+from mocks.attachments import AttachmentsMocks, ATTACHMENTS_API_MOCKS
 from mocks.api_responses import ApiResponsesMocks, API_RESPONSES_API_MOCKS
 from mocks.test_cycles import TestCyclesMocks as TypeTestCyclesMocks, TEST_CYCLES_API_MOCKS
 from mocks.test_plans import TestPlansMocks as TypeTestPlansMocks, TEST_PLANS_API_MOCKS
 from test_utilities.builders.activity import ActivityBuilder
+from test_utilities.builders.attachment import AttachmentBuilder
 from test_utilities.builders.api_response import AbstractRestResponseBuilder, CreatedResponseBuilder
 from test_utilities.builders.http import HTTPResponseBuilder
+from test_utilities.builders.lock import LockBuilder
 from test_utilities.builders.page_info import PageInfoBuilder
 from test_utilities.builders.test_cycle import TestCycleBuilder as TypeTestCycleBuilder
 from test_utilities.builders.test_plan import \
@@ -946,6 +950,186 @@ class TestProjectsAPI():
         
         abstract_rest_response = self.__service.update_test_plan_archived_status(dummy_test_plan_id, dummy_archived_status_request)  
         assert expected_abstract_rest_response == abstract_rest_response 
+
+
+    # get_test_plan_attachments call
+    def test_validate_happy_path_get_test_plan_attachments_calls_http_get_method_with_expected_resource(self) -> None:
+        dummy_test_plan_id: int = 2
+        self.__http_client.get.return_value = HTTPResponseBuilder().set_status_code(200) \
+                                                                   .set_body(ATTACHMENTS_API_MOCKS[AttachmentsMocks.CASE_NO_ELEMENTS])\
+                                                                   .get_element()
+        
+        self.__service.get_test_plan_attachments(dummy_test_plan_id)    
+        self.__http_client.get.assert_called_once_with(f'/rest/v1/testplans/{dummy_test_plan_id}/attachments?startAt=0&maxResults=50')
+
+    @pytest.mark.parametrize(
+      "http_responses, expected_attachments",
+      [
+        (
+            [
+                HTTPResponseBuilder().set_status_code(200)
+                                     .set_body(ATTACHMENTS_API_MOCKS[AttachmentsMocks.CASE_NO_ELEMENTS])
+                                     .get_element()
+            ],
+            []
+        ),
+        (
+            [
+                HTTPResponseBuilder().set_status_code(200)
+                                    .set_body(ATTACHMENTS_API_MOCKS[AttachmentsMocks.CASE_1_ELEMENT])
+                                    .get_element(),
+                HTTPResponseBuilder().set_status_code(200)
+                                    .set_body(ATTACHMENTS_API_MOCKS[AttachmentsMocks.CASE_NO_ELEMENTS])
+                                    .get_element()
+            ],
+            [
+                AttachmentBuilder().set_file_name('DummyFileName 1')
+                                   .set_mime_type('DummyMimeType 1')
+                                   .set_file_size(0)
+                                   .set_id(1)
+                                   .set_document_key('DummyDocumentKey 1')
+                                   .set_global_id('DummyGlobalId 1')
+                                   .set_project(2)
+                                   .set_item_type(3)
+                                   .set_created_date(datetime.fromtimestamp(1582199426))
+                                   .set_modified_date(datetime.fromtimestamp(1582199426))
+                                   .set_last_activity_date(datetime.fromtimestamp(1582199426))
+                                   .set_created_by(4)
+                                   .set_modified_by(5)
+                                   .set_lock(
+                                       LockBuilder().set_locked(False)
+                                                    .set_last_locked_date(datetime.fromtimestamp(1582199426))
+                                                    .set_locked_by(0)
+                                                    .get_element()
+                                   )
+                                   .set_fields(
+                                      {
+                                        'fieldStr': 'DummyField',
+                                        'fieldInt': 0,
+                                        'fieldBool': True
+                                      }
+                                   )
+                                   .get_element()
+            ] 
+        ),
+        (
+            [
+                HTTPResponseBuilder().set_status_code(200)
+                                    .set_body(ATTACHMENTS_API_MOCKS[AttachmentsMocks.CASE_30_ELEMENTS])
+                                    .get_element(),
+                HTTPResponseBuilder().set_status_code(200)
+                                    .set_body(ATTACHMENTS_API_MOCKS[AttachmentsMocks.CASE_NO_ELEMENTS])
+                                    .get_element()
+            ],
+            [
+                AttachmentBuilder().set_file_name(f'DummyFileName {index}')
+                                   .set_mime_type(f'DummyMimeType {index}')
+                                   .set_file_size(index)
+                                   .set_id(index + 1)
+                                   .set_document_key(f'DummyDocumentKey {index}')
+                                   .set_global_id(f'DummyGlobalId {index}')
+                                   .set_project(index + 2)
+                                   .set_item_type(index + 3)
+                                   .set_created_date(datetime.fromtimestamp(1582199426))
+                                   .set_modified_date(datetime.fromtimestamp(1582199426))
+                                   .set_last_activity_date(datetime.fromtimestamp(1582199426))
+                                   .set_created_by(index + 4)
+                                   .set_modified_by(index + 5)
+                                   .set_lock(
+                                       LockBuilder().set_locked(False)
+                                                    .set_last_locked_date(datetime.fromtimestamp(1582199426))
+                                                    .set_locked_by(0)
+                                                    .get_element()
+                                   )
+                                   .set_fields(
+                                      {
+                                        'fieldStr': 'DummyField',
+                                        'fieldInt': 0,
+                                        'fieldBool': True
+                                      }
+                                   )
+                                   .get_element() for index in range(1,30)
+            ]     
+        ),
+        (
+            [
+                HTTPResponseBuilder().set_status_code(200)
+                                    .set_body(ATTACHMENTS_API_MOCKS[AttachmentsMocks.CASE_30_ELEMENTS])
+                                    .get_element(),
+                HTTPResponseBuilder().set_status_code(200)
+                                    .set_body(ATTACHMENTS_API_MOCKS[AttachmentsMocks.CASE_1_ELEMENT])
+                                    .get_element(),
+                HTTPResponseBuilder().set_status_code(200)
+                                    .set_body(ATTACHMENTS_API_MOCKS[AttachmentsMocks.CASE_NO_ELEMENTS])
+                                    .get_element()
+            ],
+            [
+                AttachmentBuilder().set_file_name(f'DummyFileName {index}')
+                                   .set_mime_type(f'DummyMimeType {index}')
+                                   .set_file_size(index)
+                                   .set_id(index + 1)
+                                   .set_document_key(f'DummyDocumentKey {index}')
+                                   .set_global_id(f'DummyGlobalId {index}')
+                                   .set_project(index + 2)
+                                   .set_item_type(index + 3)
+                                   .set_created_date(datetime.fromtimestamp(1582199426))
+                                   .set_modified_date(datetime.fromtimestamp(1582199426))
+                                   .set_last_activity_date(datetime.fromtimestamp(1582199426))
+                                   .set_created_by(index + 4)
+                                   .set_modified_by(index + 5)
+                                   .set_lock(
+                                       LockBuilder().set_locked(False)
+                                                    .set_last_locked_date(datetime.fromtimestamp(1582199426))
+                                                    .set_locked_by(0)
+                                                    .get_element()
+                                   )
+                                   .set_fields(
+                                      {
+                                        'fieldStr': 'DummyField',
+                                        'fieldInt': 0,
+                                        'fieldBool': True
+                                      }
+                                   )
+                                   .get_element() for index in range(1,30)
+            ] +
+            [
+                AttachmentBuilder().set_file_name('DummyFileName 1')
+                                   .set_mime_type('DummyMimeType 1')
+                                   .set_file_size(0)
+                                   .set_id(1)
+                                   .set_document_key('DummyDocumentKey 1')
+                                   .set_global_id('DummyGlobalId 1')
+                                   .set_project(2)
+                                   .set_item_type(3)
+                                   .set_created_date(datetime.fromtimestamp(1582199426))
+                                   .set_modified_date(datetime.fromtimestamp(1582199426))
+                                   .set_last_activity_date(datetime.fromtimestamp(1582199426))
+                                   .set_created_by(4)
+                                   .set_modified_by(5)
+                                   .set_lock(
+                                       LockBuilder().set_locked(False)
+                                                    .set_last_locked_date(datetime.fromtimestamp(1582199426))
+                                                    .set_locked_by(0)
+                                                    .get_element()
+                                   )
+                                   .set_fields(
+                                      {
+                                        'fieldStr': 'DummyField',
+                                        'fieldInt': 0,
+                                        'fieldBool': True
+                                      }
+                                   )
+                                   .get_element()
+            ]
+        )
+      ]
+    )
+    def test_validate_happy_path_get_test_plan_attachments_returns_expected_value(self, http_responses: List[HTTPResponse], expected_attachments: List[Attachment]) -> None:
+        dummy_test_plan_id: int = 2
+        self.__http_client.get.side_effect = http_responses
+        
+        attachments = self.__service.get_test_plan_attachments(dummy_test_plan_id)  
+        assert expected_attachments == attachments 
 
 
     # get_test_plan_cycles call
