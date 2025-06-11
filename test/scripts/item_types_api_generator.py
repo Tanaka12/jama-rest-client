@@ -36,28 +36,31 @@ if __name__ == "__main__":
             'display': f'DummyDisplay {index}',
             'displayPlural': f'DummyDisplayPlural {index}',
             'description': f'DummyDescription {index}',
-            'image': '',
-            'category': f'DummyCategory {index}',
-            'fields': [],
-            'system': True,
-            'type': 'itemtypes',
+            'image': f'DummyImage {index}',
+            'category': 'COMPONENT',
             'fields': [
                 {
                     'id': 1,
                     'name': 'DummyName 1',
                     'label': 'DummyLabel 1',
-                    'fieldType': 'DummyFieldType 1',
+                    'fieldType': 'ACTIONS',
                     'readOnly': False,
+                    'readOnlyAllowApiOverwrite': False,
                     'required': False,
                     'triggerSuspect': False,
-                    'synchronize': True,
-                    'textType': 'DummyTextType 1'
+                    'synchronize': False,
+                    'pickList': 1,
+                    'textType': 'ATTACHMENT',
+                    'itemType': 1
                 }
-            ]
+            ],
+            'system': True
         }
 
         data.append(element)
 
     result['data'] = data
 
-    print(json.dumps(result))
+    with open('file.json', 'w') as file_handle:
+        file_handle.write(json.dumps(result))
+
