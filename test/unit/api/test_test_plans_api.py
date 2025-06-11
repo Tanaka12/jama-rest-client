@@ -7,7 +7,7 @@ from unittest.mock import ANY, Mock
 from jama_rest_client.api import TestPlansAPI as TypeTestPlansAPI
 from jama_rest_client.model.api_response import CreatedResponse
 from jama_rest_client.model.test_cycle import TestCycle as TypeTestCycle, TestCycleRequest as TypeTestCycleRequest
-from jama_rest_client.model.test_plan import TestPlan as TypeTestPlan, TestGroup as TypeTestGroup
+from jama_rest_client.model.test_plan import TestPlan as TypeTestPlan, TestGroup as TypeTestGroup, TestPlanRequest as TypeTestPlanRequest
 from jama_rest_client.model.http import HTTPResponse
 
 from mocks.api_responses import ApiResponsesMocks, API_RESPONSES_API_MOCKS
@@ -17,7 +17,11 @@ from test_utilities.builders.api_response import CreatedResponseBuilder
 from test_utilities.builders.http import HTTPResponseBuilder
 from test_utilities.builders.page_info import PageInfoBuilder
 from test_utilities.builders.test_cycle import TestCycleBuilder as TypeTestCycleBuilder
-from test_utilities.builders.test_plan import TestPlanBuilder as TypeTestPlanBuilder, TestGroupBuilder as TypeTestGroupBuilder
+from test_utilities.builders.test_plan import \
+(
+    TestPlanBuilder as TypeTestPlanBuilder,
+    TestGroupBuilder as TypeTestGroupBuilder
+)
 
 class TestProjectsAPI():
     __service: TypeTestPlansAPI
@@ -173,6 +177,47 @@ class TestProjectsAPI():
         
         test_plans: List[TypeTestPlan] = self.__service.get_test_plans(dummy_project_id)  
         assert expected_test_plans == test_plans 
+
+
+    # create_test_plan call
+    def test_validate_happy_path_create_test_plan_calls_http_post_method_with_expected_resource(self) -> None:
+        dummy_test_plan_request = TypeTestPlanRequest()
+        self.__http_client.post.return_value = HTTPResponseBuilder().set_status_code(200) \
+                                                                    .set_body(API_RESPONSES_API_MOCKS[ApiResponsesMocks.CASE_CREATED_RESPONSE]) \
+                                                                    .get_element()
+        
+        self.__service.create_test_plan(dummy_test_plan_request)    
+        self.__http_client.post.assert_called_once_with(f'/rest/v1/testplans', ANY)
+
+    @pytest.mark.parametrize(
+      "http_responses, expected_created_response",
+      [
+        (
+            [
+                HTTPResponseBuilder().set_status_code(200)
+                                     .set_body(API_RESPONSES_API_MOCKS[ApiResponsesMocks.CASE_CREATED_RESPONSE])
+                                     .get_element()
+            ],
+            CreatedResponseBuilder().set_id(1)
+                                    .set_location('/element/elementNew')
+                                    .set_page_info(
+                                        PageInfoBuilder().set_result_count(1)
+                                                            .set_start_index(0)
+                                                            .set_total_results(2)
+                                                            .get_element()
+                                    )
+                                    .set_status(0)
+                                    .set_status_reason_phrase('DummyStatusReasonPhrase')
+                                    .get_element()
+        )
+      ]
+    )
+    def test_validate_happy_path_post_test_plan_cycle_returns_expected_value(self, http_responses: List[HTTPResponse], expected_created_response: CreatedResponse) -> None:
+        dummy_test_plan_request = TypeTestPlanRequest()
+        self.__http_client.post.side_effect = http_responses
+        
+        created_response = self.__service.create_test_plan_cycle(dummy_test_plan_request)  
+        assert expected_created_response == created_response 
 
 
     # get_test_plan_cycles call
