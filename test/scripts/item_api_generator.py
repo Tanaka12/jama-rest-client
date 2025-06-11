@@ -62,12 +62,14 @@ if __name__ == "__main__":
                 "globalSortOrder": index + 1,
                 "sequence": f'DummySequence {index}',
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": bool(index % 2),
-                "lastLockedDate": f'DummyLastLockedDate {index}'
+                "lastLockedDate": '2020-02-20T12:50:26.000+0000',
+                "lockedBy": 0
             },
             "type": "items"
         }
