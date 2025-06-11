@@ -10,11 +10,8 @@ class ItemLock:
         self.last_locked_date = ""
 
     def __eq__(self, other: Self):
-        if self.locked == other.locked \
-        and self.last_locked_date == other.last_locked_date:
-            return True
-
-        return False
+        return self.locked == other.locked \
+            and self.last_locked_date == other.last_locked_date
 
 class ItemLocation:
     sort_order: int
@@ -27,13 +24,10 @@ class ItemLocation:
         self.sequence = ""
 
     def __eq__(self, other: Self):
-        if self.sort_order == other.sort_order \
-        and self.global_sort_order == other.global_sort_order \
-        and self.sequence == other.sequence:
-            return True
-
-        return False
-
+        return self.sort_order == other.sort_order \
+            and self.global_sort_order == other.global_sort_order \
+            and self.sequence == other.sequence
+    
 class Item:
     id: int
     document_key: str
@@ -65,19 +59,16 @@ class Item:
         self.fields = {}
 
     def __eq__(self, other: Self):
-        if self.id == other.id \
-        and self.document_key == other.document_key \
-        and self.global_id == other.global_id \
-        and self.item_type == other.item_type \
-        and self.project == other.project \
-        and self.created_date == other.created_date \
-        and self.modified_date == other.modified_date \
-        and self.last_activity_date == other.last_activity_date \
-        and self.created_by == other.created_by \
-        and self.modified_by == other.modified_by \
-        and self.lock == other.lock \
-        and self.location == other.location \
-        and self.fields == other.fields:
-            return True
-
-        return False
+        return self.id == other.id \
+            and self.document_key == other.document_key \
+            and self.global_id == other.global_id \
+            and self.item_type == other.item_type \
+            and self.project == other.project \
+            and self.created_date == other.created_date \
+            and self.modified_date == other.modified_date \
+            and self.last_activity_date == other.last_activity_date \
+            and self.created_by == other.created_by \
+            and self.modified_by == other.modified_by \
+            and self.lock == other.lock \
+            and self.location == other.location \
+            and self.fields == other.fields

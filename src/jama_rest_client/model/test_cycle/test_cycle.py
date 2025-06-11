@@ -27,17 +27,14 @@ class TestCycle:
         self.fields = {}
 
     def __eq__(self, other: Self):
-        if self.id == other.id \
-        and self.document_key == other.document_key \
-        and self.global_id == other.global_id \
-        and self.project == other.project \
-        and self.item_type == other.item_type \
-        and self.created_date == other.created_date \
-        and self.modified_date == other.modified_date \
-        and self.last_activity_date == other.last_activity_date \
-        and self.created_by == other.created_by \
-        and self.modified_by == other.modified_by \
-        and self.fields == other.fields:
-            return True
-
-        return False
+        return self.id == other.id \
+            and self.document_key == other.document_key \
+            and self.global_id == other.global_id \
+            and self.project == other.project \
+            and self.item_type == other.item_type \
+            and self.created_date == other.created_date \
+            and self.modified_date == other.modified_date \
+            and self.last_activity_date == other.last_activity_date \
+            and self.created_by == other.created_by \
+            and self.modified_by == other.modified_by \
+            and self.fields == other.fields

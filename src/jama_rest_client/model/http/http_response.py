@@ -12,9 +12,6 @@ class HTTPResponse:
         self.request = HTTPRequest()
     
     def __eq__(self, other: Self):
-        if self.status_code == other.status_code \
-        and self.body == other.body \
-        and self.request == other.request:
-            return True
-
-        return False
+        return self.status_code == other.status_code \
+            and self.body == other.body \
+            and self.request == other.request

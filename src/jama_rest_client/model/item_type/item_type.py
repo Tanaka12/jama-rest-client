@@ -24,18 +24,15 @@ class ItemTypeField:
         self.text_type = ""
 
     def __eq__(self, other: Self):
-        if self.id == other.id \
-        and self.name == other.name \
-        and self.label == other.label \
-        and self.field_type == other.field_type \
-        and self.read_only == other.read_only \
-        and self.required == other.required \
-        and self.trigger_suspect == other.trigger_suspect \
-        and self.synchronize == other.synchronize \
-        and self.text_type == other.text_type:
-            return True
-
-        return False
+        return self.id == other.id \
+            and self.name == other.name \
+            and self.label == other.label \
+            and self.field_type == other.field_type \
+            and self.read_only == other.read_only \
+            and self.required == other.required \
+            and self.trigger_suspect == other.trigger_suspect \
+            and self.synchronize == other.synchronize \
+            and self.text_type == other.text_type
 
 class ItemType:
     id: int
@@ -56,13 +53,10 @@ class ItemType:
         self.fields = []
 
     def __eq__(self, other: Self):
-        if self.id == other.id \
-        and self.key == other.key \
-        and self.display == other.display \
-        and self.display_plural == other.display_plural \
-        and self.description == other.description \
-        and self.category == other.category \
-        and self.fields == other.fields:
-            return True
-
-        return False
+        return self.id == other.id \
+            and self.key == other.key \
+            and self.display == other.display \
+            and self.display_plural == other.display_plural \
+            and self.description == other.description \
+            and self.category == other.category \
+            and self.fields == other.fields

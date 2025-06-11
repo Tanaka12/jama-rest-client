@@ -11,9 +11,6 @@ class HTTPRequest:
         self.resource = ""
 
     def __eq__(self, other: Self):
-        if self.method == other.method \
-        and self.body == other.body \
-        and self.resource == other.resource:
-            return True
-
-        return False
+        return self.method == other.method \
+            and self.body == other.body \
+            and self.resource == other.resource
