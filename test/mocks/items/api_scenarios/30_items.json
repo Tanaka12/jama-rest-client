@@ -51,12 +51,14 @@
                 "globalSortOrder": 2,
                 "sequence": "DummySequence 1",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 1"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -92,12 +94,14 @@
                 "globalSortOrder": 3,
                 "sequence": "DummySequence 2",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 2"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -133,12 +137,14 @@
                 "globalSortOrder": 4,
                 "sequence": "DummySequence 3",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 3"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -174,12 +180,14 @@
                 "globalSortOrder": 5,
                 "sequence": "DummySequence 4",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 4"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -215,12 +223,14 @@
                 "globalSortOrder": 6,
                 "sequence": "DummySequence 5",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 5"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -256,12 +266,14 @@
                 "globalSortOrder": 7,
                 "sequence": "DummySequence 6",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 6"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -297,12 +309,14 @@
                 "globalSortOrder": 8,
                 "sequence": "DummySequence 7",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 7"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -338,12 +352,14 @@
                 "globalSortOrder": 9,
                 "sequence": "DummySequence 8",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 8"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -379,12 +395,14 @@
                 "globalSortOrder": 10,
                 "sequence": "DummySequence 9",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 9"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -420,12 +438,14 @@
                 "globalSortOrder": 11,
                 "sequence": "DummySequence 10",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 10"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -461,12 +481,14 @@
                 "globalSortOrder": 12,
                 "sequence": "DummySequence 11",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 11"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -502,12 +524,14 @@
                 "globalSortOrder": 13,
                 "sequence": "DummySequence 12",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 12"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -543,12 +567,14 @@
                 "globalSortOrder": 14,
                 "sequence": "DummySequence 13",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 13"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -584,12 +610,14 @@
                 "globalSortOrder": 15,
                 "sequence": "DummySequence 14",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 14"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -625,12 +653,14 @@
                 "globalSortOrder": 16,
                 "sequence": "DummySequence 15",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 15"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -666,12 +696,14 @@
                 "globalSortOrder": 17,
                 "sequence": "DummySequence 16",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 16"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -707,12 +739,14 @@
                 "globalSortOrder": 18,
                 "sequence": "DummySequence 17",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 17"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -748,12 +782,14 @@
                 "globalSortOrder": 19,
                 "sequence": "DummySequence 18",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 18"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -789,12 +825,14 @@
                 "globalSortOrder": 20,
                 "sequence": "DummySequence 19",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 19"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -830,12 +868,14 @@
                 "globalSortOrder": 21,
                 "sequence": "DummySequence 20",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 20"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -871,12 +911,14 @@
                 "globalSortOrder": 22,
                 "sequence": "DummySequence 21",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 21"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -912,12 +954,14 @@
                 "globalSortOrder": 23,
                 "sequence": "DummySequence 22",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 22"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -953,12 +997,14 @@
                 "globalSortOrder": 24,
                 "sequence": "DummySequence 23",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 23"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -994,12 +1040,14 @@
                 "globalSortOrder": 25,
                 "sequence": "DummySequence 24",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 24"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -1035,12 +1083,14 @@
                 "globalSortOrder": 26,
                 "sequence": "DummySequence 25",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 25"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -1076,12 +1126,14 @@
                 "globalSortOrder": 27,
                 "sequence": "DummySequence 26",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 26"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -1117,12 +1169,14 @@
                 "globalSortOrder": 28,
                 "sequence": "DummySequence 27",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 27"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -1158,12 +1212,14 @@
                 "globalSortOrder": 29,
                 "sequence": "DummySequence 28",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 28"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -1199,12 +1255,14 @@
                 "globalSortOrder": 30,
                 "sequence": "DummySequence 29",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 29"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         }

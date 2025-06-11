@@ -73,12 +73,14 @@
             "globalSortOrder": 1,
             "sequence": "DummySequence 1",
             "parent": {
-                "item": 2
+                "project": 2,
+                "item": 3
             }
         },
         "lock": {
             "locked": false,
-            "lastLockedDate": "DummyLastLockedDate 1"
+            "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+            "lockedBy": 0
         },
         "type": "items"
     }
