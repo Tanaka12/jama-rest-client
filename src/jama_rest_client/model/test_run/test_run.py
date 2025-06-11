@@ -1,3 +1,5 @@
+from datetime import datetime
+from typing import List
 from typing_extensions import Self
 
 class TestRun:
@@ -6,14 +8,15 @@ class TestRun:
     global_id: str
     project: int
     item_type: int
-    created_date: str
-    modified_date: str
-    last_activity_date: str
+    created_date: datetime
+    modified_date: datetime
+    last_activity_date: datetime
     created_by: int
     modified_by: int
     test_case_version_number: int
     test_case_current_version_number: int
     sort_order_from_test_group: int
+    test_group: List[int]
     fields: dict
 
     def __init__(self):
@@ -22,14 +25,15 @@ class TestRun:
         self.global_id = ""
         self.project = 0
         self.item_type = 0
-        self.created_date = ""
-        self.modified_date = ""
-        self.last_activity_date = ""
+        self.created_date = datetime.fromtimestamp(0)
+        self.modified_date = datetime.fromtimestamp(0)
+        self.last_activity_date = datetime.fromtimestamp(0)
         self.created_by = 0
         self.modified_by = 0
         self.test_case_version_number = 0
         self.test_case_current_version_number = 0
         self.sort_order_from_test_group = 0
+        self.test_group = []
         self.fields = {}
 
     def __eq__(self, other: Self):
@@ -46,4 +50,5 @@ class TestRun:
             and self.test_case_version_number == other.test_case_version_number \
             and self.test_case_current_version_number == other.test_case_current_version_number \
             and self.sort_order_from_test_group == other.sort_order_from_test_group \
+            and self.test_group == other.test_group \
             and self.fields == other.fields
