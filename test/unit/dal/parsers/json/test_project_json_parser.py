@@ -1,3 +1,4 @@
+from datetime import datetime
 import pytest
 
 from jama_rest_client.dal.parsers.json import ProjectJSONParser
@@ -15,9 +16,10 @@ class TestProjectJSONParser():
             PROJECTS_API_MOCKS[ProjectsMocks.CASE_1_ELEMENT]['data'][0],
             ProjectBuilder().set_id(1)
                             .set_project_key('DummyProjectKey 1')
+                            .set_parent(2)
                             .set_is_folder(False)
-                            .set_created_date('DummyCreatedDate 1')
-                            .set_modified_date('DummyModifiedDate 1')
+                            .set_created_date(datetime.fromtimestamp(1582199426))
+                            .set_modified_date(datetime.fromtimestamp(1582199426))
                             .set_created_by(3)
                             .set_modified_by(4)
                             .set_fields(
@@ -32,9 +34,10 @@ class TestProjectJSONParser():
             PROJECTS_API_MOCKS[ProjectsMocks.CASE_1_ELEMENT_FOLDER]['data'][0],
             ProjectBuilder().set_id(1)
                             .set_project_key('DummyProjectKey 1')
+                            .set_parent(2)
                             .set_is_folder(True)
-                            .set_created_date('DummyCreatedDate 1')
-                            .set_modified_date('DummyModifiedDate 1')
+                            .set_created_date(datetime.fromtimestamp(1582199426))
+                            .set_modified_date(datetime.fromtimestamp(1582199426))
                             .set_created_by(3)
                             .set_modified_by(4)
                             .set_fields(
