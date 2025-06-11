@@ -4,7 +4,7 @@ import pytest
 from unittest.mock import Mock
 
 from jama_rest_client.api import ItemTypesAPI
-from jama_rest_client.model.item_type import ItemType
+from jama_rest_client.model.item_type import ItemType, ItemTypeCategory, ItemTypeFieldTextType, ItemTypeFieldType
 from jama_rest_client.model.http import HTTPResponse
 
 from mocks.item_types import ItemTypesMocks, ITEM_TYPES_API_MOCKS
@@ -41,7 +41,7 @@ class TestItemTypesAPI():
         (
             [
                 HTTPResponseBuilder().set_status_code(200)
-                                     .set_body(ITEM_TYPES_API_MOCKS[ItemTypesMocks.CASE_1_ELEMENT])
+                                     .set_body(ITEM_TYPES_API_MOCKS[ItemTypesMocks.CASE_1_ELEMENT_CATEGORY_COMPONENT])
                                      .get_element(),
                 HTTPResponseBuilder().set_status_code(200)
                                      .set_body(ITEM_TYPES_API_MOCKS[ItemTypesMocks.CASE_NO_ELEMENTS])
@@ -49,55 +49,14 @@ class TestItemTypesAPI():
             ],
             [
                 ItemTypeBuilder().set_id(1)
-                                 .set_key('DummyTypeKey 1')
+                                 .set_type_key('DummyTypeKey 1')
                                  .set_display('DummyDisplay 1')
                                  .set_display_plural('DummyDisplayPlural 1')
                                  .set_description('DummyDescription 1')
-                                 .set_category('DummyCategory 1')
-                                 .set_fields(
-                                    [
-                                        ItemTypeFieldBuilder().set_id(1)
-                                                            .set_name('DummyName 1')
-                                                            .set_label('DummyLabel 1')
-                                                            .set_field_type('DummyFieldType 1')
-                                                            .set_read_only(True)
-                                                            .set_required(False)
-                                                            .set_trigger_suspect(False)
-                                                            .set_synchronize(False)
-                                                            .set_text_type('DummyTextType 1')
-                                                            .get_element(),
-                                        ItemTypeFieldBuilder().set_id(2)
-                                                            .set_name('DummyName 2')
-                                                            .set_label('DummyLabel 2')
-                                                            .set_field_type('DummyFieldType 2')
-                                                            .set_read_only(False)
-                                                            .set_required(True)
-                                                            .set_trigger_suspect(False)
-                                                            .set_synchronize(False)
-                                                            .set_text_type('DummyTextType 2')
-                                                            .get_element(),
-                                        ItemTypeFieldBuilder().set_id(3)
-                                                            .set_name('DummyName 3')
-                                                            .set_label('DummyLabel 3')
-                                                            .set_field_type('DummyFieldType 3')
-                                                            .set_read_only(False)
-                                                            .set_required(False)
-                                                            .set_trigger_suspect(True)
-                                                            .set_synchronize(False)
-                                                            .set_text_type('DummyTextType 3')
-                                                            .get_element(),
-                                        ItemTypeFieldBuilder().set_id(4)
-                                                            .set_name('DummyName 4')
-                                                            .set_label('DummyLabel 4')
-                                                            .set_field_type('DummyFieldType 4')
-                                                            .set_read_only(False)
-                                                            .set_required(False)
-                                                            .set_trigger_suspect(False)
-                                                            .set_synchronize(True)
-                                                            .set_text_type('DummyTextType 4')
-                                                            .get_element()
-                                    ]
-                                 ).get_element()
+                                 .set_image('DummyImage 1')
+                                 .set_category(ItemTypeCategory.COMPONENT)
+                                 .set_system(True)
+                                 .get_element()
             ] 
         ),
         (
@@ -111,25 +70,31 @@ class TestItemTypesAPI():
             ],
             [
                 ItemTypeBuilder().set_id(index)
-                                 .set_key(f'DummyTypeKey {index}')
+                                 .set_type_key(f'DummyTypeKey {index}')
                                  .set_display(f'DummyDisplay {index}')
                                  .set_display_plural(f'DummyDisplayPlural {index}')
                                  .set_description(f'DummyDescription {index}')
-                                 .set_category(f'DummyCategory {index}')
-                                                                 .set_fields(
+                                 .set_image(f'DummyImage {index}')
+                                 .set_category(ItemTypeCategory.COMPONENT)
+                                 .set_fields(
                                     [
                                         ItemTypeFieldBuilder().set_id(1)
-                                                            .set_name('DummyName 1')
-                                                            .set_label('DummyLabel 1')
-                                                            .set_field_type('DummyFieldType 1')
-                                                            .set_read_only(False)
-                                                            .set_required(False)
-                                                            .set_trigger_suspect(False)
-                                                            .set_synchronize(True)
-                                                            .set_text_type('DummyTextType 1')
-                                                            .get_element()
+                                                              .set_name('DummyName 1')
+                                                              .set_label('DummyLabel 1')
+                                                              .set_field_type(ItemTypeFieldType.ACTIONS)
+                                                              .set_read_only(False)
+                                                              .set_read_only_allow_api_overwrite(False)
+                                                              .set_required(False)
+                                                              .set_trigger_suspect(False)
+                                                              .set_synchronize(False)
+                                                              .set_pick_list(1)
+                                                              .set_text_type(ItemTypeFieldTextType.ATTACHMENT)
+                                                              .set_item_type(1)
+                                                              .get_element()
                                     ]
-                                 ).get_element() for index in range(1,30)
+                                 )
+                                 .set_system(True)
+                                 .get_element() for index in range(1,30)
             ]     
         ),
         (
@@ -138,7 +103,7 @@ class TestItemTypesAPI():
                                      .set_body(ITEM_TYPES_API_MOCKS[ItemTypesMocks.CASE_30_ELEMENTS])
                                      .get_element(),
                 HTTPResponseBuilder().set_status_code(200)
-                                     .set_body(ITEM_TYPES_API_MOCKS[ItemTypesMocks.CASE_1_ELEMENT])
+                                     .set_body(ITEM_TYPES_API_MOCKS[ItemTypesMocks.CASE_1_ELEMENT_CATEGORY_COMPONENT])
                                      .get_element(),
                 HTTPResponseBuilder().set_status_code(200)
                                      .set_body(ITEM_TYPES_API_MOCKS[ItemTypesMocks.CASE_NO_ELEMENTS])
@@ -146,77 +111,42 @@ class TestItemTypesAPI():
             ],
             [
                 ItemTypeBuilder().set_id(index)
-                                 .set_key(f'DummyTypeKey {index}')
+                                 .set_type_key(f'DummyTypeKey {index}')
                                  .set_display(f'DummyDisplay {index}')
                                  .set_display_plural(f'DummyDisplayPlural {index}')
                                  .set_description(f'DummyDescription {index}')
-                                 .set_category(f'DummyCategory {index}')
-                                                                 .set_fields(
-                                    [
-                                        ItemTypeFieldBuilder().set_id(1)
-                                                            .set_name('DummyName 1')
-                                                            .set_label('DummyLabel 1')
-                                                            .set_field_type('DummyFieldType 1')
-                                                            .set_read_only(False)
-                                                            .set_required(False)
-                                                            .set_trigger_suspect(False)
-                                                            .set_synchronize(True)
-                                                            .set_text_type('DummyTextType 1')
-                                                            .get_element()
-                                    ]
-                                 ).get_element() for index in range(1,30)
-            ] +
-            [
-                ItemTypeBuilder().set_id(1)
-                                 .set_key('DummyTypeKey 1')
-                                 .set_display('DummyDisplay 1')
-                                 .set_display_plural('DummyDisplayPlural 1')
-                                 .set_description('DummyDescription 1')
-                                 .set_category('DummyCategory 1')
+                                 .set_image(f'DummyImage {index}')
+                                 .set_category(ItemTypeCategory.COMPONENT)
                                  .set_fields(
                                     [
                                         ItemTypeFieldBuilder().set_id(1)
-                                                            .set_name('DummyName 1')
-                                                            .set_label('DummyLabel 1')
-                                                            .set_field_type('DummyFieldType 1')
-                                                            .set_read_only(True)
-                                                            .set_required(False)
-                                                            .set_trigger_suspect(False)
-                                                            .set_synchronize(False)
-                                                            .set_text_type('DummyTextType 1')
-                                                            .get_element(),
-                                        ItemTypeFieldBuilder().set_id(2)
-                                                            .set_name('DummyName 2')
-                                                            .set_label('DummyLabel 2')
-                                                            .set_field_type('DummyFieldType 2')
-                                                            .set_read_only(False)
-                                                            .set_required(True)
-                                                            .set_trigger_suspect(False)
-                                                            .set_synchronize(False)
-                                                            .set_text_type('DummyTextType 2')
-                                                            .get_element(),
-                                        ItemTypeFieldBuilder().set_id(3)
-                                                            .set_name('DummyName 3')
-                                                            .set_label('DummyLabel 3')
-                                                            .set_field_type('DummyFieldType 3')
-                                                            .set_read_only(False)
-                                                            .set_required(False)
-                                                            .set_trigger_suspect(True)
-                                                            .set_synchronize(False)
-                                                            .set_text_type('DummyTextType 3')
-                                                            .get_element(),
-                                        ItemTypeFieldBuilder().set_id(4)
-                                                            .set_name('DummyName 4')
-                                                            .set_label('DummyLabel 4')
-                                                            .set_field_type('DummyFieldType 4')
-                                                            .set_read_only(False)
-                                                            .set_required(False)
-                                                            .set_trigger_suspect(False)
-                                                            .set_synchronize(True)
-                                                            .set_text_type('DummyTextType 4')
-                                                            .get_element()
+                                                              .set_name('DummyName 1')
+                                                              .set_label('DummyLabel 1')
+                                                              .set_field_type(ItemTypeFieldType.ACTIONS)
+                                                              .set_read_only(False)
+                                                              .set_read_only_allow_api_overwrite(False)
+                                                              .set_required(False)
+                                                              .set_trigger_suspect(False)
+                                                              .set_synchronize(False)
+                                                              .set_pick_list(1)
+                                                              .set_text_type(ItemTypeFieldTextType.ATTACHMENT)
+                                                              .set_item_type(1)
+                                                              .get_element()
                                     ]
-                                 ).get_element()
+                                 )
+                                 .set_system(True)
+                                 .get_element() for index in range(1,30)
+            ] +
+            [
+                ItemTypeBuilder().set_id(1)
+                                 .set_type_key('DummyTypeKey 1')
+                                 .set_display('DummyDisplay 1')
+                                 .set_display_plural('DummyDisplayPlural 1')
+                                 .set_description('DummyDescription 1')
+                                 .set_image('DummyImage 1')
+                                 .set_category(ItemTypeCategory.COMPONENT)
+                                 .set_system(True)
+                                 .get_element()
             ]
         )
       ]
