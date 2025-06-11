@@ -1,7 +1,13 @@
 from typing import List
 
 from jama_rest_client.http import HTTPClient
-from jama_rest_client.dal.parsers.json import CreatedResponseJSONParser, TestCycleJSONParser, TestGroupJSONParser, TestPlanJSONParser
+from jama_rest_client.dal.parsers.json import \
+(
+    CreatedResponseJSONParser, 
+    TestCycleJSONParser, 
+    TestGroupJSONParser, 
+    TestPlanJSONParser
+)
 from jama_rest_client.dal.serializers.json import TestCycleRequestJSONSerializer, TestPlanRequestJSONSerializer
 from jama_rest_client.model.api_response import CreatedResponse
 from jama_rest_client.model.test_cycle import TestCycle, TestCycleRequest
@@ -34,6 +40,10 @@ class TestPlansAPI(BaseAPI):
         http_response = self._post(self.__resourceName, TestPlanRequestJSONSerializer.serialize(test_plan_request))
         return CreatedResponseJSONParser.parse(http_response.body)
 
+    def get_test_plan(self, test_plan_id: int) -> TestPlan:
+        test_plan_dict = self._get(f'{self.__resourceName}/{test_plan_id}').body['data']
+        return TestPlanJSONParser.parse(test_plan_dict)
+        
     def get_test_plan_cycles(self, test_plan_id: int) -> List[TestCycle]:
         test_cycles: List[TestCycle] = []
 
