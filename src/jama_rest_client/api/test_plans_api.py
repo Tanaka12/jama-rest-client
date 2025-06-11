@@ -3,6 +3,7 @@ from typing import List
 from jama_rest_client.http import HTTPClient
 from jama_rest_client.dal.parsers.json import \
 (
+    ActivityJSONParser,
     AbstractRestResponseJSONParser,
     CreatedResponseJSONParser, 
     TestCycleJSONParser, 
@@ -10,6 +11,7 @@ from jama_rest_client.dal.parsers.json import \
     TestPlanJSONParser
 )
 from jama_rest_client.dal.serializers.json import PatchOperationRequestJSONSerializer, TestCycleRequestJSONSerializer, TestPlanRequestJSONSerializer
+from jama_rest_client.model.activity import Activity
 from jama_rest_client.model.api_response import AbstractRestResponse, CreatedResponse
 from jama_rest_client.model.request import PatchOperationRequest
 from jama_rest_client.model.test_cycle import TestCycle, TestCycleRequest
@@ -50,14 +52,29 @@ class TestPlansAPI(BaseAPI):
         http_response = self._put(f'{self.__resourceName}/{test_plan_id}', TestPlanRequestJSONSerializer.serialize(test_plan_request))
         return AbstractRestResponseJSONParser.parse(http_response.body)
 
-    def patch_test_plan(self, test_plan_id: int, patch_operation_request: PatchOperationRequest) -> AbstractRestResponse:
-        http_response = self._patch(f'{self.__resourceName}/{test_plan_id}', PatchOperationRequestJSONSerializer.serialize(patch_operation_request))
-        return AbstractRestResponseJSONParser.parse(http_response.body)
-
     def delete_test_plan(self, test_plan_id: int) -> AbstractRestResponse:
         http_response = self._delete(f'{self.__resourceName}/{test_plan_id}')
         return AbstractRestResponseJSONParser.parse(http_response.body)
 
+    def patch_test_plan(self, test_plan_id: int, patch_operation_request: PatchOperationRequest) -> AbstractRestResponse:
+        http_response = self._patch(f'{self.__resourceName}/{test_plan_id}', PatchOperationRequestJSONSerializer.serialize(patch_operation_request))
+        return AbstractRestResponseJSONParser.parse(http_response.body)
+
+    def get_test_plan_activities(self, test_plan_id: int) -> List[Activity]:
+        test_plan_activities: List[TestPlan] = []
+
+        start_index: int = 0
+        while True:
+            activities_batch = self.__parse_activities_dict(self._get(f'{self.__resourceName}/{test_plan_id}/activities?startAt={start_index}&maxResults=50').body['data'])
+            
+            if len(activities_batch) == 0:
+                break
+
+            test_plan_activities.extend(activities_batch)
+            start_index += len(activities_batch)
+
+        return test_plan_activities
+    
     def get_test_plan_cycles(self, test_plan_id: int) -> List[TestCycle]:
         test_cycles: List[TestCycle] = []
 
@@ -94,6 +111,9 @@ class TestPlansAPI(BaseAPI):
 
     def __parse_test_plans_dict(self, test_plans_list_dict: List[dict]) -> List[TestPlan]:
         return list(map(lambda test_plan_dict: TestPlanJSONParser.parse(test_plan_dict), test_plans_list_dict))
+
+    def __parse_activities_dict(self, activities_list_dict: List[dict]) -> List[Activity]:
+        return list(map(lambda activity_dict: ActivityJSONParser.parse(activity_dict), activities_list_dict))
 
     def __parse_test_cycles_dict(self, test_cycles_list_dict: List[dict]) -> List[TestCycle]:
         return list(map(lambda test_cycle_dict: TestCycleJSONParser.parse(test_cycle_dict), test_cycles_list_dict))
