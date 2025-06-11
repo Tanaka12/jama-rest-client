@@ -44,8 +44,8 @@
             "projectKey": "DummyProjectKey 1",
             "parent": 2,
             "isFolder": true,
-            "createdDate": "DummyCreatedDate 1",
-            "modifiedDate": "DummyModifiedDate 1",
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 3,
             "modifiedBy": 4,
             "fields": 
