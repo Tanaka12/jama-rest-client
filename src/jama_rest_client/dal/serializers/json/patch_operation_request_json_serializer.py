@@ -11,4 +11,4 @@ class PatchOperationRequestJSONSerializer:
         if patch_operation_request.value is not None:
             patch_operation_request_dict['value'] = patch_operation_request.value
 
-        return patch_operation_request
+        return patch_operation_request_dict
