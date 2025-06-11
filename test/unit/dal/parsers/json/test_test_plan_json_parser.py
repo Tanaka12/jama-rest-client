@@ -1,3 +1,4 @@
+from datetime import datetime
 import pytest
 
 from jama_rest_client.dal.parsers.json import TestPlanJSONParser as TypeTestPlanJSONParser
@@ -18,9 +19,9 @@ class TestTestPlanJSONParser():
                                  .set_global_id('DummyGlobalId 1')
                                  .set_item_type(2)
                                  .set_project(3)
-                                 .set_created_date('DummyCreatedDate 1')
-                                 .set_modified_date('DummyModifiedDate 1')
-                                 .set_last_activity_date('DummyLastActivityDate 1')
+                                 .set_created_date(datetime.fromtimestamp(1582199426))
+                                 .set_modified_date(datetime.fromtimestamp(1582199426))
+                                 .set_last_activity_date(datetime.fromtimestamp(1582199426))
                                  .set_created_by(4)
                                  .set_modified_by(5)                             
                                  .set_fields(
@@ -40,9 +41,9 @@ class TestTestPlanJSONParser():
                              .set_global_id('DummyGlobalId 1')
                              .set_item_type(2)
                              .set_project(3)
-                             .set_created_date('DummyCreatedDate 1')
-                             .set_modified_date('DummyModifiedDate 1')
-                             .set_last_activity_date('DummyLastActivityDate 1')
+                             .set_created_date(datetime.fromtimestamp(1582199426))
+                             .set_modified_date(datetime.fromtimestamp(1582199426))
+                             .set_last_activity_date(datetime.fromtimestamp(1582199426))
                              .set_created_by(4)
                              .set_modified_by(5)                             
                              .set_fields(
