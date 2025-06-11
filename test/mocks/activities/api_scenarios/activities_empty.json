@@ -1,0 +1,22 @@
+{
+    "meta": {
+        "status": "OK",
+        "timestamp": "2025-05-22T15:46:31.191+0000",
+        "pageInfo": {
+            "startIndex": 0,
+            "resultCount": 1,
+            "totalResults": 1
+        }
+    },
+    "links": {
+        "data.fields.pickList": {
+            "type": "picklists",
+            "href": ""
+        },
+        "data.fields.itemType": {
+            "type": "itemtypes",
+            "href": ""
+        }
+    },
+    "data": []
+}

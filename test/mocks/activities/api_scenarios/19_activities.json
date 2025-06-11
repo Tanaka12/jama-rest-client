@@ -1,0 +1,251 @@
+{
+    "meta": {
+        "status": "OK",
+        "timestamp": "2025-05-22T15:46:31.191+0000",
+        "pageInfo": {
+            "startIndex": 0,
+            "resultCount": 1,
+            "totalResults": 1
+        }
+    },
+    "links": {
+        "data.fields.pickList": {
+            "type": "picklists",
+            "href": ""
+        },
+        "data.fields.itemType": {
+            "type": "itemtypes",
+            "href": ""
+        }
+    },
+    "data": [
+        {
+            "id": 1,
+            "date": "2020-02-20T12:50:26.000+0000",
+            "details": "DummyDetails 1",
+            "action": "DummyAction 1",
+            "user": 2,
+            "userComment": "DummyUserComment 1",
+            "item": 3,
+            "itemType": 4,
+            "eventType": "BATCH_COPY",
+            "objectType": "BASELINE"
+        },
+        {
+            "id": 1,
+            "date": "2020-02-20T12:50:26.000+0000",
+            "details": "DummyDetails 2",
+            "action": "DummyAction 2",
+            "user": 2,
+            "userComment": "DummyUserComment 2",
+            "item": 3,
+            "itemType": 4,
+            "eventType": "BATCH_CREATE",
+            "objectType": "CHANGE_REQUEST"
+        },
+        {
+            "id": 1,
+            "date": "2020-02-20T12:50:26.000+0000",
+            "details": "DummyDetails 3",
+            "action": "DummyAction 3",
+            "user": 2,
+            "userComment": "DummyUserComment 3",
+            "item": 3,
+            "itemType": 4,
+            "eventType": "BATCH_DELETE",
+            "objectType": "COMMENT"
+        },
+        {
+            "id": 1,
+            "date": "2020-02-20T12:50:26.000+0000",
+            "details": "DummyDetails 4",
+            "action": "DummyAction 4",
+            "user": 2,
+            "userComment": "DummyUserComment 4",
+            "item": 3,
+            "itemType": 4,
+            "eventType": "BATCH_SUMMARY",
+            "objectType": "INTEGRATION"
+        },
+        {
+            "id": 1,
+            "date": "2020-02-20T12:50:26.000+0000",
+            "details": "DummyDetails 5",
+            "action": "DummyAction 5",
+            "user": 2,
+            "userComment": "DummyUserComment 5",
+            "item": 3,
+            "itemType": 4,
+            "eventType": "BATCH_UPDATE",
+            "objectType": "ITEM_ATTACHMENT"
+        },
+        {
+            "id": 1,
+            "date": "2020-02-20T12:50:26.000+0000",
+            "details": "DummyDetails 6",
+            "action": "DummyAction 6",
+            "user": 2,
+            "userComment": "DummyUserComment 6",
+            "item": 3,
+            "itemType": 4,
+            "eventType": "COPY",
+            "objectType": "ITEM_TAG"
+        },
+        {
+            "id": 1,
+            "date": "2020-02-20T12:50:26.000+0000",
+            "details": "DummyDetails 7",
+            "action": "DummyAction 7",
+            "user": 2,
+            "userComment": "DummyUserComment 7",
+            "item": 3,
+            "itemType": 4,
+            "eventType": "CREATE",
+            "objectType": "MISCELLANEOUS"
+        },
+        {
+            "id": 1,
+            "date": "2020-02-20T12:50:26.000+0000",
+            "details": "DummyDetails 8",
+            "action": "DummyAction 8",
+            "user": 2,
+            "userComment": "DummyUserComment 8",
+            "item": 3,
+            "itemType": 4,
+            "eventType": "DELETE",
+            "objectType": "PROJECT"
+        },
+        {
+            "id": 1,
+            "date": "2020-02-20T12:50:26.000+0000",
+            "details": "DummyDetails 9",
+            "action": "DummyAction 9",
+            "user": 2,
+            "userComment": "DummyUserComment 9",
+            "item": 3,
+            "itemType": 4,
+            "eventType": "MOVE",
+            "objectType": "RELATIONSHIP"
+        },
+        {
+            "id": 1,
+            "date": "2020-02-20T12:50:26.000+0000",
+            "details": "DummyDetails 10",
+            "action": "DummyAction 10",
+            "user": 2,
+            "userComment": "DummyUserComment 10",
+            "item": 3,
+            "itemType": 4,
+            "eventType": "PUBLIC",
+            "objectType": "REVIEW"
+        },
+        {
+            "id": 1,
+            "date": "2020-02-20T12:50:26.000+0000",
+            "details": "DummyDetails 11",
+            "action": "DummyAction 11",
+            "user": 2,
+            "userComment": "DummyUserComment 11",
+            "item": 3,
+            "itemType": 4,
+            "eventType": "UPDATE",
+            "objectType": "REVISION"
+        },
+        {
+            "id": 1,
+            "date": "2020-02-20T12:50:26.000+0000",
+            "details": "DummyDetails 12",
+            "action": "DummyAction 12",
+            "user": 2,
+            "userComment": "DummyUserComment 12",
+            "item": 3,
+            "itemType": 4,
+            "eventType": "UPDATE",
+            "objectType": "REVISION_ITEM"
+        },
+        {
+            "id": 1,
+            "date": "2020-02-20T12:50:26.000+0000",
+            "details": "DummyDetails 13",
+            "action": "DummyAction 13",
+            "user": 2,
+            "userComment": "DummyUserComment 13",
+            "item": 3,
+            "itemType": 4,
+            "eventType": "UPDATE",
+            "objectType": "TAG"
+        },
+        {
+            "id": 1,
+            "date": "2020-02-20T12:50:26.000+0000",
+            "details": "DummyDetails 14",
+            "action": "DummyAction 14",
+            "user": 2,
+            "userComment": "DummyUserComment 14",
+            "item": 3,
+            "itemType": 4,
+            "eventType": "UPDATE",
+            "objectType": "TEST_CYCLE"
+        },
+        {
+            "id": 1,
+            "date": "2020-02-20T12:50:26.000+0000",
+            "details": "DummyDetails 15",
+            "action": "DummyAction 15",
+            "user": 2,
+            "userComment": "DummyUserComment 15",
+            "item": 3,
+            "itemType": 4,
+            "eventType": "UPDATE",
+            "objectType": "TEST_PLAN"
+        },
+        {
+            "id": 1,
+            "date": "2020-02-20T12:50:26.000+0000",
+            "details": "DummyDetails 16",
+            "action": "DummyAction 16",
+            "user": 2,
+            "userComment": "DummyUserComment 16",
+            "item": 3,
+            "itemType": 4,
+            "eventType": "UPDATE",
+            "objectType": "TEST_RESULT"
+        },
+        {
+            "id": 1,
+            "date": "2020-02-20T12:50:26.000+0000",
+            "details": "DummyDetails 17",
+            "action": "DummyAction 17",
+            "user": 2,
+            "userComment": "DummyUserComment 17",
+            "item": 3,
+            "itemType": 4,
+            "eventType": "UPDATE",
+            "objectType": "TEST_RUN"
+        },
+        {
+            "id": 1,
+            "date": "2020-02-20T12:50:26.000+0000",
+            "details": "DummyDetails 18",
+            "action": "DummyAction 18",
+            "user": 2,
+            "userComment": "DummyUserComment 18",
+            "item": 3,
+            "itemType": 4,
+            "eventType": "UPDATE",
+            "objectType": "URL"
+        },
+        {
+            "id": 1,
+            "date": "2020-02-20T12:50:26.000+0000",
+            "details": "DummyDetails 19",
+            "action": "DummyAction 19",
+            "user": 2,
+            "userComment": "DummyUserComment 19",
+            "item": 3,
+            "itemType": 4,
+            "eventType": "UPDATE",
+            "objectType": "USER"
+        }
+    ]
+}
