@@ -1,3 +1,4 @@
+from datetime import datetime
 from jama_rest_client.model.item import Item, ItemLocation, ItemLock
 from typing_extensions import Self
 
@@ -65,15 +66,19 @@ class ItemBuilder:
         self.__item.project = project
         return self
     
-    def set_created_date(self, created_date: str) -> Self:
+    def set_child_item_type(self, child_item_type: int) -> Self:
+        self.__item.child_item_type = child_item_type
+        return self
+    
+    def set_created_date(self, created_date: datetime) -> Self:
         self.__item.created_date = created_date
         return self
 
-    def set_modified_date(self, modified_date: str) -> Self:
+    def set_modified_date(self, modified_date: datetime) -> Self:
         self.__item.modified_date = modified_date
         return self
 
-    def set_last_activity_date(self, last_activity_date: str) -> Self:
+    def set_last_activity_date(self, last_activity_date: datetime) -> Self:
         self.__item.last_activity_date = last_activity_date
         return self
 
