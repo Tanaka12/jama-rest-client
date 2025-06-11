@@ -47,9 +47,10 @@
         "globalId": "DummyGlobalId 1",
         "itemType": 2,
         "project": 3,
-        "createdDate": "DummyCreatedDate 1",
-        "modifiedDate": "DummyModifiedDate 1",
-        "lastActivityDate": "DummyLastActivityDate 1",
+        "childItemType": 6,
+        "createdDate": "2020-02-20T12:50:26.000+0000",
+        "modifiedDate": "2020-02-20T12:50:26.000+0000",
+        "lastActivityDate": "2020-02-20T12:50:26.000+0000",
         "createdBy": 4,
         "modifiedBy": 5,
         "fields": {
@@ -72,12 +73,14 @@
             "globalSortOrder": 1,
             "sequence": "DummySequence 1",
             "parent": {
-                "item": 2
+                "project": 2,
+                "item": 3
             }
         },
         "lock": {
             "locked": false,
-            "lastLockedDate": "DummyLastLockedDate 1"
+            "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+            "lockedBy": 0
         },
         "type": "items"
     }

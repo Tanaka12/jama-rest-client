@@ -36,9 +36,10 @@ if __name__ == "__main__":
             'globalId': f'DummyGlobalId {index}',
             'itemType': index + 1,
             'project': index + 2,
-            'createdDate': f'DummyCreatedDate {index}',
-            'modifiedDate': f'DummyModifiedDate {index}',
-            'lastActivityDate': f'DummyLastActivityDate {index}',
+            'childItemType': index + 5,
+            'createdDate': '2020-02-20T12:50:26.000+0000',
+            'modifiedDate': '2020-02-20T12:50:26.000+0000',
+            'lastActivityDate': '2020-02-20T12:50:26.000+0000',
             'createdBy': index + 3,
             'modifiedBy': index + 4,
             "fields": {
@@ -61,12 +62,14 @@ if __name__ == "__main__":
                 "globalSortOrder": index + 1,
                 "sequence": f'DummySequence {index}',
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": bool(index % 2),
-                "lastLockedDate": f'DummyLastLockedDate {index}'
+                "lastLockedDate": '2020-02-20T12:50:26.000+0000',
+                "lockedBy": 0
             },
             "type": "items"
         }
@@ -75,4 +78,5 @@ if __name__ == "__main__":
 
     result['data'] = data
 
-    print(json.dumps(result))
+    with open('file.json', 'w') as file_handle:
+        file_handle.write(json.dumps(result))

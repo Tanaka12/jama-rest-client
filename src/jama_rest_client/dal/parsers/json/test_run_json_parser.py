@@ -1,3 +1,4 @@
+from datetime import datetime
 from jama_rest_client.model.test_run import TestRun
 
 class TestRunJSONParser:
@@ -10,14 +11,19 @@ class TestRunJSONParser:
         test_run.global_id = test_run_dict['globalId']
         test_run.project = test_run_dict['project']
         test_run.item_type = test_run_dict['itemType']
-        test_run.created_date = test_run_dict['createdDate']
-        test_run.modified_date = test_run_dict['modifiedDate']
-        test_run.last_activity_date = test_run_dict['lastActivityDate']
+        test_run.created_date = TestRunJSONParser.__parse_date_time(test_run_dict['createdDate'])
+        test_run.modified_date = TestRunJSONParser.__parse_date_time(test_run_dict['modifiedDate'])
+        test_run.last_activity_date = TestRunJSONParser.__parse_date_time(test_run_dict['lastActivityDate'])
         test_run.created_by = test_run_dict['createdBy']
         test_run.modified_by = test_run_dict['modifiedBy']
         test_run.test_case_version_number = test_run_dict['testCaseVersionNumber']
         test_run.test_case_current_version_number = test_run_dict['testCaseCurrentVersionNumber']
         test_run.sort_order_from_test_group = test_run_dict['sortOrderFromTestGroup']
+        test_run.test_group = test_run_dict['testGroup']
         test_run.fields = test_run_dict['fields']
 
         return test_run
+    
+    @staticmethod
+    def __parse_date_time(date_time: str) -> datetime:
+        return datetime.strptime(date_time, '%Y-%m-%dT%H:%M:%S.000+0000')

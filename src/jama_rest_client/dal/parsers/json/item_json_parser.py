@@ -1,4 +1,7 @@
-from jama_rest_client.model.item import Item, ItemLock, ItemLocation
+from datetime import datetime
+from jama_rest_client.model.item import Item
+from .location_json_parser import LocationJSONParser
+from .lock_json_parser import LockJSONParser
 
 class ItemJSONParser:
 
@@ -10,30 +13,18 @@ class ItemJSONParser:
         item.global_id = item_dict['globalId']
         item.item_type = item_dict['itemType']
         item.project = item_dict['project']
-        item.created_date = item_dict['createdDate']
-        item.modified_date = item_dict['modifiedDate']
-        item.last_activity_date = item_dict['lastActivityDate']
+        item.child_item_type = item_dict['childItemType']
+        item.created_date = ItemJSONParser.__parse_date_time(item_dict['createdDate'])
+        item.modified_date = ItemJSONParser.__parse_date_time(item_dict['modifiedDate'])
+        item.last_activity_date = ItemJSONParser.__parse_date_time(item_dict['lastActivityDate'])
         item.created_by = item_dict['createdBy']
         item.modified_by = item_dict['modifiedBy']
-        item.lock = ItemJSONParser.__parse_item_lock(item_dict['lock'])
-        item.location = ItemJSONParser.__parse_item_location(item_dict['location'])
+        item.lock = LockJSONParser.parse(item_dict['lock'])
+        item.location = LocationJSONParser.parse(item_dict['location'])
         item.fields = item_dict['fields']
 
         return item
     
     @staticmethod
-    def __parse_item_lock(item_lock_dict: dict) -> ItemLock:
-        item_lock: ItemLock = ItemLock()
-        item_lock.locked = item_lock_dict['locked']
-        item_lock.last_locked_date = item_lock_dict['lastLockedDate']
-
-        return item_lock
-    
-    @staticmethod
-    def __parse_item_location(item_location_dict: dict) -> ItemLocation:
-        item_location: ItemLocation = ItemLocation()
-        item_location.sort_order = item_location_dict['sortOrder']
-        item_location.global_sort_order = item_location_dict['globalSortOrder']
-        item_location.sequence = item_location_dict['sequence']
-
-        return item_location
+    def __parse_date_time(date_time: str) -> datetime:
+        return datetime.strptime(date_time, '%Y-%m-%dT%H:%M:%S.000+0000')

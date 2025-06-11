@@ -25,23 +25,25 @@
             "display": "DummyDisplay 1",
             "displayPlural": "DummyDisplayPlural 1",
             "description": "DummyDescription 1",
-            "image": "",
-            "category": "DummyCategory 1",
+            "image": "DummyImage 1",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 2,
@@ -49,23 +51,25 @@
             "display": "DummyDisplay 2",
             "displayPlural": "DummyDisplayPlural 2",
             "description": "DummyDescription 2",
-            "image": "",
-            "category": "DummyCategory 2",
+            "image": "DummyImage 2",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 3,
@@ -73,23 +77,25 @@
             "display": "DummyDisplay 3",
             "displayPlural": "DummyDisplayPlural 3",
             "description": "DummyDescription 3",
-            "image": "",
-            "category": "DummyCategory 3",
+            "image": "DummyImage 3",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 4,
@@ -97,23 +103,25 @@
             "display": "DummyDisplay 4",
             "displayPlural": "DummyDisplayPlural 4",
             "description": "DummyDescription 4",
-            "image": "",
-            "category": "DummyCategory 4",
+            "image": "DummyImage 4",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 5,
@@ -121,23 +129,25 @@
             "display": "DummyDisplay 5",
             "displayPlural": "DummyDisplayPlural 5",
             "description": "DummyDescription 5",
-            "image": "",
-            "category": "DummyCategory 5",
+            "image": "DummyImage 5",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 6,
@@ -145,23 +155,25 @@
             "display": "DummyDisplay 6",
             "displayPlural": "DummyDisplayPlural 6",
             "description": "DummyDescription 6",
-            "image": "",
-            "category": "DummyCategory 6",
+            "image": "DummyImage 6",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 7,
@@ -169,23 +181,25 @@
             "display": "DummyDisplay 7",
             "displayPlural": "DummyDisplayPlural 7",
             "description": "DummyDescription 7",
-            "image": "",
-            "category": "DummyCategory 7",
+            "image": "DummyImage 7",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 8,
@@ -193,23 +207,25 @@
             "display": "DummyDisplay 8",
             "displayPlural": "DummyDisplayPlural 8",
             "description": "DummyDescription 8",
-            "image": "",
-            "category": "DummyCategory 8",
+            "image": "DummyImage 8",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 9,
@@ -217,23 +233,25 @@
             "display": "DummyDisplay 9",
             "displayPlural": "DummyDisplayPlural 9",
             "description": "DummyDescription 9",
-            "image": "",
-            "category": "DummyCategory 9",
+            "image": "DummyImage 9",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 10,
@@ -241,23 +259,25 @@
             "display": "DummyDisplay 10",
             "displayPlural": "DummyDisplayPlural 10",
             "description": "DummyDescription 10",
-            "image": "",
-            "category": "DummyCategory 10",
+            "image": "DummyImage 10",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 11,
@@ -265,23 +285,25 @@
             "display": "DummyDisplay 11",
             "displayPlural": "DummyDisplayPlural 11",
             "description": "DummyDescription 11",
-            "image": "",
-            "category": "DummyCategory 11",
+            "image": "DummyImage 11",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 12,
@@ -289,23 +311,25 @@
             "display": "DummyDisplay 12",
             "displayPlural": "DummyDisplayPlural 12",
             "description": "DummyDescription 12",
-            "image": "",
-            "category": "DummyCategory 12",
+            "image": "DummyImage 12",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 13,
@@ -313,23 +337,25 @@
             "display": "DummyDisplay 13",
             "displayPlural": "DummyDisplayPlural 13",
             "description": "DummyDescription 13",
-            "image": "",
-            "category": "DummyCategory 13",
+            "image": "DummyImage 13",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 14,
@@ -337,23 +363,25 @@
             "display": "DummyDisplay 14",
             "displayPlural": "DummyDisplayPlural 14",
             "description": "DummyDescription 14",
-            "image": "",
-            "category": "DummyCategory 14",
+            "image": "DummyImage 14",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 15,
@@ -361,23 +389,25 @@
             "display": "DummyDisplay 15",
             "displayPlural": "DummyDisplayPlural 15",
             "description": "DummyDescription 15",
-            "image": "",
-            "category": "DummyCategory 15",
+            "image": "DummyImage 15",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 16,
@@ -385,23 +415,25 @@
             "display": "DummyDisplay 16",
             "displayPlural": "DummyDisplayPlural 16",
             "description": "DummyDescription 16",
-            "image": "",
-            "category": "DummyCategory 16",
+            "image": "DummyImage 16",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 17,
@@ -409,23 +441,25 @@
             "display": "DummyDisplay 17",
             "displayPlural": "DummyDisplayPlural 17",
             "description": "DummyDescription 17",
-            "image": "",
-            "category": "DummyCategory 17",
+            "image": "DummyImage 17",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 18,
@@ -433,23 +467,25 @@
             "display": "DummyDisplay 18",
             "displayPlural": "DummyDisplayPlural 18",
             "description": "DummyDescription 18",
-            "image": "",
-            "category": "DummyCategory 18",
+            "image": "DummyImage 18",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 19,
@@ -457,23 +493,25 @@
             "display": "DummyDisplay 19",
             "displayPlural": "DummyDisplayPlural 19",
             "description": "DummyDescription 19",
-            "image": "",
-            "category": "DummyCategory 19",
+            "image": "DummyImage 19",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 20,
@@ -481,23 +519,25 @@
             "display": "DummyDisplay 20",
             "displayPlural": "DummyDisplayPlural 20",
             "description": "DummyDescription 20",
-            "image": "",
-            "category": "DummyCategory 20",
+            "image": "DummyImage 20",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 21,
@@ -505,23 +545,25 @@
             "display": "DummyDisplay 21",
             "displayPlural": "DummyDisplayPlural 21",
             "description": "DummyDescription 21",
-            "image": "",
-            "category": "DummyCategory 21",
+            "image": "DummyImage 21",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 22,
@@ -529,23 +571,25 @@
             "display": "DummyDisplay 22",
             "displayPlural": "DummyDisplayPlural 22",
             "description": "DummyDescription 22",
-            "image": "",
-            "category": "DummyCategory 22",
+            "image": "DummyImage 22",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 23,
@@ -553,23 +597,25 @@
             "display": "DummyDisplay 23",
             "displayPlural": "DummyDisplayPlural 23",
             "description": "DummyDescription 23",
-            "image": "",
-            "category": "DummyCategory 23",
+            "image": "DummyImage 23",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 24,
@@ -577,23 +623,25 @@
             "display": "DummyDisplay 24",
             "displayPlural": "DummyDisplayPlural 24",
             "description": "DummyDescription 24",
-            "image": "",
-            "category": "DummyCategory 24",
+            "image": "DummyImage 24",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 25,
@@ -601,23 +649,25 @@
             "display": "DummyDisplay 25",
             "displayPlural": "DummyDisplayPlural 25",
             "description": "DummyDescription 25",
-            "image": "",
-            "category": "DummyCategory 25",
+            "image": "DummyImage 25",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 26,
@@ -625,23 +675,25 @@
             "display": "DummyDisplay 26",
             "displayPlural": "DummyDisplayPlural 26",
             "description": "DummyDescription 26",
-            "image": "",
-            "category": "DummyCategory 26",
+            "image": "DummyImage 26",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 27,
@@ -649,23 +701,25 @@
             "display": "DummyDisplay 27",
             "displayPlural": "DummyDisplayPlural 27",
             "description": "DummyDescription 27",
-            "image": "",
-            "category": "DummyCategory 27",
+            "image": "DummyImage 27",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 28,
@@ -673,23 +727,25 @@
             "display": "DummyDisplay 28",
             "displayPlural": "DummyDisplayPlural 28",
             "description": "DummyDescription 28",
-            "image": "",
-            "category": "DummyCategory 28",
+            "image": "DummyImage 28",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         },
         {
             "id": 29,
@@ -697,23 +753,25 @@
             "display": "DummyDisplay 29",
             "displayPlural": "DummyDisplayPlural 29",
             "description": "DummyDescription 29",
-            "image": "",
-            "category": "DummyCategory 29",
+            "image": "DummyImage 29",
+            "category": "COMPONENT",
             "fields": [
                 {
                     "id": 1,
                     "name": "DummyName 1",
                     "label": "DummyLabel 1",
-                    "fieldType": "DummyFieldType 1",
+                    "fieldType": "ACTIONS",
                     "readOnly": false,
+                    "readOnlyAllowApiOverwrite": false,
                     "required": false,
                     "triggerSuspect": false,
-                    "synchronize": true,
-                    "textType": "DummyTextType 1"
+                    "synchronize": false,
+                    "pickList": 1,
+                    "textType": "ATTACHMENT",
+                    "itemType": 1
                 }
             ],
-            "system": true,
-            "type": "itemtypes"
+            "system": true
         }
     ]
 }

@@ -1,0 +1,1 @@
+from .locations_mock import LocationsMocks, LOCATIONS_API_MOCKS

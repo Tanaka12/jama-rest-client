@@ -1,0 +1,9 @@
+{
+    "globalSortOrder": 1,
+    "parent": {
+        "project": 2, 
+        "item": 3
+    },
+    "sequence": "DummySequence 1",
+    "sortOrder": 4
+}

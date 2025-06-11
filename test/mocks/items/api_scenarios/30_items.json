@@ -25,9 +25,10 @@
             "globalId": "DummyGlobalId 1",
             "itemType": 2,
             "project": 3,
-            "createdDate": "DummyCreatedDate 1",
-            "modifiedDate": "DummyModifiedDate 1",
-            "lastActivityDate": "DummyLastActivityDate 1",
+            "childItemType": 6,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 4,
             "modifiedBy": 5,
             "fields": {
@@ -50,12 +51,14 @@
                 "globalSortOrder": 2,
                 "sequence": "DummySequence 1",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 1"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -65,9 +68,10 @@
             "globalId": "DummyGlobalId 2",
             "itemType": 3,
             "project": 4,
-            "createdDate": "DummyCreatedDate 2",
-            "modifiedDate": "DummyModifiedDate 2",
-            "lastActivityDate": "DummyLastActivityDate 2",
+            "childItemType": 7,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 5,
             "modifiedBy": 6,
             "fields": {
@@ -90,12 +94,14 @@
                 "globalSortOrder": 3,
                 "sequence": "DummySequence 2",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 2"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -105,9 +111,10 @@
             "globalId": "DummyGlobalId 3",
             "itemType": 4,
             "project": 5,
-            "createdDate": "DummyCreatedDate 3",
-            "modifiedDate": "DummyModifiedDate 3",
-            "lastActivityDate": "DummyLastActivityDate 3",
+            "childItemType": 8,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 6,
             "modifiedBy": 7,
             "fields": {
@@ -130,12 +137,14 @@
                 "globalSortOrder": 4,
                 "sequence": "DummySequence 3",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 3"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -145,9 +154,10 @@
             "globalId": "DummyGlobalId 4",
             "itemType": 5,
             "project": 6,
-            "createdDate": "DummyCreatedDate 4",
-            "modifiedDate": "DummyModifiedDate 4",
-            "lastActivityDate": "DummyLastActivityDate 4",
+            "childItemType": 9,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 7,
             "modifiedBy": 8,
             "fields": {
@@ -170,12 +180,14 @@
                 "globalSortOrder": 5,
                 "sequence": "DummySequence 4",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 4"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -185,9 +197,10 @@
             "globalId": "DummyGlobalId 5",
             "itemType": 6,
             "project": 7,
-            "createdDate": "DummyCreatedDate 5",
-            "modifiedDate": "DummyModifiedDate 5",
-            "lastActivityDate": "DummyLastActivityDate 5",
+            "childItemType": 10,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 8,
             "modifiedBy": 9,
             "fields": {
@@ -210,12 +223,14 @@
                 "globalSortOrder": 6,
                 "sequence": "DummySequence 5",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 5"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -225,9 +240,10 @@
             "globalId": "DummyGlobalId 6",
             "itemType": 7,
             "project": 8,
-            "createdDate": "DummyCreatedDate 6",
-            "modifiedDate": "DummyModifiedDate 6",
-            "lastActivityDate": "DummyLastActivityDate 6",
+            "childItemType": 11,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 9,
             "modifiedBy": 10,
             "fields": {
@@ -250,12 +266,14 @@
                 "globalSortOrder": 7,
                 "sequence": "DummySequence 6",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 6"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -265,9 +283,10 @@
             "globalId": "DummyGlobalId 7",
             "itemType": 8,
             "project": 9,
-            "createdDate": "DummyCreatedDate 7",
-            "modifiedDate": "DummyModifiedDate 7",
-            "lastActivityDate": "DummyLastActivityDate 7",
+            "childItemType": 12,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 10,
             "modifiedBy": 11,
             "fields": {
@@ -290,12 +309,14 @@
                 "globalSortOrder": 8,
                 "sequence": "DummySequence 7",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 7"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -305,9 +326,10 @@
             "globalId": "DummyGlobalId 8",
             "itemType": 9,
             "project": 10,
-            "createdDate": "DummyCreatedDate 8",
-            "modifiedDate": "DummyModifiedDate 8",
-            "lastActivityDate": "DummyLastActivityDate 8",
+            "childItemType": 13,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 11,
             "modifiedBy": 12,
             "fields": {
@@ -330,12 +352,14 @@
                 "globalSortOrder": 9,
                 "sequence": "DummySequence 8",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 8"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -345,9 +369,10 @@
             "globalId": "DummyGlobalId 9",
             "itemType": 10,
             "project": 11,
-            "createdDate": "DummyCreatedDate 9",
-            "modifiedDate": "DummyModifiedDate 9",
-            "lastActivityDate": "DummyLastActivityDate 9",
+            "childItemType": 14,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 12,
             "modifiedBy": 13,
             "fields": {
@@ -370,12 +395,14 @@
                 "globalSortOrder": 10,
                 "sequence": "DummySequence 9",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 9"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -385,9 +412,10 @@
             "globalId": "DummyGlobalId 10",
             "itemType": 11,
             "project": 12,
-            "createdDate": "DummyCreatedDate 10",
-            "modifiedDate": "DummyModifiedDate 10",
-            "lastActivityDate": "DummyLastActivityDate 10",
+            "childItemType": 15,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 13,
             "modifiedBy": 14,
             "fields": {
@@ -410,12 +438,14 @@
                 "globalSortOrder": 11,
                 "sequence": "DummySequence 10",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 10"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -425,9 +455,10 @@
             "globalId": "DummyGlobalId 11",
             "itemType": 12,
             "project": 13,
-            "createdDate": "DummyCreatedDate 11",
-            "modifiedDate": "DummyModifiedDate 11",
-            "lastActivityDate": "DummyLastActivityDate 11",
+            "childItemType": 16,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 14,
             "modifiedBy": 15,
             "fields": {
@@ -450,12 +481,14 @@
                 "globalSortOrder": 12,
                 "sequence": "DummySequence 11",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 11"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -465,9 +498,10 @@
             "globalId": "DummyGlobalId 12",
             "itemType": 13,
             "project": 14,
-            "createdDate": "DummyCreatedDate 12",
-            "modifiedDate": "DummyModifiedDate 12",
-            "lastActivityDate": "DummyLastActivityDate 12",
+            "childItemType": 17,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 15,
             "modifiedBy": 16,
             "fields": {
@@ -490,12 +524,14 @@
                 "globalSortOrder": 13,
                 "sequence": "DummySequence 12",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 12"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -505,9 +541,10 @@
             "globalId": "DummyGlobalId 13",
             "itemType": 14,
             "project": 15,
-            "createdDate": "DummyCreatedDate 13",
-            "modifiedDate": "DummyModifiedDate 13",
-            "lastActivityDate": "DummyLastActivityDate 13",
+            "childItemType": 18,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 16,
             "modifiedBy": 17,
             "fields": {
@@ -530,12 +567,14 @@
                 "globalSortOrder": 14,
                 "sequence": "DummySequence 13",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 13"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -545,9 +584,10 @@
             "globalId": "DummyGlobalId 14",
             "itemType": 15,
             "project": 16,
-            "createdDate": "DummyCreatedDate 14",
-            "modifiedDate": "DummyModifiedDate 14",
-            "lastActivityDate": "DummyLastActivityDate 14",
+            "childItemType": 19,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 17,
             "modifiedBy": 18,
             "fields": {
@@ -570,12 +610,14 @@
                 "globalSortOrder": 15,
                 "sequence": "DummySequence 14",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 14"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -585,9 +627,10 @@
             "globalId": "DummyGlobalId 15",
             "itemType": 16,
             "project": 17,
-            "createdDate": "DummyCreatedDate 15",
-            "modifiedDate": "DummyModifiedDate 15",
-            "lastActivityDate": "DummyLastActivityDate 15",
+            "childItemType": 20,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 18,
             "modifiedBy": 19,
             "fields": {
@@ -610,12 +653,14 @@
                 "globalSortOrder": 16,
                 "sequence": "DummySequence 15",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 15"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -625,9 +670,10 @@
             "globalId": "DummyGlobalId 16",
             "itemType": 17,
             "project": 18,
-            "createdDate": "DummyCreatedDate 16",
-            "modifiedDate": "DummyModifiedDate 16",
-            "lastActivityDate": "DummyLastActivityDate 16",
+            "childItemType": 21,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 19,
             "modifiedBy": 20,
             "fields": {
@@ -650,12 +696,14 @@
                 "globalSortOrder": 17,
                 "sequence": "DummySequence 16",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 16"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -665,9 +713,10 @@
             "globalId": "DummyGlobalId 17",
             "itemType": 18,
             "project": 19,
-            "createdDate": "DummyCreatedDate 17",
-            "modifiedDate": "DummyModifiedDate 17",
-            "lastActivityDate": "DummyLastActivityDate 17",
+            "childItemType": 22,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 20,
             "modifiedBy": 21,
             "fields": {
@@ -690,12 +739,14 @@
                 "globalSortOrder": 18,
                 "sequence": "DummySequence 17",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 17"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -705,9 +756,10 @@
             "globalId": "DummyGlobalId 18",
             "itemType": 19,
             "project": 20,
-            "createdDate": "DummyCreatedDate 18",
-            "modifiedDate": "DummyModifiedDate 18",
-            "lastActivityDate": "DummyLastActivityDate 18",
+            "childItemType": 23,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 21,
             "modifiedBy": 22,
             "fields": {
@@ -730,12 +782,14 @@
                 "globalSortOrder": 19,
                 "sequence": "DummySequence 18",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 18"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -745,9 +799,10 @@
             "globalId": "DummyGlobalId 19",
             "itemType": 20,
             "project": 21,
-            "createdDate": "DummyCreatedDate 19",
-            "modifiedDate": "DummyModifiedDate 19",
-            "lastActivityDate": "DummyLastActivityDate 19",
+            "childItemType": 24,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 22,
             "modifiedBy": 23,
             "fields": {
@@ -770,12 +825,14 @@
                 "globalSortOrder": 20,
                 "sequence": "DummySequence 19",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 19"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -785,9 +842,10 @@
             "globalId": "DummyGlobalId 20",
             "itemType": 21,
             "project": 22,
-            "createdDate": "DummyCreatedDate 20",
-            "modifiedDate": "DummyModifiedDate 20",
-            "lastActivityDate": "DummyLastActivityDate 20",
+            "childItemType": 25,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 23,
             "modifiedBy": 24,
             "fields": {
@@ -810,12 +868,14 @@
                 "globalSortOrder": 21,
                 "sequence": "DummySequence 20",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 20"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -825,9 +885,10 @@
             "globalId": "DummyGlobalId 21",
             "itemType": 22,
             "project": 23,
-            "createdDate": "DummyCreatedDate 21",
-            "modifiedDate": "DummyModifiedDate 21",
-            "lastActivityDate": "DummyLastActivityDate 21",
+            "childItemType": 26,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 24,
             "modifiedBy": 25,
             "fields": {
@@ -850,12 +911,14 @@
                 "globalSortOrder": 22,
                 "sequence": "DummySequence 21",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 21"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -865,9 +928,10 @@
             "globalId": "DummyGlobalId 22",
             "itemType": 23,
             "project": 24,
-            "createdDate": "DummyCreatedDate 22",
-            "modifiedDate": "DummyModifiedDate 22",
-            "lastActivityDate": "DummyLastActivityDate 22",
+            "childItemType": 27,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 25,
             "modifiedBy": 26,
             "fields": {
@@ -890,12 +954,14 @@
                 "globalSortOrder": 23,
                 "sequence": "DummySequence 22",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 22"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -905,9 +971,10 @@
             "globalId": "DummyGlobalId 23",
             "itemType": 24,
             "project": 25,
-            "createdDate": "DummyCreatedDate 23",
-            "modifiedDate": "DummyModifiedDate 23",
-            "lastActivityDate": "DummyLastActivityDate 23",
+            "childItemType": 28,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 26,
             "modifiedBy": 27,
             "fields": {
@@ -930,12 +997,14 @@
                 "globalSortOrder": 24,
                 "sequence": "DummySequence 23",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 23"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -945,9 +1014,10 @@
             "globalId": "DummyGlobalId 24",
             "itemType": 25,
             "project": 26,
-            "createdDate": "DummyCreatedDate 24",
-            "modifiedDate": "DummyModifiedDate 24",
-            "lastActivityDate": "DummyLastActivityDate 24",
+            "childItemType": 29,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 27,
             "modifiedBy": 28,
             "fields": {
@@ -970,12 +1040,14 @@
                 "globalSortOrder": 25,
                 "sequence": "DummySequence 24",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 24"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -985,9 +1057,10 @@
             "globalId": "DummyGlobalId 25",
             "itemType": 26,
             "project": 27,
-            "createdDate": "DummyCreatedDate 25",
-            "modifiedDate": "DummyModifiedDate 25",
-            "lastActivityDate": "DummyLastActivityDate 25",
+            "childItemType": 30,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 28,
             "modifiedBy": 29,
             "fields": {
@@ -1010,12 +1083,14 @@
                 "globalSortOrder": 26,
                 "sequence": "DummySequence 25",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 25"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -1025,9 +1100,10 @@
             "globalId": "DummyGlobalId 26",
             "itemType": 27,
             "project": 28,
-            "createdDate": "DummyCreatedDate 26",
-            "modifiedDate": "DummyModifiedDate 26",
-            "lastActivityDate": "DummyLastActivityDate 26",
+            "childItemType": 31,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 29,
             "modifiedBy": 30,
             "fields": {
@@ -1050,12 +1126,14 @@
                 "globalSortOrder": 27,
                 "sequence": "DummySequence 26",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 26"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -1065,9 +1143,10 @@
             "globalId": "DummyGlobalId 27",
             "itemType": 28,
             "project": 29,
-            "createdDate": "DummyCreatedDate 27",
-            "modifiedDate": "DummyModifiedDate 27",
-            "lastActivityDate": "DummyLastActivityDate 27",
+            "childItemType": 32,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 30,
             "modifiedBy": 31,
             "fields": {
@@ -1090,12 +1169,14 @@
                 "globalSortOrder": 28,
                 "sequence": "DummySequence 27",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 27"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -1105,9 +1186,10 @@
             "globalId": "DummyGlobalId 28",
             "itemType": 29,
             "project": 30,
-            "createdDate": "DummyCreatedDate 28",
-            "modifiedDate": "DummyModifiedDate 28",
-            "lastActivityDate": "DummyLastActivityDate 28",
+            "childItemType": 33,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 31,
             "modifiedBy": 32,
             "fields": {
@@ -1130,12 +1212,14 @@
                 "globalSortOrder": 29,
                 "sequence": "DummySequence 28",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": false,
-                "lastLockedDate": "DummyLastLockedDate 28"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         },
@@ -1145,9 +1229,10 @@
             "globalId": "DummyGlobalId 29",
             "itemType": 30,
             "project": 31,
-            "createdDate": "DummyCreatedDate 29",
-            "modifiedDate": "DummyModifiedDate 29",
-            "lastActivityDate": "DummyLastActivityDate 29",
+            "childItemType": 34,
+            "createdDate": "2020-02-20T12:50:26.000+0000",
+            "modifiedDate": "2020-02-20T12:50:26.000+0000",
+            "lastActivityDate": "2020-02-20T12:50:26.000+0000",
             "createdBy": 32,
             "modifiedBy": 33,
             "fields": {
@@ -1170,12 +1255,14 @@
                 "globalSortOrder": 30,
                 "sequence": "DummySequence 29",
                 "parent": {
-                    "item": 0
+                    "project": 0,
+                    "item": 1
                 }
             },
             "lock": {
                 "locked": true,
-                "lastLockedDate": "DummyLastLockedDate 29"
+                "lastLockedDate": "2020-02-20T12:50:26.000+0000",
+                "lockedBy": 0
             },
             "type": "items"
         }

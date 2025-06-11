@@ -1,3 +1,4 @@
+from datetime import datetime
 from jama_rest_client.model.test_cycle import TestCycle
 
 class TestCycleJSONParser:
@@ -10,11 +11,15 @@ class TestCycleJSONParser:
         test_cycle.global_id = test_cycle_dict['globalId']
         test_cycle.item_type = test_cycle_dict['itemType']
         test_cycle.project = test_cycle_dict['project']
-        test_cycle.created_date = test_cycle_dict['createdDate']
-        test_cycle.modified_date = test_cycle_dict['modifiedDate']
-        test_cycle.last_activity_date = test_cycle_dict['lastActivityDate']
+        test_cycle.created_date = TestCycleJSONParser.__parse_date_time(test_cycle_dict['createdDate'])
+        test_cycle.modified_date = TestCycleJSONParser.__parse_date_time(test_cycle_dict['modifiedDate'])
+        test_cycle.last_activity_date = TestCycleJSONParser.__parse_date_time(test_cycle_dict['lastActivityDate'])
         test_cycle.created_by = test_cycle_dict['createdBy']
         test_cycle.modified_by = test_cycle_dict['modifiedBy']
         test_cycle.fields = test_cycle_dict['fields']
 
         return test_cycle
+    
+    @staticmethod
+    def __parse_date_time(date_time: str) -> datetime:
+        return datetime.strptime(date_time, '%Y-%m-%dT%H:%M:%S.000+0000')

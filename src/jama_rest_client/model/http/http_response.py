@@ -1,4 +1,5 @@
 from .http_request import HTTPRequest 
+from typing_extensions import Self
 
 class HTTPResponse:
     status_code: int
@@ -10,10 +11,7 @@ class HTTPResponse:
         self.body = {}
         self.request = HTTPRequest()
     
-    def __eq__(self, other):
-        if self.status_code == other.status_code \
-        and self.body == other.body \
-        and self.request == other.request:
-            return True
-
-        return False
+    def __eq__(self, other: Self):
+        return self.status_code == other.status_code \
+            and self.body == other.body \
+            and self.request == other.request

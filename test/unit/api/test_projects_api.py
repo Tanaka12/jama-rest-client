@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import List
 
 import pytest
@@ -50,9 +51,10 @@ class TestProjectsAPI():
             [
                 ProjectBuilder().set_id(1)
                                 .set_project_key('DummyProjectKey 1')
+                                .set_parent(2)
                                 .set_is_folder(False)
-                                .set_created_date('DummyCreatedDate 1')
-                                .set_modified_date('DummyModifiedDate 1')
+                                .set_created_date(datetime.fromtimestamp(1582199426))
+                                .set_modified_date(datetime.fromtimestamp(1582199426))
                                 .set_created_by(3)
                                 .set_modified_by(4)
                                 .set_fields(
@@ -75,9 +77,10 @@ class TestProjectsAPI():
             [
                 ProjectBuilder().set_id(index)
                                 .set_project_key(f'DummyProjectKey {index}')
+                                .set_parent(index + 1)
                                 .set_is_folder(True)
-                                .set_created_date(f'DummyCreatedDate {index}')
-                                .set_modified_date(f'DummyModifiedDate {index}')
+                                .set_created_date(datetime.fromtimestamp(1582199426))
+                                .set_modified_date(datetime.fromtimestamp(1582199426))
                                 .set_created_by(index + 2)
                                 .set_modified_by(index + 3)
                                 .set_fields(
@@ -103,9 +106,10 @@ class TestProjectsAPI():
             [
                 ProjectBuilder().set_id(index)
                                 .set_project_key(f'DummyProjectKey {index}')
+                                .set_parent(index + 1)
                                 .set_is_folder(True)
-                                .set_created_date(f'DummyCreatedDate {index}')
-                                .set_modified_date(f'DummyModifiedDate {index}')
+                                .set_created_date(datetime.fromtimestamp(1582199426))
+                                .set_modified_date(datetime.fromtimestamp(1582199426))
                                 .set_created_by(index + 2)
                                 .set_modified_by(index + 3)
                                 .set_fields(
@@ -118,9 +122,10 @@ class TestProjectsAPI():
             [
                 ProjectBuilder().set_id(1)
                                 .set_project_key('DummyProjectKey 1')
+                                .set_parent(2)
                                 .set_is_folder(False)
-                                .set_created_date('DummyCreatedDate 1')
-                                .set_modified_date('DummyModifiedDate 1')
+                                .set_created_date(datetime.fromtimestamp(1582199426))
+                                .set_modified_date(datetime.fromtimestamp(1582199426))
                                 .set_created_by(3)
                                 .set_modified_by(4)
                                 .set_fields(

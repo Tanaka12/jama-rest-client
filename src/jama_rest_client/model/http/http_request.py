@@ -1,3 +1,5 @@
+from typing_extensions import Self
+
 class HTTPRequest:
     method: str
     resource: str
@@ -8,10 +10,7 @@ class HTTPRequest:
         self.body = {}
         self.resource = ""
 
-    def __eq__(self, other):
-        if self.method == other.method \
-        and self.body == other.body \
-        and self.resource == other.resource:
-            return True
-
-        return False
+    def __eq__(self, other: Self):
+        return self.method == other.method \
+            and self.body == other.body \
+            and self.resource == other.resource

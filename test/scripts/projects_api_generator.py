@@ -56,8 +56,8 @@ if __name__ == "__main__":
             'projectKey': f'DummyProjectKey {index}',
             'parent': index + 1,
             'isFolder': True,
-            'createdDate': f'DummyCreatedDate {index}',
-            'modifiedDate': f'DummyModifiedDate {index}',
+            'createdDate': '2020-02-20T12:50:26.000+0000',
+            'modifiedDate': '2020-02-20T12:50:26.000+0000',
             'createdBy': index + 2,
             'modifiedBy': index + 3,
             'fields':
@@ -72,4 +72,5 @@ if __name__ == "__main__":
 
     result['data'] = data
 
-    print(json.dumps(result))
+    with open('file.json', 'w') as file_handle:
+        file_handle.write(json.dumps(result))
