@@ -9,8 +9,9 @@ from jama_rest_client.dal.parsers.json import \
     TestGroupJSONParser, 
     TestPlanJSONParser
 )
-from jama_rest_client.dal.serializers.json import TestCycleRequestJSONSerializer, TestPlanRequestJSONSerializer
+from jama_rest_client.dal.serializers.json import PatchOperationRequestJSONSerializer, TestCycleRequestJSONSerializer, TestPlanRequestJSONSerializer
 from jama_rest_client.model.api_response import AbstractRestResponse, CreatedResponse
+from jama_rest_client.model.request import PatchOperationRequest
 from jama_rest_client.model.test_cycle import TestCycle, TestCycleRequest
 from jama_rest_client.model.test_plan import TestGroup, TestPlan, TestPlanRequest
 
@@ -47,6 +48,10 @@ class TestPlansAPI(BaseAPI):
     
     def update_test_plan(self, test_plan_id: int, test_plan_request: TestPlanRequest) -> AbstractRestResponse:
         http_response = self._put(f'{self.__resourceName}/{test_plan_id}', TestPlanRequestJSONSerializer.serialize(test_plan_request))
+        return AbstractRestResponseJSONParser.parse(http_response.body)
+
+    def patch_test_plan(self, test_plan_id: int, patch_operation_request: PatchOperationRequest) -> AbstractRestResponse:
+        http_response = self._patch(f'{self.__resourceName}/{test_plan_id}', PatchOperationRequestJSONSerializer.serialize(patch_operation_request))
         return AbstractRestResponseJSONParser.parse(http_response.body)
 
     def delete_test_plan(self, test_plan_id: int) -> AbstractRestResponse:
