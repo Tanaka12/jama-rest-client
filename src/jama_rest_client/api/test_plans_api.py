@@ -108,6 +108,10 @@ class TestPlansAPI(BaseAPI):
         http_response = self._post(f'{self.__resourceName}/{test_plan_id}/attachments', AttachmentRequestJSONSerializer.serialize(attachment_request))
         return CreatedResponseJSONParser.parse(http_response.body)
 
+    def remove_test_plan_attachment(self, test_plan_id, attachment_id: int) -> AbstractRestResponse:
+        http_response = self._delete(f'{self.__resourceName}/{test_plan_id}/attachments/{attachment_id}')
+        return AbstractRestResponseJSONParser.parse(http_response.body)
+
     def get_test_plan_cycles(self, test_plan_id: int) -> List[TestCycle]:
         test_cycles: List[TestCycle] = []
 
