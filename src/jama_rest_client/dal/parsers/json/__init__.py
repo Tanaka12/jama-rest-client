@@ -1,6 +1,7 @@
 from .activity_json_parser import ActivityJSONParser
 from .api_response_json_parser import AbstractRestResponseJSONParser, CreatedResponseJSONParser
 from .attachment_json_parser import AttachmentJSONParser
+from .comment_json_parser import CommentJSONParser
 from .item_json_parser import ItemJSONParser
 from .item_type_json_parser import ItemTypeJSONParser
 from .location_json_parser import LocationJSONParser
