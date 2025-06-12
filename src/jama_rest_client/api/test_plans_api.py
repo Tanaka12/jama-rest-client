@@ -14,13 +14,14 @@ from jama_rest_client.dal.parsers.json import \
 from jama_rest_client.dal.serializers.json import \
 (
     ArchivedStatusRequestJSONSerializer,
+    AttachmentRequestJSONSerializer,
     PatchOperationRequestJSONSerializer, 
     TestCycleRequestJSONSerializer, 
     TestPlanRequestJSONSerializer
 )
 from jama_rest_client.model.activity import Activity
 from jama_rest_client.model.archived import ArchivedStatusRequest
-from jama_rest_client.model.attachment import Attachment
+from jama_rest_client.model.attachment import Attachment, AttachmentRequest
 from jama_rest_client.model.api_response import AbstractRestResponse, CreatedResponse
 from jama_rest_client.model.request import PatchOperationRequest
 from jama_rest_client.model.test_cycle import TestCycle, TestCycleRequest
@@ -103,6 +104,10 @@ class TestPlansAPI(BaseAPI):
 
         return test_plan_attachments
     
+    def add_test_plan_attachment(self, test_plan_id, attachment_request: AttachmentRequest) -> CreatedResponse:
+        http_response = self._post(f'{self.__resourceName}/{test_plan_id}/attachments', AttachmentRequestJSONSerializer.serialize(attachment_request))
+        return CreatedResponseJSONParser.parse(http_response.body)
+
     def get_test_plan_cycles(self, test_plan_id: int) -> List[TestCycle]:
         test_cycles: List[TestCycle] = []
 
