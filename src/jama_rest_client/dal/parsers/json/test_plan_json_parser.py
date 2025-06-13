@@ -11,16 +11,12 @@ class TestPlanJSONParser:
         test_plan.global_id = test_plan_dict['globalId']
         test_plan.project = test_plan_dict['project']
         test_plan.item_type = test_plan_dict['itemType']
-        test_plan.created_date = TestPlanJSONParser.__parse_date_time(test_plan_dict['createdDate'])
-        test_plan.modified_date = TestPlanJSONParser.__parse_date_time(test_plan_dict['modifiedDate'])
-        test_plan.last_activity_date = TestPlanJSONParser.__parse_date_time(test_plan_dict['lastActivityDate'])
+        test_plan.created_date = datetime.fromisoformat(test_plan_dict['createdDate'])
+        test_plan.modified_date = datetime.fromisoformat(test_plan_dict['modifiedDate'])
+        test_plan.last_activity_date = datetime.fromisoformat(test_plan_dict['lastActivityDate'])
         test_plan.created_by = test_plan_dict['createdBy']
         test_plan.modified_by = test_plan_dict['modifiedBy']
         test_plan.fields = test_plan_dict['fields']
         test_plan.archived = test_plan_dict['archived']
 
         return test_plan
-    
-    @staticmethod
-    def __parse_date_time(date_time: str) -> datetime:
-        return datetime.strptime(date_time, '%Y-%m-%dT%H:%M:%S.000+0000')

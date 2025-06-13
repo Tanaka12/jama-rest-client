@@ -7,7 +7,7 @@ class ActivityJSONParser:
     def parse(activity_dict: dict) -> Activity:
         activity: Activity = Activity()
         activity.id = activity_dict['id']
-        activity.date = ActivityJSONParser.__parse_date_time(activity_dict['date'])
+        activity.date = datetime.fromisoformat(activity_dict['date'])
         activity.details = activity_dict['details']
         activity.action = activity_dict['action']
         activity.user = activity_dict['user']
@@ -18,10 +18,6 @@ class ActivityJSONParser:
         activity.object_type = ActivityJSONParser.__parse_object_type(activity_dict['objectType'])
 
         return activity
-    
-    @staticmethod
-    def __parse_date_time(date_time: str) -> datetime:
-        return datetime.strptime(date_time, '%Y-%m-%dT%H:%M:%S.000+0000')
     
     @staticmethod
     def __parse_event_type(event_type: str) -> EventType:

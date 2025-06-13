@@ -14,9 +14,9 @@ class ItemJSONParser:
         item.item_type = item_dict['itemType']
         item.project = item_dict['project']
         item.child_item_type = item_dict['childItemType']
-        item.created_date = ItemJSONParser.__parse_date_time(item_dict['createdDate'])
-        item.modified_date = ItemJSONParser.__parse_date_time(item_dict['modifiedDate'])
-        item.last_activity_date = ItemJSONParser.__parse_date_time(item_dict['lastActivityDate'])
+        item.created_date = datetime.fromisoformat(item_dict['createdDate'])
+        item.modified_date = datetime.fromisoformat(item_dict['modifiedDate'])
+        item.last_activity_date = datetime.fromisoformat(item_dict['lastActivityDate'])
         item.created_by = item_dict['createdBy']
         item.modified_by = item_dict['modifiedBy']
         item.lock = LockJSONParser.parse(item_dict['lock'])
@@ -24,7 +24,3 @@ class ItemJSONParser:
         item.fields = item_dict['fields']
 
         return item
-    
-    @staticmethod
-    def __parse_date_time(date_time: str) -> datetime:
-        return datetime.strptime(date_time, '%Y-%m-%dT%H:%M:%S.000+0000')

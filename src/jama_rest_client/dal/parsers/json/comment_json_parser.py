@@ -8,7 +8,7 @@ class CommentJSONParser:
         comment: Comment = Comment()
         comment.id = comment_dict['id']
         comment.in_reply_to = comment_dict['inReplyTo']
-        comment.created_date = CommentJSONParser.__parse_date_time(comment_dict['createdDate'])
+        comment.created_date = datetime.fromisoformat(comment_dict['createdDate'])
         comment.created_by = 0
         comment.modified_by = 0
         comment.deleted = comment_dict['deleted']
@@ -18,10 +18,6 @@ class CommentJSONParser:
         comment.location = comment_dict['location']
 
         return comment
-    
-    @staticmethod
-    def __parse_date_time(date_time: str) -> datetime:
-        return datetime.strptime(date_time, '%Y-%m-%dT%H:%M:%S.000+0000')
     
     @staticmethod
     def __parse_comment_status(comment_status: str) -> CommentStatus:
